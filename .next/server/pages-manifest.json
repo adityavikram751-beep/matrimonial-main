@@ -1,6 +1,19 @@
 {
-  "/": "pages/index.js",
+  "/": "pages/index.html",
+  "/CraeteSubAdmin": "pages/CraeteSubAdmin.html",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/dashboard": "pages/dashboard.js"
+  "/_error": "pages/_error.js",
+  "/adminprofile": "pages/adminprofile.html",
+  "/analytics": "pages/analytics.html",
+  "/dashboard": "pages/dashboard.html",
+  "/login": "pages/login.html",
+  "/logout": "pages/logout.html",
+  "/managesubadmin": "pages/managesubadmin.html",
+  "/manageusers": "pages/manageusers.html",
+  "/manageusers/[id]": "pages/manageusers/[id].html",
+  "/profileDetails": "pages/profileDetails.html",
+  "/reportedcontent": "pages/reportedcontent.html",
+  "/verificationrequest": "pages/verificationrequest.html",
+  "/404": "pages/404.html"
 }

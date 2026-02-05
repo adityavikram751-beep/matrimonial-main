@@ -1,0 +1,7 @@
+__turbopack_load_page_chunks__("/CraeteSubAdmin", [
+  "static/chunks/21436b72e236e55d.js",
+  "static/chunks/165f570b42cb39d5.js",
+  "static/chunks/fadd1e9dcd0f96ab.js",
+  "static/chunks/cfccf335f1bc2410.js",
+  "static/chunks/turbopack-a21d0751470d3ca0.js"
+])

@@ -6,17 +6,13 @@
   "rootMainFiles": [],
   "pages": {
     "/profileDetails": [
-      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_82a36480.js",
-      "static/chunks/node_modules_next_dist_compiled_ca41998d._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_492fcef6._.js",
-      "static/chunks/node_modules_next_dist_client_becf32a6._.js",
-      "static/chunks/node_modules_next_dist_a3e9a08f._.js",
-      "static/chunks/node_modules_react-dom_82bb97c6._.js",
-      "static/chunks/node_modules_react-icons_d5e0c6be._.js",
-      "static/chunks/node_modules_28ac8d2b._.js",
-      "static/chunks/[root-of-the-server]__a29c70ea._.js",
-      "static/chunks/pages_profileDetails_index_5771e187.js",
-      "static/chunks/pages_profileDetails_index_76fe2727.js"
+      "static/chunks/c52da8d5472be05e.js",
+      "static/chunks/165f570b42cb39d5.js",
+      "static/chunks/6cd8f578c89fbb6e.js",
+      "static/chunks/cfccf335f1bc2410.js",
+      "static/chunks/fadd1e9dcd0f96ab.js",
+      "static/chunks/ddced38d175ef950.js",
+      "static/chunks/turbopack-4b28542f0e170848.js"
     ]
   },
   "ampFirstPages": []
