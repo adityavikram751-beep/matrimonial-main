@@ -2476,10 +2476,6 @@
     outline-style: none;
   }
 
-  .active\:bg-gray-100:active {
-    background-color: var(--color-gray-100);
-  }
-
   .disabled\:opacity-40:disabled {
     opacity: .4;
   }
