@@ -1,0 +1,11 @@
+var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/managesubadmin.js")
+R.c("server/chunks/ssr/647d8_next_dist_46c15371._.js")
+R.c("server/chunks/ssr/647d8_react-icons_fa_index_mjs_36204017._.js")
+R.c("server/chunks/ssr/647d8_lucide-react_dist_esm_icons_bell_c6273738.js")
+R.c("server/chunks/ssr/[root-of-the-server]__21dd7d3d._.js")
+R.c("server/chunks/ssr/647d8_1860e2b2._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__dc16efbe._.js")
+R.c("server/chunks/ssr/647d8_187c121e._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__b7e23b8c._.js")
+R.m("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/managesubadmin/index.js [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_app.js [ssr] (ecmascript)\" } [ssr] (ecmascript)")
+module.exports=R.m("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/managesubadmin/index.js [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_app.js [ssr] (ecmascript)\" } [ssr] (ecmascript)").exports

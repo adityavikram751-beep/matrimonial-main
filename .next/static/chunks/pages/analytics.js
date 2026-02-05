@@ -1,0 +1,16 @@
+__turbopack_load_page_chunks__("/analytics", [
+  "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_408e171f.js",
+  "static/chunks/[root-of-the-server]__c9f9115c._.js",
+  "static/chunks/node_modules_next_dist_compiled_next-devtools_index_82a36480.js",
+  "static/chunks/node_modules_next_dist_compiled_43e01ce8._.js",
+  "static/chunks/node_modules_next_dist_shared_lib_f5de1318._.js",
+  "static/chunks/node_modules_next_dist_client_becf32a6._.js",
+  "static/chunks/node_modules_next_dist_a3e9a08f._.js",
+  "static/chunks/node_modules_next_dynamic_b8fa0f03.js",
+  "static/chunks/node_modules_react-dom_82bb97c6._.js",
+  "static/chunks/node_modules_highcharts_highcharts_45cc589c.js",
+  "static/chunks/node_modules_recharts_es6_f19e1338._.js",
+  "static/chunks/node_modules_92243adc._.js",
+  "static/chunks/pages_analytics_index_5771e187.js",
+  "static/chunks/pages_analytics_index_879ee39a.js"
+])

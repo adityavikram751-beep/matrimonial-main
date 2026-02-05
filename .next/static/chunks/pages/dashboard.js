@@ -1,0 +1,16 @@
+__turbopack_load_page_chunks__("/dashboard", [
+  "static/chunks/[root-of-the-server]__11272db6._.js",
+  "static/chunks/node_modules_next_dist_compiled_next-devtools_index_82a36480.js",
+  "static/chunks/node_modules_next_dist_compiled_989d35ff._.js",
+  "static/chunks/node_modules_next_dist_shared_lib_6a202fbd._.js",
+  "static/chunks/node_modules_next_dist_client_0b14ab40._.js",
+  "static/chunks/node_modules_next_dist_a3e9a08f._.js",
+  "static/chunks/node_modules_next_251e4b30._.js",
+  "static/chunks/node_modules_react-dom_82bb97c6._.js",
+  "static/chunks/node_modules_recharts_es6_b255fb20._.js",
+  "static/chunks/node_modules_react-icons_fa_index_mjs_bad01e3f._.js",
+  "static/chunks/node_modules_react-icons_lib_75a63dfe._.js",
+  "static/chunks/node_modules_db2baa10._.js",
+  "static/chunks/pages_dashboard_index_5771e187.js",
+  "static/chunks/pages_dashboard_index_9404b7f4.js"
+])

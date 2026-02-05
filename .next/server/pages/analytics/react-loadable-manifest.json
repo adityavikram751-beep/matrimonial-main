@@ -1,0 +1,9 @@
+{
+  "[project]/node_modules/highcharts-react-official/dist/highcharts-react.min.js [client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/node_modules/highcharts-react-official/dist/highcharts-react.min.js [client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_7718a06e.js",
+      "static/chunks/node_modules_highcharts-react-official_dist_highcharts-react_min_f5404f60.js"
+    ]
+  }
+}

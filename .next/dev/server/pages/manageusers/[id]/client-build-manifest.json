@@ -1,0 +1,5 @@
+{
+  "/manageusers/[id]": [
+    "static/chunks/pages/manageusers/[id].js"
+  ]
+}

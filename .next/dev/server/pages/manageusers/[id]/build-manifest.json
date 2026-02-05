@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/manageusers/[id]": [
+      "static/chunks/647d8_next_dist_compiled_16597b3a._.js",
+      "static/chunks/647d8_next_dist_shared_lib_0e3c7894._.js",
+      "static/chunks/647d8_next_dist_client_60695e8e._.js",
+      "static/chunks/647d8_next_dist_c077c4a9._.js",
+      "static/chunks/647d8_next_0e01d4af._.js",
+      "static/chunks/647d8_react-dom_4e5e3a70._.js",
+      "static/chunks/647d8_10a2c3d3._.js",
+      "static/chunks/[root-of-the-server]__965ba0d7._.js",
+      "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_manageusers_[id]_2da965e7.js",
+      "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_manageusers_[id]_c1bd60bb.js"
+    ]
+  },
+  "ampFirstPages": []
+}

@@ -1,0 +1,12 @@
+__turbopack_load_page_chunks__("/profileDetails", [
+  "static/chunks/647d8_next_dist_compiled_456e2be2._.js",
+  "static/chunks/647d8_next_dist_shared_lib_2a550148._.js",
+  "static/chunks/647d8_next_dist_client_b853d865._.js",
+  "static/chunks/647d8_next_dist_c077c4a9._.js",
+  "static/chunks/647d8_react-dom_4e5e3a70._.js",
+  "static/chunks/647d8_react-icons_e7dee8ca._.js",
+  "static/chunks/647d8_764f97d3._.js",
+  "static/chunks/[root-of-the-server]__f74533c4._.js",
+  "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_profileDetails_index_2da965e7.js",
+  "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_profileDetails_index_67f170ab.js"
+])
