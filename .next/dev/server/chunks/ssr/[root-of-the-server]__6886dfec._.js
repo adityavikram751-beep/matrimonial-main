@@ -27,7 +27,7 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$highcharts$2d$react$2d$off
 ;
 ;
 ;
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 const WEEK_ORDER = [
     "Sun",
     "Mon",
@@ -487,7 +487,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -544,13 +544,13 @@ const Search = ()=>{
     const [unreadCount, setUnreadCount] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
-    const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+    const BASE_URL = "https://merimonial-backend.onrender.com";
     /* --------------------------------------------------------
         1) LOAD ADMIN PREF → CONNECT SOCKET
   -------------------------------------------------------- */ const loadAdminPrefs = async ()=>{
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -936,7 +936,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/OneDrive/Desktop/matrimonial-admin/src/component/analytics/ProfileMatch.js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

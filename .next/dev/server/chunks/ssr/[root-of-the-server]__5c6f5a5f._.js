@@ -20,7 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$
 ;
 ;
 function AnalyticsPage() {
-    const API = "https://matrimonial-backend-7ahc.onrender.com/admin/getByGender";
+    const API = "https://merimonial-backend.onrender.com/admin/getByGender";
     // Month list
     const MONTHS = [
         "January",
@@ -36,22 +36,22 @@ function AnalyticsPage() {
         "November",
         "December"
     ];
-    // backend lowercase mapping
-    const MONTH_MAP = {
-        January: "january",
-        February: "february",
-        March: "march",
-        April: "april",
+    // Backend month abbreviations (3‑letter lowercase)
+    const ABBR_MAP = {
+        January: "jan",
+        February: "feb",
+        March: "mar",
+        April: "apr",
         May: "may",
-        June: "june",
-        July: "july",
-        August: "august",
-        September: "september",
-        October: "october",
-        November: "november",
-        December: "december"
+        June: "jun",
+        July: "jul",
+        August: "aug",
+        September: "sep",
+        October: "oct",
+        November: "nov",
+        December: "dec"
     };
-    // Auto previous month
+    // Helper to get previous month
     function getPrevMonth(m) {
         const i = MONTHS.indexOf(m);
         return i === 0 ? "December" : MONTHS[i - 1];
@@ -62,7 +62,7 @@ function AnalyticsPage() {
         const currentMonthIndex = currentDate.getMonth();
         return MONTHS[currentMonthIndex];
     }
-    // STATES - Current month automatically set hoga
+    // States
     const [selectedMonth, setSelectedMonth] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(getCurrentMonth());
     const [previousMonth, setPreviousMonth] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(getPrevMonth(getCurrentMonth()));
     const [genderData, setGenderData] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
@@ -72,25 +72,42 @@ function AnalyticsPage() {
     const [percentGrowth, setPercentGrowth] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(true);
     const [hover, setHover] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null);
-    // LOAD DATA BY MONTH - Automatically current month ka data fetch hoga
+    // Load data when selectedMonth changes
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         let mounted = true;
         (async ()=>{
             setLoading(true);
             const prev = getPrevMonth(selectedMonth);
             setPreviousMonth(prev);
-            const backendMonth = MONTH_MAP[selectedMonth];
+            const backendMonth = ABBR_MAP[selectedMonth]; // e.g., "mar"
             try {
                 const res = await fetch(`${API}?month=${backendMonth}&year=2025`);
                 const json = await res.json();
                 if (!mounted) return;
                 setGenderData(json.genderData || []);
                 setMatchData(json.matchData || []);
-                setSignInData(json.signInData || []);
-                setTotalSignIn(json.totalCurrentMonthSignIns ?? 0);
-                setPercentGrowth(json.percentGrowth ?? 0);
+                // --- Transform signInData to use currentMonth / previousMonth ---
+                const currentMonthField = ABBR_MAP[selectedMonth]; // e.g., "mar"
+                const previousMonthField = ABBR_MAP[prev]; // e.g., "feb"
+                const transformedSignIn = (json.signInData || []).map((day)=>({
+                        day: day.day,
+                        currentMonth: day[currentMonthField] ?? 0,
+                        previousMonth: day[previousMonthField] ?? 0
+                    }));
+                setSignInData(transformedSignIn);
+                // --- Calculate totals and growth ---
+                const currentTotal = transformedSignIn.reduce((sum, d)=>sum + d.currentMonth, 0);
+                const previousTotal = transformedSignIn.reduce((sum, d)=>sum + d.previousMonth, 0);
+                setTotalSignIn(currentTotal);
+                let growth = 0;
+                if (previousTotal > 0) {
+                    growth = (currentTotal - previousTotal) / previousTotal * 100;
+                } else if (currentTotal > 0) {
+                    growth = 100; // from zero to something
+                }
+                setPercentGrowth(Math.round(growth));
             } catch (err) {
-                console.log("API error:", err);
+                console.error("API error:", err);
             }
             setLoading(false);
         })();
@@ -98,7 +115,7 @@ function AnalyticsPage() {
     }, [
         selectedMonth
     ]);
-    // COLORS
+    // Colors
     const genderColors = {
         Male: "#34D399",
         Female: "#FDE047",
@@ -110,20 +127,29 @@ function AnalyticsPage() {
         "Newly Registered": "#06B6D4",
         Inactive: "#FBBF24"
     };
-    // 3D PIE CALC
+    // 3D PIE HELPER (fixed for full circle)
     function build3DSlices(data = [], cx, cy, r, h) {
         const total = Math.max(1, data.reduce((t, a)=>t + (a.value || 0), 0));
         let start = -Math.PI / 2 + 0.2;
         return data.map((item)=>{
             const angle = item.value / total * Math.PI * 2;
             const end = start + angle;
-            const x1 = cx + r * Math.cos(start);
-            const y1 = cy + r * Math.sin(start);
-            const x2 = cx + r * Math.cos(end);
-            const y2 = cy + r * Math.sin(end);
-            const largeArc = angle > Math.PI ? 1 : 0;
-            const topPath = `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2} Z`;
-            const sidePath = `M ${x1} ${y1} L ${x1} ${y1 + h} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2 + h} L ${x2} ${y2} Z`;
+            let topPath;
+            let sidePath;
+            // Special case: full circle (angle ≈ 2π)
+            if (Math.abs(angle - Math.PI * 2) < 0.0001) {
+                // Draw a complete circle as top, and a ring as side
+                topPath = `M ${cx + r} ${cy} A ${r} ${r} 0 1 1 ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy} Z`;
+                sidePath = `M ${cx + r} ${cy} L ${cx + r} ${cy + h} A ${r} ${r} 0 1 1 ${cx - r} ${cy + h} L ${cx - r} ${cy} Z`;
+            } else {
+                const x1 = cx + r * Math.cos(start);
+                const y1 = cy + r * Math.sin(start);
+                const x2 = cx + r * Math.cos(end);
+                const y2 = cy + r * Math.sin(end);
+                const largeArc = angle > Math.PI ? 1 : 0;
+                topPath = `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+                sidePath = `M ${x1} ${y1} L ${x1} ${y1 + h} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2 + h} L ${x2} ${y2} Z`;
+            }
             start = end;
             return {
                 ...item,
@@ -156,7 +182,7 @@ function AnalyticsPage() {
         40,
         45
     ];
-    // Tooltip
+    // Custom tooltip for line chart
     function LineTooltip({ active, payload, label }) {
         if (!active || !payload?.length) return null;
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -174,24 +200,24 @@ function AnalyticsPage() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                    lineNumber: 155,
+                    lineNumber: 209,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                     children: payload[0].value
                 }, void 0, false, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                    lineNumber: 156,
+                    lineNumber: 210,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-            lineNumber: 154,
+            lineNumber: 201,
             columnNumber: 7
         }, this);
     }
-    // Tooltip hover handlers
+    // Hover handlers for 3D pie
     function handleSliceEnter(e, slice) {
         setHover({
             ...slice,
@@ -214,7 +240,7 @@ function AnalyticsPage() {
         children: "Loading..."
     }, void 0, false, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-        lineNumber: 181,
+        lineNumber: 235,
         columnNumber: 12
     }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -235,7 +261,7 @@ function AnalyticsPage() {
                                             children: "Sign-In Analytics"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 193,
+                                            lineNumber: 244,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -243,13 +269,10 @@ function AnalyticsPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                                     className: "text-4xl font-extrabold",
-                                                    children: [
-                                                        totalSignIn,
-                                                        "."
-                                                    ]
-                                                }, void 0, true, {
+                                                    children: totalSignIn
+                                                }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 196,
+                                                    lineNumber: 246,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -262,7 +285,7 @@ function AnalyticsPage() {
                                                             children: "↑"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 199,
+                                                            lineNumber: 248,
                                                             columnNumber: 19
                                                         }, this),
                                                         " ",
@@ -271,7 +294,7 @@ function AnalyticsPage() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 198,
+                                                    lineNumber: 247,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -279,19 +302,19 @@ function AnalyticsPage() {
                                                     children: "Vs Last Month"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 202,
+                                                    lineNumber: 250,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 195,
+                                            lineNumber: 245,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 192,
+                                    lineNumber: 243,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -304,14 +327,14 @@ function AnalyticsPage() {
                                                     className: "w-3 h-3 rounded-full bg-black"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 210,
+                                                    lineNumber: 257,
                                                     columnNumber: 17
                                                 }, this),
                                                 selectedMonth
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 209,
+                                            lineNumber: 256,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -321,14 +344,14 @@ function AnalyticsPage() {
                                                     className: "w-3 h-3 rounded-full bg-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 215,
+                                                    lineNumber: 261,
                                                     columnNumber: 17
                                                 }, this),
                                                 previousMonth
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 214,
+                                            lineNumber: 260,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -339,24 +362,24 @@ function AnalyticsPage() {
                                                     children: m
                                                 }, m, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 225,
+                                                    lineNumber: 270,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 219,
+                                            lineNumber: 264,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 207,
+                                    lineNumber: 255,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                            lineNumber: 191,
+                            lineNumber: 242,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -370,7 +393,7 @@ function AnalyticsPage() {
                                             strokeDasharray: "4 4"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 236,
+                                            lineNumber: 280,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -378,25 +401,25 @@ function AnalyticsPage() {
                                             ticks: xTicks
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 237,
+                                            lineNumber: 281,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["YAxis"], {
                                             ticks: yTicks
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 238,
+                                            lineNumber: 282,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
                                             content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(LineTooltip, {}, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                lineNumber: 239,
+                                                lineNumber: 283,
                                                 columnNumber: 37
                                             }, void 0)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 239,
+                                            lineNumber: 283,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Line"], {
@@ -406,7 +429,7 @@ function AnalyticsPage() {
                                             dot: true
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 241,
+                                            lineNumber: 284,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Line"], {
@@ -417,29 +440,29 @@ function AnalyticsPage() {
                                             dot: false
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 242,
+                                            lineNumber: 290,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 235,
+                                    lineNumber: 279,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                lineNumber: 234,
+                                lineNumber: 278,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                            lineNumber: 233,
+                            lineNumber: 277,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                    lineNumber: 189,
+                    lineNumber: 241,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -464,7 +487,7 @@ function AnalyticsPage() {
                                             children: hover.name
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 272,
+                                            lineNumber: 319,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -474,13 +497,13 @@ function AnalyticsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 273,
+                                            lineNumber: 320,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 260,
+                                    lineNumber: 307,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -491,7 +514,7 @@ function AnalyticsPage() {
                                             children: "Gender Analytics"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 278,
+                                            lineNumber: 325,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -509,14 +532,15 @@ function AnalyticsPage() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 281,
-                                                            columnNumber: 58
+                                                            lineNumber: 328,
+                                                            columnNumber: 19
                                                         }, this),
-                                                        " Male"
+                                                        " ",
+                                                        "Male"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 281,
+                                                    lineNumber: 327,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -531,14 +555,15 @@ function AnalyticsPage() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 282,
-                                                            columnNumber: 58
+                                                            lineNumber: 339,
+                                                            columnNumber: 19
                                                         }, this),
-                                                        " Female"
+                                                        " ",
+                                                        "Female"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 282,
+                                                    lineNumber: 338,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -553,33 +578,36 @@ function AnalyticsPage() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 283,
-                                                            columnNumber: 58
+                                                            lineNumber: 350,
+                                                            columnNumber: 19
                                                         }, this),
-                                                        " Ots."
+                                                        " ",
+                                                        "Ots."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 283,
+                                                    lineNumber: 349,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 280,
+                                            lineNumber: 326,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 277,
+                                    lineNumber: 324,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                     width: "100%",
                                     height: "280",
+                                    viewBox: "0 0 400 280",
+                                    preserveAspectRatio: "xMidYMid meet",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("g", {
-                                        transform: "translate(80,16)",
+                                        transform: "translate(80, 16)",
                                         children: [
                                             genderSlices.map((s, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                                                     d: s.sidePath,
@@ -587,7 +615,7 @@ function AnalyticsPage() {
                                                     opacity: "0.66"
                                                 }, i, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 290,
+                                                    lineNumber: 371,
                                                     columnNumber: 19
                                                 }, this)),
                                             genderSlices.map((s, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("g", {
@@ -601,29 +629,29 @@ function AnalyticsPage() {
                                                         strokeWidth: 2
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                        lineNumber: 300,
+                                                        lineNumber: 386,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, i, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 294,
+                                                    lineNumber: 380,
                                                     columnNumber: 19
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                        lineNumber: 288,
+                                        lineNumber: 369,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 287,
+                                    lineNumber: 363,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                            lineNumber: 258,
+                            lineNumber: 305,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -645,7 +673,7 @@ function AnalyticsPage() {
                                             children: hover.name
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 323,
+                                            lineNumber: 413,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -655,13 +683,13 @@ function AnalyticsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 324,
+                                            lineNumber: 414,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 311,
+                                    lineNumber: 401,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -672,11 +700,11 @@ function AnalyticsPage() {
                                             children: "Matchmaking Status"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 329,
+                                            lineNumber: 419,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "space-y-",
+                                            className: "space-y-1",
                                             children: Object.keys(matchColors).map((k)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                                     className: "flex items-center gap-1",
                                                     children: [
@@ -689,7 +717,7 @@ function AnalyticsPage() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 334,
+                                                            lineNumber: 423,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -697,33 +725,35 @@ function AnalyticsPage() {
                                                             children: k
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 335,
+                                                            lineNumber: 431,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, k, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 333,
+                                                    lineNumber: 422,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 331,
+                                            lineNumber: 420,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 328,
+                                    lineNumber: 418,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                     className: "absolute left-1/3 top-[51%] -translate-x-1/2 -translate-y-1/2",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
-                                        width: "520",
+                                        width: "400",
                                         height: "320",
+                                        viewBox: "0 0 400 320",
+                                        preserveAspectRatio: "xMidYMid meet",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("g", {
-                                            transform: "translate(160,28)",
+                                            transform: "translate(60, 28)",
                                             children: [
                                                 matchSlices.map((s, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                                                         d: s.sidePath,
@@ -731,7 +761,7 @@ function AnalyticsPage() {
                                                         opacity: "0.65"
                                                     }, i, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                        lineNumber: 345,
+                                                        lineNumber: 446,
                                                         columnNumber: 21
                                                     }, this)),
                                                 matchSlices.map((s, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("g", {
@@ -745,12 +775,12 @@ function AnalyticsPage() {
                                                             strokeWidth: 3
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                            lineNumber: 355,
+                                                            lineNumber: 461,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, i, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                        lineNumber: 349,
+                                                        lineNumber: 455,
                                                         columnNumber: 21
                                                     }, this)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
@@ -760,46 +790,46 @@ function AnalyticsPage() {
                                                     fill: "#fff"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                                    lineNumber: 359,
+                                                    lineNumber: 470,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                            lineNumber: 343,
+                                            lineNumber: 444,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                        lineNumber: 342,
+                                        lineNumber: 438,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                                    lineNumber: 341,
+                                    lineNumber: 437,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                            lineNumber: 308,
+                            lineNumber: 399,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-                    lineNumber: 255,
+                    lineNumber: 303,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-            lineNumber: 186,
+            lineNumber: 239,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/AnalyticsChart.js",
-        lineNumber: 184,
+        lineNumber: 238,
         columnNumber: 5
     }, this);
 }
@@ -811,7 +841,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/TopSection.js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -1025,11 +1055,11 @@ const StatsSplitCard = ()=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "text-center sm:text-left lg:text-center xl:text-left",
+                        className: "text-center sm:text-left lg:text-center xl:text-left ",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                                 className: "text-[14px] sm:text-[16px] font-bold text-gray-800",
-                                children: "New Signups"
+                                children: "NewSignups"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/TopSection.js",
                                 lineNumber: 120,
@@ -1220,7 +1250,7 @@ const StatsSplitCard = ()=>{
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                        className: "absolute top-[28px] left-[30px] text-[14px] font-semibold",
+                                        className: "absolute top-[25px] left-[22px] text-[14px] font-semibold",
                                         children: [
                                             reportedPercent,
                                             "%"
@@ -1356,8 +1386,7 @@ function UsersPage() {
             const data = await res.json();
             setUsers(data.data || []);
             setTotalPages(data.totalPages || 1);
-            setLoading(false);
-        } catch  {
+        } catch  {} finally{
             setLoading(false);
         }
     };
@@ -1372,15 +1401,14 @@ function UsersPage() {
     /* ------------------ EXPORT CSV ------------------ */ const handleExportCSV = ()=>{
         if (!users.length) return;
         const headers = Object.keys(users[0]);
-        const csvRows = [];
-        csvRows.push(headers.join(","));
+        const csvRows = [
+            headers.join(",")
+        ];
         users.forEach((u)=>{
-            const row = headers.map((h)=>`"${u[h]}"`);
-            csvRows.push(row.join(","));
+            csvRows.push(headers.map((h)=>`"${u[h]}"`).join(","));
         });
-        const csvString = csvRows.join("\n");
         const blob = new Blob([
-            csvString
+            csvRows.join("\n")
         ], {
             type: "text/csv"
         });
@@ -1390,9 +1418,10 @@ function UsersPage() {
         a.download = "users.csv";
         a.click();
     };
-    /* ------------------ BANNER FETCH ------------------ */ const fetchBanners = async ()=>{
+    /* ------------------ BANNER FETCH (GET) ------------------ */ // GET /api/banner/access/banner-image
+    const fetchBanners = async ()=>{
         try {
-            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banners`);
+            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banner/access/banner-image`);
             const data = await res.json();
             setBanners(data.data || []);
         } catch  {}
@@ -1400,28 +1429,38 @@ function UsersPage() {
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         fetchBanners();
     }, []);
-    /* ------------------ ADD BANNER ------------------ */ const handleAddBanner = async (e)=>{
+    /* ------------------ ADD BANNER (POST) ------------------ */ // POST /api/banner/upload-banner
+    // response.data is a single object (not array)
+    const handleAddBanner = async (e)=>{
         const file = e.target.files?.[0];
         if (!file) return;
         const fd = new FormData();
-        fd.append("banner", file);
+        fd.append("bannerImage", file);
         try {
             setBannerLoading(true);
-            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banners`, {
+            const token = localStorage.getItem("token");
+            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banner/upload-banner`, {
                 method: "POST",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },
                 body: fd
             });
             const data = await res.json();
-            if (!res.ok) return;
+            if (!res.ok || !data.success) return;
+            // data.data is a single object — push it into banners array
             setBanners((prev)=>[
                     ...prev,
-                    ...data.data
+                    data.data
                 ]);
-        } finally{
+        } catch  {} finally{
             setBannerLoading(false);
+            // reset input so same file can be re-selected
+            e.target.value = "";
         }
     };
-    /* ------------------ UPDATE BANNER ------------------ */ const handleUpdateBanner = async (id)=>{
+    /* ------------------ UPDATE BANNER (PUT) ------------------ */ // PUT /api/banner/update/banner-image?id=<_id>
+    const handleUpdateBanner = async (id)=>{
         const input = document.createElement("input");
         input.type = "file";
         input.accept = "image/*";
@@ -1429,30 +1468,42 @@ function UsersPage() {
             const file = e.target.files?.[0];
             if (!file) return;
             const fd = new FormData();
-            fd.append("banner", file);
+            fd.append("bannerImage", file);
             try {
                 setBannerLoading(true);
-                const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banners/${id}`, {
+                const token = localStorage.getItem("token");
+                const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banner/update/banner-image?id=${id}`, {
                     method: "PUT",
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
                     body: fd
                 });
                 const data = await res.json();
-                if (!res.ok) return;
-                fetchBanners();
-            } finally{
+                if (!res.ok || !data.success) return;
+                // Refresh banners list after update
+                await fetchBanners();
+            } catch  {} finally{
                 setBannerLoading(false);
             }
         };
         input.click();
     };
-    /* ------------------ DELETE BANNER ------------------ */ const handleDeleteBanner = async (id)=>{
+    /* ------------------ DELETE BANNER (DELETE) ------------------ */ // DELETE /api/banner/delete/banner-images?id=<_id>
+    const handleDeleteBanner = async (id)=>{
+        if (!confirm("Are you sure you want to delete this banner?")) return;
         try {
             setBannerLoading(true);
-            await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banners/${id}`, {
-                method: "DELETE"
+            const token = localStorage.getItem("token");
+            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$api$2f$apiURL$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/api/banner/delete/banner-images?id=${id}`, {
+                method: "DELETE",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
             });
+            if (!res.ok) return;
             setBanners((prev)=>prev.filter((b)=>b._id !== id));
-        } finally{
+        } catch  {} finally{
             setBannerLoading(false);
         }
     };
@@ -1478,7 +1529,7 @@ function UsersPage() {
                                         alt: "Search"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 177,
+                                        lineNumber: 180,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -1492,13 +1543,13 @@ function UsersPage() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 178,
+                                        lineNumber: 181,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 176,
+                                lineNumber: 179,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1517,34 +1568,34 @@ function UsersPage() {
                                                 children: "Status"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 200,
+                                                lineNumber: 196,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
                                                 children: "Approved"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 201,
+                                                lineNumber: 197,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
                                                 children: "Pending"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 202,
+                                                lineNumber: 198,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
                                                 children: "Blocked"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 203,
+                                                lineNumber: 199,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 192,
+                                        lineNumber: 191,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -1560,27 +1611,27 @@ function UsersPage() {
                                                 children: "Gender"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 214,
+                                                lineNumber: 207,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
                                                 children: "Male"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 215,
+                                                lineNumber: 208,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
                                                 children: "Female"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 216,
+                                                lineNumber: 209,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 206,
+                                        lineNumber: 202,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -1589,19 +1640,19 @@ function UsersPage() {
                                         children: "Export CSV"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 220,
+                                        lineNumber: 212,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 191,
+                                lineNumber: 190,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                        lineNumber: 173,
+                        lineNumber: 178,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1626,17 +1677,17 @@ function UsersPage() {
                                                 children: h
                                             }, h, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 245,
+                                                lineNumber: 227,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 234,
+                                        lineNumber: 225,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                    lineNumber: 233,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tbody", {
@@ -1647,12 +1698,12 @@ function UsersPage() {
                                             children: "Loading..."
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 258,
+                                            lineNumber: 236,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 257,
+                                        lineNumber: 235,
                                         columnNumber: 17
                                     }, this) : users.length ? users.map((user, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
                                             className: "border-b border-gray-200 hover:bg-gray-50",
@@ -1662,7 +1713,7 @@ function UsersPage() {
                                                     children: user.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 268,
+                                                    lineNumber: 241,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1670,7 +1721,7 @@ function UsersPage() {
                                                     children: user.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 269,
+                                                    lineNumber: 242,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1678,7 +1729,7 @@ function UsersPage() {
                                                     children: user.location
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 270,
+                                                    lineNumber: 243,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1686,7 +1737,7 @@ function UsersPage() {
                                                     children: user.gender
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 271,
+                                                    lineNumber: 244,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1694,7 +1745,7 @@ function UsersPage() {
                                                     children: user.joined
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 272,
+                                                    lineNumber: 245,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1704,19 +1755,19 @@ function UsersPage() {
                                                         children: "✔ Yes"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                        lineNumber: 276,
-                                                        columnNumber: 25
+                                                        lineNumber: 248,
+                                                        columnNumber: 27
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                         className: "text-red-600",
                                                         children: "✘ No"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                        lineNumber: 278,
-                                                        columnNumber: 25
+                                                        lineNumber: 249,
+                                                        columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 274,
+                                                    lineNumber: 246,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1725,10 +1776,10 @@ function UsersPage() {
                                                         className: "flex items-center gap-2",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: `w-2 h-2 sm:w-3 sm:h-3 rounded-full ${user.status === "Approved" ? "bg-green-500" : user.status === "Pending" ? "bg-yellow-400" : "bg-red-500"}`
+                                                                className: `w-2 h-2 sm:w-3 sm:h-3 rounded-full ${user.status === "approved" ? "bg-green-500" : user.status === "pending" ? "bg-yellow-400" : "bg-red-500"}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                lineNumber: 284,
+                                                                lineNumber: 253,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -1736,18 +1787,18 @@ function UsersPage() {
                                                                 children: user.status
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                lineNumber: 293,
+                                                                lineNumber: 258,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                        lineNumber: 283,
+                                                        lineNumber: 252,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 282,
+                                                    lineNumber: 251,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1755,13 +1806,13 @@ function UsersPage() {
                                                     children: user.lastActive
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 297,
+                                                    lineNumber: 261,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, idx, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 264,
+                                            lineNumber: 240,
                                             columnNumber: 19
                                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("tr", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("td", {
@@ -1770,28 +1821,28 @@ function UsersPage() {
                                             children: "No users found."
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 302,
+                                            lineNumber: 266,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 301,
+                                        lineNumber: 265,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                    lineNumber: 255,
+                                    lineNumber: 233,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                            lineNumber: 232,
+                            lineNumber: 223,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                        lineNumber: 231,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1804,7 +1855,7 @@ function UsersPage() {
                                 children: "◄ Prev"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 314,
+                                lineNumber: 275,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -1812,7 +1863,7 @@ function UsersPage() {
                                 children: "|"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 322,
+                                lineNumber: 282,
                                 columnNumber: 11
                             }, this),
                             Array.from({
@@ -1826,29 +1877,29 @@ function UsersPage() {
                                             children: page
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 327,
-                                            columnNumber: 17
+                                            lineNumber: 285,
+                                            columnNumber: 15
                                         }, this),
                                         idx !== arr.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                             className: "hidden sm:inline",
                                             children: "|"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 338,
-                                            columnNumber: 44
+                                            lineNumber: 291,
+                                            columnNumber: 42
                                         }, this)
                                     ]
                                 }, page, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                    lineNumber: 326,
-                                    columnNumber: 15
+                                    lineNumber: 284,
+                                    columnNumber: 13
                                 }, this)),
                             end < totalPages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                 className: "hidden sm:inline",
                                 children: "....."
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 343,
+                                lineNumber: 294,
                                 columnNumber: 32
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -1856,7 +1907,7 @@ function UsersPage() {
                                 children: "|"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 344,
+                                lineNumber: 295,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -1866,30 +1917,47 @@ function UsersPage() {
                                 children: "Next ►"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 346,
+                                lineNumber: 296,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                        lineNumber: 312,
+                        lineNumber: 274,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                lineNumber: 170,
+                lineNumber: 175,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "bg-white rounded-xl sm:rounded-2xl shadow-md border border-gray-500 p-4 sm:p-6 mt-6 sm:mt-10",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                        className: "text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-900",
-                        children: "Current Images"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between mb-4 sm:mb-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
+                                className: "text-xl sm:text-2xl font-bold text-gray-900",
+                                children: "Current Images"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
+                                lineNumber: 310,
+                                columnNumber: 11
+                            }, this),
+                            bannerLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                className: "text-sm text-gray-400 animate-pulse",
+                                children: "Updating..."
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
+                                lineNumber: 312,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                        lineNumber: 361,
+                        lineNumber: 309,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1905,15 +1973,16 @@ function UsersPage() {
                                                 fill: true,
                                                 alt: "banner",
                                                 className: "object-cover",
-                                                sizes: "(max-width: 640px) 100vw, 300px"
+                                                sizes: "(max-width: 640px) 100vw, 300px",
+                                                unoptimized: true
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                lineNumber: 371,
+                                                lineNumber: 324,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 370,
+                                            lineNumber: 323,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1921,7 +1990,8 @@ function UsersPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                                     onClick: ()=>handleUpdateBanner(banner._id),
-                                                    className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2 border-2 border-red-500 text-red-500 rounded-xl text-sm sm:text-base font-semibold w-full sm:w-auto",
+                                                    disabled: bannerLoading,
+                                                    className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2 border-2 border-red-500 text-red-500 rounded-xl text-sm sm:text-base font-semibold w-full sm:w-auto hover:bg-red-50 transition disabled:opacity-50",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                                             width: "18",
@@ -1937,32 +2007,33 @@ function UsersPage() {
                                                                     d: "M12 20h9"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 397,
+                                                                    lineNumber: 342,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                                                                     d: "M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 398,
+                                                                    lineNumber: 343,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                            lineNumber: 387,
+                                                            lineNumber: 341,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Edit"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 383,
+                                                    lineNumber: 336,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                                     onClick: ()=>handleDeleteBanner(banner._id),
-                                                    className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2 border-2 border-red-500 text-red-500 rounded-xl text-sm sm:text-base font-semibold w-full sm:w-auto",
+                                                    disabled: bannerLoading,
+                                                    className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2 border-2 border-red-500 text-red-500 rounded-xl text-sm sm:text-base font-semibold w-full sm:w-auto hover:bg-red-50 transition disabled:opacity-50",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                                             width: "18",
@@ -1978,14 +2049,14 @@ function UsersPage() {
                                                                     points: "3 6 5 6 21 6"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 418,
+                                                                    lineNumber: 355,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                                                                     d: "M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 419,
+                                                                    lineNumber: 356,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
@@ -1995,7 +2066,7 @@ function UsersPage() {
                                                                     y2: "17"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 420,
+                                                                    lineNumber: 357,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
@@ -2005,32 +2076,32 @@ function UsersPage() {
                                                                     y2: "17"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                                    lineNumber: 421,
+                                                                    lineNumber: 358,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                            lineNumber: 408,
+                                                            lineNumber: 354,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Delete"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                                    lineNumber: 404,
+                                                    lineNumber: 349,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                            lineNumber: 380,
+                                            lineNumber: 334,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, banner._id, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                    lineNumber: 366,
+                                    lineNumber: 319,
                                     columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
@@ -2042,40 +2113,41 @@ function UsersPage() {
                                         children: "Add More"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 433,
+                                        lineNumber: 369,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
                                         type: "file",
+                                        accept: "image/*",
                                         className: "hidden",
                                         onChange: handleAddBanner
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                        lineNumber: 434,
+                                        lineNumber: 370,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                                lineNumber: 431,
+                                lineNumber: 367,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                        lineNumber: 363,
+                        lineNumber: 316,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-                lineNumber: 359,
+                lineNumber: 307,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/dashboard/UserTable.js",
-        lineNumber: 167,
+        lineNumber: 172,
         columnNumber: 5
     }, this);
 }
@@ -2135,7 +2207,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -2148,17 +2220,24 @@ function connectSocket(adminId) {
         }
     });
     socket.on("connect", ()=>{
-        console.log("🔵 SOCKET CONNECTED:", socket.id);
+        console.log(" SOCKET CONNECTED:", socket.id);
+        socket.emit("join", adminId);
+        console.log(" adminId:", adminId);
     });
-    socket.on("disconnect", ()=>{
-        console.log("🔴 SOCKET DISCONNECTED");
+    socket.on("disconnect", (reason)=>{
+        console.log(":red_circle: SOCKET DISCONNECTED — reason:", reason); // :white_check_mark: reason add kiya
+    });
+    // :white_check_mark: Ye add karo — reconnect pe dobara join karo
+    socket.on("reconnect", ()=>{
+        console.log(":repeat: RECONNECTED — rejoining room");
+        socket.emit("join", adminId);
     });
     return socket;
 }
 function disconnectSocket() {
     if (socket) {
         socket.disconnect();
-        console.log("🔴 SOCKET MANUALLY DISCONNECTED");
+        console.log(":red_circle: SOCKET MANUALLY DISCONNECTED");
     }
 }
 function getSocket() {
@@ -2204,11 +2283,11 @@ const Index = ()=>{
     ];
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [notifications, setNotifications] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
-    const [unread, setUnread] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0); // ⭐ NEW
+    const [unread, setUnread] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
+    const [adminId, setAdminId] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null); // store admin ID
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
-    const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
-    const [adminPref, setAdminPref] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null);
+    const BASE_URL = "https://merimonial-backend.onrender.com";
     /* ROTATE PLACEHOLDERS */ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const interval = setInterval(()=>{
             setIndex((prev)=>(prev + 1) % placeholders.length);
@@ -2224,32 +2303,27 @@ const Index = ()=>{
         document.addEventListener("mousedown", handler);
         return ()=>document.removeEventListener("mousedown", handler);
     }, []);
-    /* FETCH ADMIN NOTIFICATION PREFERENCES */ const loadAdminPrefs = async ()=>{
-        try {
-            const token = localStorage.getItem("token");
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            const data = await res.json();
-            if (data.success) {
-                setAdminPref(data.data);
-                // auto connect socket
-                if (data.data.notifications) {
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["connectSocket"])(data.data._id);
-                } else {
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["disconnectSocket"])();
-                }
-            }
-        } catch (err) {
-            console.log("Admin Pref load error:", err);
+    /* GET ADMIN ID FROM LOCALSTORAGE */ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user?.userId) {
+            setAdminId(user.userId);
+            console.log("Admin ID from localStorage:", user.userId);
+        } else {
+            console.warn("No admin ID found in localStorage");
         }
-    };
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        loadAdminPrefs();
     }, []);
-    /* FETCH NOTIFICATIONS FROM API */ const fetchNotifications = async ()=>{
+    /* CONNECT SOCKET WHEN ADMIN ID IS AVAILABLE */ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
+        if (adminId) {
+            console.log("Connecting socket with adminId:", adminId);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["connectSocket"])(adminId);
+        } else {
+            // Optionally disconnect if no ID
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["disconnectSocket"])();
+        }
+    }, [
+        adminId
+    ]);
+    /* FETCH NOTIFICATIONS */ const fetchNotifications = async ()=>{
         try {
             const token = localStorage.getItem("token");
             const res = await fetch(`${BASE_URL}/api/notification/me`, {
@@ -2261,7 +2335,7 @@ const Index = ()=>{
             if (data.success) {
                 const list = data.data.reverse();
                 setNotifications(list);
-                setUnread(list.filter((n)=>!n.read).length); // ⭐ NEW
+                setUnread(list.filter((n)=>!n.read).length);
             }
         } catch (err) {
             console.log("Notification fetch error:", err);
@@ -2271,41 +2345,42 @@ const Index = ()=>{
         fetchNotifications();
     }, []);
     /* RECEIVE REAL-TIME NOTIFICATIONS */ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        if (!adminPref) return;
+        if (!adminId) return;
         const socket = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getSocket"])();
         if (!socket) return;
-        // NEW notification
+        socket.off("new-notification");
+        socket.off("one-read");
+        socket.off("all-read");
+        socket.off("delete-one");
+        socket.off("delete-all");
         socket.on("new-notification", (data)=>{
+            console.log(":bell: NOTIFICATION RECEIVED:", data);
             setNotifications((prev)=>[
                     data,
                     ...prev
                 ]);
-            setUnread((u)=>u + 1); // ⭐ NEW
+            setUnread((u)=>u + 1);
         });
-        // mark-one from other tab
         socket.on("one-read", ({ id })=>{
             setNotifications((prev)=>prev.map((n)=>n._id === id ? {
                         ...n,
                         read: true
                     } : n));
-            setUnread((u)=>Math.max(0, u - 1)); // ⭐ NEW
+            setUnread((u)=>Math.max(0, u - 1));
         });
-        // mark-all from other tab
         socket.on("all-read", ()=>{
             setNotifications((prev)=>prev.map((n)=>({
                         ...n,
                         read: true
                     })));
-            setUnread(0); // ⭐ NEW
+            setUnread(0);
         });
-        // delete-one sync
         socket.on("delete-one", ({ id })=>{
             setNotifications((prev)=>prev.filter((n)=>n._id !== id));
         });
-        // delete-all sync
         socket.on("delete-all", ()=>{
             setNotifications([]);
-            setUnread(0); // ⭐ NEW
+            setUnread(0);
         });
         return ()=>{
             socket.off("new-notification");
@@ -2315,8 +2390,8 @@ const Index = ()=>{
             socket.off("delete-all");
         };
     }, [
-        adminPref
-    ]);
+        adminId
+    ]); // No dependency needed; socket instance is stable
     /* SEND NOTIFICATION */ const sendNotification = async (title, message)=>{
         try {
             const token = localStorage.getItem("token");
@@ -2337,7 +2412,7 @@ const Index = ()=>{
                         data.data,
                         ...prev
                     ]);
-                setUnread((u)=>u + 1); // ⭐ NEW
+                setUnread((u)=>u + 1);
                 return true;
             }
         } catch (err) {
@@ -2358,7 +2433,7 @@ const Index = ()=>{
                         ...n,
                         read: true
                     } : n));
-            setUnread((u)=>Math.max(0, u - 1)); // ⭐ NEW
+            setUnread((u)=>Math.max(0, u - 1));
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getSocket"])()?.emit("one-read", {
                 id
             });
@@ -2379,7 +2454,7 @@ const Index = ()=>{
                         ...n,
                         read: true
                     })));
-            setUnread(0); // ⭐ NEW
+            setUnread(0);
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getSocket"])()?.emit("all-read");
         } catch (e) {
             console.log(e);
@@ -2412,7 +2487,7 @@ const Index = ()=>{
                     }
                 })));
             setNotifications([]);
-            setUnread(0); // ⭐ NEW
+            setUnread(0);
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getSocket"])()?.emit("delete-all");
         } catch (e) {
             console.log(e);
@@ -2426,11 +2501,11 @@ const Index = ()=>{
                         ...n,
                         read: true
                     })));
-            setUnread(0); // ⭐ NEW
+            setUnread(0);
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getSocket"])()?.emit("all-read");
         }
     };
-    const showRedDot = unread > 0; // ⭐ FIXED
+    const showRedDot = unread > 0;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
         className: "flex w-full",
         children: [
@@ -2438,7 +2513,7 @@ const Index = ()=>{
                 className: "fixed top-0 left-0 h-full w-[250px] bg-white shadow-md border-r p-4"
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                lineNumber: 285,
+                lineNumber: 201,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2449,7 +2524,7 @@ const Index = ()=>{
                         children: "Dashboard"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 289,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2468,19 +2543,19 @@ const Index = ()=>{
                                     d: "M12 24c1.104 0 2-.897 2-2h-4c0 1.103.896 2 2 2zm6.707-5l1.293 1.293V21H4v-1.707L5.293 19H6v-7c0-3.309 2.691-6 6-6s6 2.691 6 6v7h.707zM18 18H6v-7c0-2.757 2.243-5 5-5s5 2.243 5 5v7z"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                    lineNumber: 303,
+                                    lineNumber: 218,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                lineNumber: 294,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             showRedDot && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                 className: "absolute top-0 right-0 w-3 h-3 bg-red-600 rounded-full border border-white"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                lineNumber: 308,
+                                lineNumber: 223,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2494,7 +2569,7 @@ const Index = ()=>{
                                                 children: "Notifications"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                lineNumber: 316,
+                                                lineNumber: 230,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -2503,13 +2578,13 @@ const Index = ()=>{
                                                 children: "Mark all read"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                lineNumber: 317,
+                                                lineNumber: 231,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                        lineNumber: 315,
+                                        lineNumber: 229,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     notifications.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -2517,7 +2592,7 @@ const Index = ()=>{
                                         children: "No notifications"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                        lineNumber: 321,
+                                        lineNumber: 235,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)) : notifications.map((n)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "border-b pb-3 mb-3",
@@ -2530,7 +2605,7 @@ const Index = ()=>{
                                                             children: n.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                            lineNumber: 326,
+                                                            lineNumber: 240,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -2539,13 +2614,13 @@ const Index = ()=>{
                                                             children: "Delete"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                            lineNumber: 327,
+                                                            lineNumber: 241,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                    lineNumber: 325,
+                                                    lineNumber: 239,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -2553,7 +2628,7 @@ const Index = ()=>{
                                                     children: n.message
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                    lineNumber: 335,
+                                                    lineNumber: 245,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -2561,13 +2636,13 @@ const Index = ()=>{
                                                     children: new Date(n.createdAt).toLocaleString()
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                    lineNumber: 336,
+                                                    lineNumber: 246,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, n._id, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                            lineNumber: 324,
+                                            lineNumber: 238,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))),
                                     notifications.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["Fragment"], {
@@ -2576,7 +2651,7 @@ const Index = ()=>{
                                                 className: "border-gray-300 my-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                lineNumber: 345,
+                                                lineNumber: 255,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -2585,7 +2660,7 @@ const Index = ()=>{
                                                 children: "Delete All"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                                lineNumber: 346,
+                                                lineNumber: 256,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
@@ -2593,19 +2668,19 @@ const Index = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                                lineNumber: 313,
+                                lineNumber: 228,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 291,
+                        lineNumber: 207,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                lineNumber: 288,
+                lineNumber: 204,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2613,38 +2688,29 @@ const Index = ()=>{
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$dashboard$2f$TopSection$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 362,
+                        lineNumber: 268,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$dashboard$2f$AnalyticsChart$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 363,
+                        lineNumber: 269,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$component$2f$dashboard$2f$UserTable$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 364,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                        onClick: ()=>sendNotification("Test Notification", "This is a live notification."),
-                        className: "mt-10 px-6 py-3 bg-blue-600 text-white rounded-lg",
-                        children: "Send Test Notification"
-                    }, void 0, false, {
-                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                        lineNumber: 367,
+                        lineNumber: 270,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-                lineNumber: 361,
+                lineNumber: 267,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/pages/dashboard/index.js",
-        lineNumber: 282,
+        lineNumber: 199,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

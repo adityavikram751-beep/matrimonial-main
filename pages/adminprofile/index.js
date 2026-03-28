@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FiEdit } from "react-icons/fi";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 
 /* ---------------------------
    SOCKET IMPORT
@@ -456,7 +456,7 @@ export default function AdminProfilePage() {
   const loadProfile = async () => {
     try {
       const token = getAuthTokenFromLocalStorage();
-      const res = await fetch(`${BASE_URL}/admin/profile`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
         headers: token ? { Authorization: `Bearer ${token}` } : {},
       });
       const json = await res.json();
@@ -512,7 +512,7 @@ export default function AdminProfilePage() {
       fd.append("phone", values.phone);
       if (values.profileImage) fd.append("profileImage", values.profileImage);
 
-      const res = await fetch(`${BASE_URL}/admin/profile/basic`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/update-basic/profile`, {
         method: "PUT",
         headers: token ? { Authorization: `Bearer ${token}` } : {},
         body: fd,
@@ -535,7 +535,7 @@ export default function AdminProfilePage() {
   const handleSaveSecurity = async (values) => {
     try {
       const token = getAuthTokenFromLocalStorage();
-      const res = await fetch(`${BASE_URL}/admin/profile/security`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/update/security`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -564,7 +564,7 @@ export default function AdminProfilePage() {
   const handleSavePreferences = async (values) => {
     try {
       const token = getAuthTokenFromLocalStorage();
-      const res = await fetch(`${BASE_URL}/admin/profile/preferences`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/update-profile/preferences`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -606,7 +606,7 @@ export default function AdminProfilePage() {
     try {
       const token = getAuthTokenFromLocalStorage();
 
-      const res = await fetch(`${BASE_URL}/admin/profile/preferences`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/update-profile/preferences`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

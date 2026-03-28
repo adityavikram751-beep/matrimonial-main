@@ -477,7 +477,7 @@ var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 const UserDetailCard = ({ user })=>{
     _s();
     const [currentUser, setCurrentUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(user);
@@ -496,6 +496,7 @@ const UserDetailCard = ({ user })=>{
   ------------------------------- */ const updateStatus = async (status)=>{
         try {
             const token = localStorage.getItem('token');
+            console.log;
             const res = await fetch(`${BASE_URL}/admin/user-verify/${currentUser._id}/status`, {
                 method: "PATCH",
                 headers: {
@@ -994,7 +995,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

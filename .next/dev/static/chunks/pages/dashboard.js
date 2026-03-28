@@ -6,14 +6,14 @@ __turbopack_load_page_chunks__("/dashboard", [
   "static/chunks/647d8_next_dist_c077c4a9._.js",
   "static/chunks/647d8_next_b91371f2._.js",
   "static/chunks/647d8_react-dom_4e5e3a70._.js",
-  "static/chunks/647d8_recharts_es6_util_da8af2ab._.js",
-  "static/chunks/647d8_recharts_es6_state_56601fab._.js",
+  "static/chunks/647d8_recharts_es6_util_33bfdeab._.js",
+  "static/chunks/647d8_recharts_es6_state_bf535406._.js",
   "static/chunks/647d8_recharts_es6_component_fa1c5c7a._.js",
-  "static/chunks/647d8_recharts_es6_cartesian_5c80acb2._.js",
+  "static/chunks/647d8_recharts_es6_cartesian_b13e0310._.js",
   "static/chunks/647d8_recharts_es6_bef32f8b._.js",
   "static/chunks/647d8_react-icons_fa_index_mjs_f91888a9._.js",
   "static/chunks/647d8_react-icons_lib_e6215aa5._.js",
-  "static/chunks/647d8_7d40662f._.js",
+  "static/chunks/647d8_16623d98._.js",
   "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_dashboard_index_2da965e7.js",
-  "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_dashboard_index_c1721615.js"
+  "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_dashboard_index_bf09c959.js"
 ])

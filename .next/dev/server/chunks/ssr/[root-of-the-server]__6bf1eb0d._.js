@@ -20,7 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matri
 ;
 ;
 function AnalyticsPage() {
-    const API = "https://matrimonial-backend-7ahc.onrender.com/admin/getByGender";
+    const API = "https://merimonial-backend.onrender.com/admin/getByGender";
     // Month list
     const MONTHS = [
         "January",
@@ -805,7 +805,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/OneDrive/Desktop/matrimonial-admin/src/component/dashboard/TopSection.js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -2129,7 +2129,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -2201,7 +2201,7 @@ const Index = ()=>{
     const [unread, setUnread] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0); // ⭐ NEW
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
-    const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+    const BASE_URL = "https://merimonial-backend.onrender.com";
     const [adminPref, setAdminPref] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null);
     /* ROTATE PLACEHOLDERS */ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const interval = setInterval(()=>{
@@ -2221,7 +2221,7 @@ const Index = ()=>{
     /* FETCH ADMIN NOTIFICATION PREFERENCES */ const loadAdminPrefs = async ()=>{
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

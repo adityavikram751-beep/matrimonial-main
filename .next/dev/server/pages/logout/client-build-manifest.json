@@ -1,0 +1,5 @@
+{
+  "/logout": [
+    "static/chunks/pages/logout.js"
+  ]
+}

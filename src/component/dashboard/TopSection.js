@@ -116,8 +116,8 @@ const StatsSplitCard = () => {
         <div className="block sm:hidden lg:block xl:hidden w-full h-[1px] bg-gray-300 my-4" />
 
         {/* RIGHT */}
-        <div className="text-center sm:text-left lg:text-center xl:text-left">
-          <p className="text-[14px] sm:text-[16px] font-bold text-gray-800">New Signups</p>
+        <div className="text-center sm:text-left lg:text-center xl:text-left ">
+          <p className="text-[14px] sm:text-[16px] font-bold text-gray-800">NewSignups</p>
           <h2 className="text-[24px] sm:text-[28px] lg:text-[30px] leading-[32px] font-semibold">{newSignups}</h2>
           <ChangeIndicator percent={signupChangePercent} />
         </div>
@@ -162,7 +162,7 @@ const StatsSplitCard = () => {
 
           <div className="relative">
             <Donut value={reportedPercent} />
-            <span className="absolute top-[28px] left-[30px] text-[14px] font-semibold">
+            <span className="absolute top-[25px] left-[22px] text-[14px] font-semibold">
               {reportedPercent}%
             </span>
           </div>

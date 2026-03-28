@@ -16,13 +16,12 @@ const Index = () => {
   const [index, setIndex] = useState(0);
 
   const [notifications, setNotifications] = useState([]);
-  const [unread, setUnread] = useState(0);   // ⭐ NEW
+  const [unread, setUnread] = useState(0);
   const [open, setOpen] = useState(false);
+  const [adminId, setAdminId] = useState(null);   // store admin ID
 
   const dropdownRef = useRef(null);
-  const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
-
-  const [adminPref, setAdminPref] = useState(null);
+  const BASE_URL = "https://merimonial-backend.onrender.com";
 
   /* ROTATE PLACEHOLDERS */
   useEffect(() => {
@@ -39,56 +38,44 @@ const Index = () => {
         setOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  /* FETCH ADMIN NOTIFICATION PREFERENCES */
-  const loadAdminPrefs = async () => {
-    try {
-      const token = localStorage.getItem("token");
-
-      const res = await fetch(`${BASE_URL}/admin/profile`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        setAdminPref(data.data);
-
-        // auto connect socket
-        if (data.data.notifications) {
-          connectSocket(data.data._id);
-        } else {
-          disconnectSocket();
-        }
-      }
-    } catch (err) {
-      console.log("Admin Pref load error:", err);
-    }
-  };
-
+  /* GET ADMIN ID FROM LOCALSTORAGE */
   useEffect(() => {
-    loadAdminPrefs();
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user?.userId) {   // adjust key if needed (userId, _id, id, etc.)
+      setAdminId(user.userId);
+      console.log("Admin ID from localStorage:", user.userId);
+    } else {
+      console.warn("No admin ID found in localStorage");
+    }
   }, []);
 
-  /* FETCH NOTIFICATIONS FROM API */
+  /* CONNECT SOCKET WHEN ADMIN ID IS AVAILABLE */
+  useEffect(() => {
+    if (adminId) {
+      console.log("Connecting socket with adminId:", adminId);
+      connectSocket(adminId);
+    } else {
+      // Optionally disconnect if no ID
+      disconnectSocket();
+    }
+  }, [adminId]);
+
+  /* FETCH NOTIFICATIONS */
   const fetchNotifications = async () => {
     try {
       const token = localStorage.getItem("token");
-
       const res = await fetch(`${BASE_URL}/api/notification/me`, {
         headers: { Authorization: `Bearer ${token}` }
       });
-
       const data = await res.json();
-
       if (data.success) {
         const list = data.data.reverse();
         setNotifications(list);
-        setUnread(list.filter((n) => !n.read).length);   // ⭐ NEW
+        setUnread(list.filter((n) => !n.read).length);
       }
     } catch (err) {
       console.log("Notification fetch error:", err);
@@ -100,80 +87,29 @@ const Index = () => {
   }, []);
 
   /* RECEIVE REAL-TIME NOTIFICATIONS */
-  useEffect(() => {
-    if (!adminPref) return;
-
-    const socket = getSocket();
-    if (!socket) return;
-
-    // NEW notification
-    socket.on("new-notification", (data) => {
-      setNotifications((prev) => [data, ...prev]);
-      setUnread((u) => u + 1);   // ⭐ NEW
-    });
-
-    // mark-one from other tab
-    socket.on("one-read", ({ id }) => {
-      setNotifications((prev) =>
-        prev.map((n) => n._id === id ? { ...n, read: true } : n)
-      );
-      setUnread((u) => Math.max(0, u - 1));   // ⭐ NEW
-    });
-
-    // mark-all from other tab
-    socket.on("all-read", () => {
-      setNotifications((prev) => prev.map((n) => ({ ...n, read: true })));
-      setUnread(0);   // ⭐ NEW
-    });
-
-    // delete-one sync
-    socket.on("delete-one", ({ id }) => {
-      setNotifications((prev) => prev.filter((n) => n._id !== id));
-    });
-
-    // delete-all sync
-    socket.on("delete-all", () => {
-      setNotifications([]);
-      setUnread(0);   // ⭐ NEW
-    });
-
-    return () => {
-      socket.off("new-notification");
-      socket.off("one-read");
-      socket.off("all-read");
-      socket.off("delete-one");
-      socket.off("delete-all");
-    };
-  }, [adminPref]);
+ useEffect(() => {  if (!adminId) return;  const socket = getSocket();  if (!socket) return;  socket.off("new-notification"); socket.off("one-read"); socket.off("all-read"); socket.off("delete-one"); socket.off("delete-all");  socket.on("new-notification", (data) => {    console.log(":bell: NOTIFICATION RECEIVED:", data);  setNotifications((prev) => [data, ...prev]);    setUnread((u) => u + 1);  }); socket.on("one-read", ({ id }) => {    setNotifications((prev) => prev.map((n) => n._id === id ? { ...n, read: true } : n)    );    setUnread((u) => Math.max(0, u - 1));  }); socket.on("all-read", () => {    setNotifications((prev) => prev.map((n) => ({ ...n, read: true })));    setUnread(0);  }); socket.on("delete-one", ({ id }) => {    setNotifications((prev) => prev.filter((n) => n._id !== id));  }); socket.on("delete-all", () => {    setNotifications([]);    setUnread(0);  });  return () => { socket.off("new-notification"); socket.off("one-read"); socket.off("all-read"); socket.off("delete-one"); socket.off("delete-all");  };}, [adminId]); // No dependency needed; socket instance is stable
 
   /* SEND NOTIFICATION */
   const sendNotification = async (title, message) => {
     try {
       const token = localStorage.getItem("token");
-
       const res = await fetch(`${BASE_URL}/api/notification/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({
-          title,
-          message,
-        }),
+        body: JSON.stringify({ title, message }),
       });
-
       const data = await res.json();
-
       if (data.success) {
         setNotifications((prev) => [data.data, ...prev]);
-        setUnread((u) => u + 1);   // ⭐ NEW
+        setUnread((u) => u + 1);
         return true;
       }
     } catch (err) {
       console.log("Send Notification Error:", err);
     }
-
     return false;
   };
 
@@ -181,20 +117,15 @@ const Index = () => {
   const markRead = async (id) => {
     try {
       const token = localStorage.getItem("token");
-
       await fetch(`${BASE_URL}/api/notification/mark-read/${id}`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` }
       });
-
       setNotifications((prev) =>
         prev.map((n) => n._id === id ? { ...n, read: true } : n)
       );
-
-      setUnread((u) => Math.max(0, u - 1));   // ⭐ NEW
-
+      setUnread((u) => Math.max(0, u - 1));
       getSocket()?.emit("one-read", { id });
-
     } catch (e) {
       console.log(e);
     }
@@ -204,17 +135,13 @@ const Index = () => {
   const markAll = async () => {
     try {
       const token = localStorage.getItem("token");
-
       await fetch(`${BASE_URL}/api/notification/mark-all`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` }
       });
-
       setNotifications((prev) => prev.map((n) => ({ ...n, read: true })));
-      setUnread(0);   // ⭐ NEW
-
+      setUnread(0);
       getSocket()?.emit("all-read");
-
     } catch (e) {
       console.log(e);
     }
@@ -224,16 +151,12 @@ const Index = () => {
   const deleteOne = async (id) => {
     try {
       const token = localStorage.getItem("token");
-
       await fetch(`${BASE_URL}/api/notification/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });
-
       setNotifications((prev) => prev.filter((n) => n._id !== id));
-
       getSocket()?.emit("delete-one", { id });
-
     } catch (e) {
       console.log(e);
     }
@@ -243,7 +166,6 @@ const Index = () => {
   const deleteAll = async () => {
     try {
       const token = localStorage.getItem("token");
-
       await Promise.all(
         notifications.map((n) =>
           fetch(`${BASE_URL}/api/notification/${n._id}`, {
@@ -252,12 +174,9 @@ const Index = () => {
           })
         )
       );
-
       setNotifications([]);
-      setUnread(0);   // ⭐ NEW
-
+      setUnread(0);
       getSocket()?.emit("delete-all");
-
     } catch (e) {
       console.log(e);
     }
@@ -267,20 +186,17 @@ const Index = () => {
   const handleBellClick = () => {
     const newOpen = !open;
     setOpen(newOpen);
-
     if (newOpen) {
       setNotifications((prev) => prev.map((n) => ({ ...n, read: true })));
-      setUnread(0);   // ⭐ NEW
-
+      setUnread(0);
       getSocket()?.emit("all-read");
     }
   };
 
-  const showRedDot = unread > 0;   // ⭐ FIXED
+  const showRedDot = unread > 0;
 
   return (
     <div className="flex w-full">
-
       {/* SIDEBAR */}
       <div className="fixed top-0 left-0 h-full w-[250px] bg-white shadow-md border-r p-4"></div>
 
@@ -289,7 +205,6 @@ const Index = () => {
         <h1 className="text-[28px] font-extrabold text-black">Dashboard</h1>
 
         <div className="relative cursor-pointer" ref={dropdownRef}>
-          
           {/* BELL */}
           <svg
             onClick={handleBellClick}
@@ -311,7 +226,6 @@ const Index = () => {
           {/* DROPDOWN */}
           {open && (
             <div className="absolute right-0 mt-3 w-80 bg-white shadow-xl border rounded-lg max-h-96 overflow-y-auto p-3">
-
               <div className="flex justify-between items-center mb-3">
                 <h3 className="font-semibold text-[16px]">Notifications</h3>
                 <button onClick={markAll} className="text-blue-600 text-sm">Mark all read</button>
@@ -324,14 +238,10 @@ const Index = () => {
                   <div key={n._id} className="border-b pb-3 mb-3">
                     <div className="flex justify-between items-center">
                       <p className="font-bold text-[15px] capitalize">{n.title}</p>
-                      <button
-                        onClick={() => deleteOne(n._id)}
-                        className="text-red-600 text-xs"
-                      >
+                      <button onClick={() => deleteOne(n._id)} className="text-red-600 text-xs">
                         Delete
                       </button>
                     </div>
-
                     <p className="text-gray-600 text-[13px] mt-1">{n.message}</p>
                     <p className="text-gray-500 text-[11px] mt-1">
                       {new Date(n.createdAt).toLocaleString()}
@@ -343,15 +253,11 @@ const Index = () => {
               {notifications.length > 0 && (
                 <>
                   <hr className="border-gray-300 my-2" />
-                  <button
-                    onClick={deleteAll}
-                    className="w-full py-2 text-red-600 font-semibold text-sm"
-                  >
+                  <button onClick={deleteAll} className="w-full py-2 text-red-600 font-semibold text-sm">
                     Delete All
                   </button>
                 </>
               )}
-
             </div>
           )}
         </div>
@@ -364,16 +270,8 @@ const Index = () => {
         <UserTable />
 
         {/* SEND TEST NOTIFICATION */}
-        <button
-          onClick={() =>
-            sendNotification("Test Notification", "This is a live notification.")
-          }
-          className="mt-10 px-6 py-3 bg-blue-600 text-white rounded-lg"
-        >
-          Send Test Notification
-        </button>
+      
       </div>
-
     </div>
   );
 };

@@ -5263,6 +5263,8 @@ const getHandler = ({ srcPage: originalSrcPage, config, userland, routeModule, i
 "[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/managesubadmin/index.js [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/Downloads/matrimonial-main/matrimonial-main/pages/_app.js [ssr] (ecmascript)\" } [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+return __turbopack_context__.a(async (__turbopack_handle_async_dependencies__, __turbopack_async_result__) => { try {
+
 __turbopack_context__.s([
     "config",
     ()=>config,
@@ -5300,6 +5302,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$
 // Import the userland code.
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$pages$2f$managesubadmin$2f$index$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/pages/managesubadmin/index.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$route$2d$modules$2f$pages$2f$pages$2d$handler$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/dist/esm/server/route-modules/pages/pages-handler.js [ssr] (ecmascript)");
+var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
+    __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$pages$2f$managesubadmin$2f$index$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__
+]);
+[__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$pages$2f$managesubadmin$2f$index$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__;
 ;
 ;
 ;
@@ -5345,7 +5351,8 @@ const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f
     getStaticProps,
     getServerSideProps
 }); //# sourceMappingURL=pages.js.map
-}),
+__turbopack_async_result__();
+} catch(e) { __turbopack_async_result__(e); } }, false);}),
 ];
 
 //# sourceMappingURL=647d8_next_dist_46c15371._.js.map

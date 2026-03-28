@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 
 const UserDetailCard = ({ user }) => {
   const [currentUser, setCurrentUser] = useState(user);
@@ -23,7 +23,7 @@ const UserDetailCard = ({ user }) => {
   ------------------------------- */
   const updateStatus = async (status) => {
     try {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem('token'); console.log
 
       const res = await fetch(
         `${BASE_URL}/admin/user-verify/${currentUser._id}/status`,

@@ -31,7 +31,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -44,17 +44,24 @@ function connectSocket(adminId) {
         }
     });
     socket.on("connect", ()=>{
-        console.log("🔵 SOCKET CONNECTED:", socket.id);
+        console.log(" SOCKET CONNECTED:", socket.id);
+        socket.emit("join", adminId);
+        console.log(" adminId:", adminId);
     });
-    socket.on("disconnect", ()=>{
-        console.log("🔴 SOCKET DISCONNECTED");
+    socket.on("disconnect", (reason)=>{
+        console.log(":red_circle: SOCKET DISCONNECTED — reason:", reason); // :white_check_mark: reason add kiya
+    });
+    // :white_check_mark: Ye add karo — reconnect pe dobara join karo
+    socket.on("reconnect", ()=>{
+        console.log(":repeat: RECONNECTED — rejoining room");
+        socket.emit("join", adminId);
     });
     return socket;
 }
 function disconnectSocket() {
     if (socket) {
         socket.disconnect();
-        console.log("🔴 SOCKET MANUALLY DISCONNECTED");
+        console.log(":red_circle: SOCKET MANUALLY DISCONNECTED");
     }
 }
 function getSocket() {
@@ -90,13 +97,13 @@ const Search = ()=>{
     const [unreadCount, setUnreadCount] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
-    const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+    const BASE_URL = "https://merimonial-backend.onrender.com";
     /* --------------------------------------------------------
         1) CONNECT SOCKET BASED ON ADMIN PREF
   ---------------------------------------------------------*/ const loadAdminPrefs = async ()=>{
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -466,7 +473,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/ReportModal.js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

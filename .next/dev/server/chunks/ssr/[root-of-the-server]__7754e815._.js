@@ -13,7 +13,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matri
 ;
 ;
 ;
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 const UserDetailCard = ({ user })=>{
     const [currentUser, setCurrentUser] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(user);
     const formatDate = (date)=>{
@@ -520,7 +520,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/OneDrive/Desktop/matrimonial-admin/pages/manageusers/[id].js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

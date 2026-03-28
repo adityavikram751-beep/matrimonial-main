@@ -2,7 +2,7 @@
 // // import React, { useEffect, useRef, useState } from "react";
 // // import { Eye, EyeOff, Edit } from "lucide-react";
 
-// // const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+// // const BASE_URL = "https://merimonial-backend.onrender.com";
 
 // // export default function Admin() {
 // //   const [data, setData] = useState(null);
@@ -13,7 +13,7 @@
 
 // //   const fetchProfile = async () => {
 // //     try {
-// //       const res = await fetch(`${BASE_URL}/admin/profile`);
+// //       const res = await fetch(`${BASE_URL}/api/auth/admin/profile`);
 // //       const json = await res.json();
 // //       setData(json.data);
 // //     } catch (error) {
@@ -173,7 +173,7 @@
 // //   const [assignedRegion, setAssignedRegion] = useState(data.assignedRegion);
 
 // //   const update = async () => {
-// //     await fetch(`${BASE_URL}/admin/profile/basic`, {
+// //     await fetch(`${BASE_URL}/api/auth/admin/api/auth/admin/update-basic/profile`, {
 // //       method: "PUT",
 // //       headers: { "Content-Type": "application/json" },
 // //       body: JSON.stringify({ name, phone, assignedRegion }),
@@ -204,7 +204,7 @@
 // //   const [pass, setPass] = useState("");
 
 // //   const update = async () => {
-// //     await fetch(`${BASE_URL}/admin/profile/security`, {
+// //     await fetch(`${BASE_URL}/api/auth/admin/update/security`, {
 // //       method: "PUT",
 // //       headers: { "Content-Type": "application/json" },
 // //       body: JSON.stringify({
@@ -251,7 +251,7 @@
 // //   const [landingPage, setLandingPage] = useState(data.landingPage);
 
 // //   const update = async () => {
-// //     await fetch(`${BASE_URL}/admin/profile/preferences`, {
+// //     await fetch(`${BASE_URL}/api/auth/admin/update-profile/preferences`, {
 // //       method: "PUT",
 // //       headers: { "Content-Type": "application/json" },
 // //       body: JSON.stringify({

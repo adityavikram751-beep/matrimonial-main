@@ -21,7 +21,7 @@ export default function ReportsThisWeek() {
     (async () => {
       try {
         const res = await fetch(`${API_URL}/admin/reports-this-week`);
-        const json = await res.json();
+        const json = await res.json(); console.log("name",name)
         if (json.success) setReportData(json.data);
       } finally {
         setLoading(false);

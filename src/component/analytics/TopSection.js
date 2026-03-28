@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 
 const WEEK_ORDER = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const WEEK_LABELS = { Sun:"Su", Mon:"Mo", Tue:"Tu", Wed:"We", Thu:"Th", Fri:"Fr", Sat:"Sa" };
@@ -32,7 +32,7 @@ export default function DashboardFinal() {
         yellowBucket[d.date] = Number(d.newUsers || 0);
         greenBucket[d.date] = Number(d.returningUsers || 0);
       });
-
+    
       const orderedYellow = WEEK_ORDER.map((day) => yellowBucket[day] || 0);
       const orderedGreen  = WEEK_ORDER.map((day) => greenBucket[day] || 0);
 

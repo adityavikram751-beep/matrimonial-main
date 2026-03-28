@@ -13,7 +13,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$
 ;
 ;
 ;
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 const UserDetailCard = ({ user })=>{
     const [currentUser, setCurrentUser] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(user);
     const formatDate = (date)=>{
@@ -31,6 +31,7 @@ const UserDetailCard = ({ user })=>{
   ------------------------------- */ const updateStatus = async (status)=>{
         try {
             const token = localStorage.getItem('token');
+            console.log;
             const res = await fetch(`${BASE_URL}/admin/user-verify/${currentUser._id}/status`, {
                 method: "PATCH",
                 headers: {
@@ -520,7 +521,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/Downloads/matrimonial-main/matrimonial-main/pages/manageusers/[id].js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

@@ -9,6 +9,7 @@
   "static/chunks/647d8_react-dom_4e5e3a70._.js",
   "static/chunks/647d8_axios_lib_1d832328._.js",
   "static/chunks/647d8_react-icons_ai_index_mjs_5d329aad._.js",
+  "static/chunks/647d8_react-icons_fa_index_mjs_f91888a9._.js",
   "static/chunks/647d8_react-icons_lib_e6215aa5._.js",
   "static/chunks/647d8_68cf5390._.js",
   "static/chunks/[root-of-the-server]__f0962cf0._.js",

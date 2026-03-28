@@ -148,7 +148,7 @@ export default function UserModerationDashboard() {
 
         // TOP 4 BOX STATS
         const statsRes = await fetch(
-          "https://matrimonial-backend-7ahc.onrender.com/admin/WeeklyRequestStats"
+          "https://merimonial-backend.onrender.com/admin/WeeklyRequestStats"
         );
         const statsJson = await statsRes.json();
         setStats(statsJson.data);

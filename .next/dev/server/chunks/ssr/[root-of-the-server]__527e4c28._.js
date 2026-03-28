@@ -82,7 +82,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 }),
 "[project]/OneDrive/Desktop/matrimonial-admin/src/component/login/Login.jsx [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

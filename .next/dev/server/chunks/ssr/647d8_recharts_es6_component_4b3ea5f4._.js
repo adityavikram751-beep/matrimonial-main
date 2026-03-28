@@ -5,6 +5,8 @@ module.exports = [
 __turbopack_context__.s([
     "calculateChartDimensions",
     ()=>calculateChartDimensions,
+    "defaultResponsiveContainerProps",
+    ()=>defaultResponsiveContainerProps,
     "getDefaultWidthAndHeight",
     ()=>getDefaultWidthAndHeight,
     "getInnerDivStyle",
@@ -12,8 +14,18 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/DataUtils.js [ssr] (ecmascript)");
 ;
+var defaultResponsiveContainerProps = {
+    width: '100%',
+    height: '100%',
+    debounce: 0,
+    minWidth: 0,
+    initialDimension: {
+        width: -1,
+        height: -1
+    }
+};
 var calculateChartDimensions = (containerWidth, containerHeight, props)=>{
-    var { width = '100%', height = '100%', aspect, maxHeight } = props;
+    var { width = defaultResponsiveContainerProps.width, height = defaultResponsiveContainerProps.height, aspect, maxHeight } = props;
     /*
    * The containerWidth and containerHeight are already percentage based because it's set as that percentage in CSS.
    * Means we don't have to calculate percentages here.
@@ -72,12 +84,12 @@ function getDefaultWidthAndHeight(_ref) {
     var calculatedWidth = width;
     var calculatedHeight = height;
     if (calculatedWidth === undefined && calculatedHeight === undefined) {
-        calculatedWidth = '100%';
-        calculatedHeight = '100%';
+        calculatedWidth = defaultResponsiveContainerProps.width;
+        calculatedHeight = defaultResponsiveContainerProps.height;
     } else if (calculatedWidth === undefined) {
-        calculatedWidth = aspect && aspect > 0 ? undefined : '100%';
+        calculatedWidth = aspect && aspect > 0 ? undefined : defaultResponsiveContainerProps.width;
     } else if (calculatedHeight === undefined) {
-        calculatedHeight = aspect && aspect > 0 ? undefined : '100%';
+        calculatedHeight = aspect && aspect > 0 ? undefined : defaultResponsiveContainerProps.height;
     }
     return {
         width: calculatedWidth,
@@ -155,10 +167,7 @@ function _toPrimitive(t, r) {
 ;
 ;
 ;
-var ResponsiveContainerContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])({
-    width: -1,
-    height: -1
-});
+var ResponsiveContainerContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$responsiveContainerUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["defaultResponsiveContainerProps"].initialDimension);
 function isAcceptableSize(size) {
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$isWellBehavedNumber$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isPositiveNumber"])(size.width) && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$isWellBehavedNumber$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isPositiveNumber"])(size.height);
 }
@@ -184,13 +193,10 @@ function ResponsiveContainerContextProvider(_ref) {
 }
 var useResponsiveContainerContext = ()=>(0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useContext"])(ResponsiveContainerContext);
 var SizeDetectorContainer = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["forwardRef"])((_ref2, ref)=>{
-    var { aspect, initialDimension = {
-        width: -1,
-        height: -1
-    }, width, height, /*
+    var { aspect, initialDimension = __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$responsiveContainerUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["defaultResponsiveContainerProps"].initialDimension, width, height, /*
      * default min-width to 0 if not specified - 'auto' causes issues with flexbox
      * https://github.com/recharts/recharts/issues/172
-     */ minWidth = 0, minHeight, maxHeight, children, debounce = 0, id, className, onResize, style = {} } = _ref2;
+     */ minWidth = __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$responsiveContainerUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["defaultResponsiveContainerProps"].minWidth, minHeight, maxHeight, children, debounce = __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$responsiveContainerUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["defaultResponsiveContainerProps"].debounce, id, className, onResize, style = {} } = _ref2;
     var containerRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
     /*
    * We are using a ref to avoid re-creating the ResizeObserver when the onResize function changes.
@@ -221,7 +227,11 @@ var SizeDetectorContainer = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b
         }
         var callback = (entries)=>{
             var _onResizeRef$current;
-            var { width: containerWidth, height: containerHeight } = entries[0].contentRect;
+            var entry = entries[0];
+            if (entry == null) {
+                return;
+            }
+            var { width: containerWidth, height: containerHeight } = entry.contentRect;
             setContainerSize(containerWidth, containerHeight);
             (_onResizeRef$current = onResizeRef.current) === null || _onResizeRef$current === void 0 || _onResizeRef$current.call(onResizeRef, containerWidth, containerHeight);
         };
@@ -326,8 +336,12 @@ __turbopack_context__.s([
     ()=>Text,
     "getWordsByLines",
     ()=>getWordsByLines,
+    "isRenderableText",
+    ()=>isRenderableText,
     "isValidTextAnchor",
-    ()=>isValidTextAnchor
+    ()=>isValidTextAnchor,
+    "textDefaultProps",
+    ()=>textDefaultProps
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/clsx/dist/clsx.mjs [ssr] (ecmascript)");
@@ -412,6 +426,9 @@ var calculateWordWidths = (_ref)=>{
 };
 function isValidTextAnchor(value) {
     return value === 'start' || value === 'middle' || value === 'end' || value === 'inherit';
+}
+function isRenderableText(val) {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(val) || typeof val === 'string' || typeof val === 'number' || typeof val === 'boolean';
 }
 var calculate = (words, lineWidth, spaceWidth, scaleToFit)=>words.reduce((result, _ref2)=>{
         var { word, width } = _ref2;
@@ -528,6 +545,7 @@ var getWordsByLines = (_ref4)=>{
 };
 var DEFAULT_FILL = '#808080';
 var textDefaultProps = {
+    angle: 0,
     breakAll: false,
     // Magic number from d3
     capHeight: '0.71em',
@@ -581,8 +599,9 @@ var Text = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$r
             break;
     }
     var transforms = [];
-    if (scaleToFit) {
-        var lineWidth = wordsByLines[0].width;
+    var firstLine = wordsByLines[0];
+    if (scaleToFit && firstLine != null) {
+        var lineWidth = firstLine.width;
         var { width } = props;
         transforms.push("scale(".concat((0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(width) && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(lineWidth) ? width / lineWidth : 1, ")"));
     }
@@ -625,8 +644,8 @@ __turbopack_context__.s([
     ()=>PolarLabelContextProvider,
     "PolarLabelFromLabelProp",
     ()=>PolarLabelFromLabelProp,
-    "getAttrsOfCartesianLabel",
-    ()=>getAttrsOfCartesianLabel,
+    "defaultLabelProps",
+    ()=>defaultLabelProps,
     "isLabelContentAFunction",
     ()=>isLabelContentAFunction,
     "usePolarLabelContext",
@@ -644,8 +663,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$svgPropertiesAndEvents$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/svgPropertiesAndEvents.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$ZIndexLayer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/zIndex/ZIndexLayer.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/zIndex/DefaultZIndexes.js [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$getCartesianPosition$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/cartesian/getCartesianPosition.js [ssr] (ecmascript)");
 var _excluded = [
     "labelRef"
+], _excluded2 = [
+    "content"
 ];
 function _objectWithoutProperties(e, t) {
     if (null == e) return {};
@@ -724,7 +746,14 @@ function _extends() {
 ;
 ;
 ;
-var CartesianLabelContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(null);
+;
+/**
+ * @inline
+ */ /**
+ * @inline
+ */ /**
+ * @inline
+ */ var CartesianLabelContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(null);
 var CartesianLabelContextProvider = (_ref)=>{
     var { x, y, upperWidth, lowerWidth, width, height, children } = _ref;
     var viewBox = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useMemo"])(()=>({
@@ -749,7 +778,7 @@ var CartesianLabelContextProvider = (_ref)=>{
 var useCartesianLabelContext = ()=>{
     var labelChildContext = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useContext"])(CartesianLabelContext);
     var chartContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$chartLayoutContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useViewBox"])();
-    return labelChildContext || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$chartLayoutContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["cartesianViewBoxToTrapezoid"])(chartContext);
+    return labelChildContext || (chartContext ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$chartLayoutContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["cartesianViewBoxToTrapezoid"])(chartContext) : undefined);
 };
 var PolarLabelContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(null);
 var PolarLabelContextProvider = (_ref2)=>{
@@ -879,178 +908,32 @@ var getAttrsOfPolarLabel = (viewBox, offset, position)=>{
         verticalAnchor: 'middle'
     };
 };
-var isPolar = (viewBox)=>'cx' in viewBox && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(viewBox.cx);
-var getAttrsOfCartesianLabel = (props, viewBox)=>{
-    var { parentViewBox: parentViewBoxFromProps, offset, position } = props;
-    var parentViewBox;
-    if (parentViewBoxFromProps != null && !isPolar(parentViewBoxFromProps)) {
-        // Check that nobody is trying to pass a polar viewBox to a cartesian label
-        parentViewBox = parentViewBoxFromProps;
-    }
-    var { x, y, upperWidth, lowerWidth, height } = viewBox;
-    // Funnel.tsx provides a viewBox where `x` is the top-left of the trapezoid shape.
-    var upperX = x;
-    // The trapezoid is centered, so we can calculate the other corners from the top-left.
-    var lowerX = x + (upperWidth - lowerWidth) / 2;
-    // middleX is the x-coordinate of the left edge at the vertical midpoint of the trapezoid.
-    var middleX = (upperX + lowerX) / 2;
-    // The width of the trapezoid at its vertical midpoint.
-    var midHeightWidth = (upperWidth + lowerWidth) / 2;
-    // The center x-coordinate is constant for the entire height of the trapezoid.
-    var centerX = upperX + upperWidth / 2;
-    // Define vertical offsets and position inverts based on the value being positive or negative.
-    // This allows labels to be positioned correctly for bars with negative height.
-    var verticalSign = height >= 0 ? 1 : -1;
-    var verticalOffset = verticalSign * offset;
-    var verticalEnd = verticalSign > 0 ? 'end' : 'start';
-    var verticalStart = verticalSign > 0 ? 'start' : 'end';
-    // Define horizontal offsets and position inverts based on the value being positive or negative.
-    // This allows labels to be positioned correctly for bars with negative width.
-    var horizontalSign = upperWidth >= 0 ? 1 : -1;
-    var horizontalOffset = horizontalSign * offset;
-    var horizontalEnd = horizontalSign > 0 ? 'end' : 'start';
-    var horizontalStart = horizontalSign > 0 ? 'start' : 'end';
-    if (position === 'top') {
-        var attrs = {
-            x: upperX + upperWidth / 2,
-            y: y - verticalOffset,
-            textAnchor: 'middle',
-            verticalAnchor: verticalEnd
-        };
-        return _objectSpread(_objectSpread({}, attrs), parentViewBox ? {
-            height: Math.max(y - parentViewBox.y, 0),
-            width: upperWidth
-        } : {});
-    }
-    if (position === 'bottom') {
-        var _attrs = {
-            x: lowerX + lowerWidth / 2,
-            y: y + height + verticalOffset,
-            textAnchor: 'middle',
-            verticalAnchor: verticalStart
-        };
-        return _objectSpread(_objectSpread({}, _attrs), parentViewBox ? {
-            height: Math.max(parentViewBox.y + parentViewBox.height - (y + height), 0),
-            width: lowerWidth
-        } : {});
-    }
-    if (position === 'left') {
-        var _attrs2 = {
-            x: middleX - horizontalOffset,
-            y: y + height / 2,
-            textAnchor: horizontalEnd,
-            verticalAnchor: 'middle'
-        };
-        return _objectSpread(_objectSpread({}, _attrs2), parentViewBox ? {
-            width: Math.max(_attrs2.x - parentViewBox.x, 0),
-            height
-        } : {});
-    }
-    if (position === 'right') {
-        var _attrs3 = {
-            x: middleX + midHeightWidth + horizontalOffset,
-            y: y + height / 2,
-            textAnchor: horizontalStart,
-            verticalAnchor: 'middle'
-        };
-        return _objectSpread(_objectSpread({}, _attrs3), parentViewBox ? {
-            width: Math.max(parentViewBox.x + parentViewBox.width - _attrs3.x, 0),
-            height
-        } : {});
-    }
-    var sizeAttrs = parentViewBox ? {
-        width: midHeightWidth,
-        height
-    } : {};
-    if (position === 'insideLeft') {
-        return _objectSpread({
-            x: middleX + horizontalOffset,
-            y: y + height / 2,
-            textAnchor: horizontalStart,
-            verticalAnchor: 'middle'
-        }, sizeAttrs);
-    }
-    if (position === 'insideRight') {
-        return _objectSpread({
-            x: middleX + midHeightWidth - horizontalOffset,
-            y: y + height / 2,
-            textAnchor: horizontalEnd,
-            verticalAnchor: 'middle'
-        }, sizeAttrs);
-    }
-    if (position === 'insideTop') {
-        return _objectSpread({
-            x: upperX + upperWidth / 2,
-            y: y + verticalOffset,
-            textAnchor: 'middle',
-            verticalAnchor: verticalStart
-        }, sizeAttrs);
-    }
-    if (position === 'insideBottom') {
-        return _objectSpread({
-            x: lowerX + lowerWidth / 2,
-            y: y + height - verticalOffset,
-            textAnchor: 'middle',
-            verticalAnchor: verticalEnd
-        }, sizeAttrs);
-    }
-    if (position === 'insideTopLeft') {
-        return _objectSpread({
-            x: upperX + horizontalOffset,
-            y: y + verticalOffset,
-            textAnchor: horizontalStart,
-            verticalAnchor: verticalStart
-        }, sizeAttrs);
-    }
-    if (position === 'insideTopRight') {
-        return _objectSpread({
-            x: upperX + upperWidth - horizontalOffset,
-            y: y + verticalOffset,
-            textAnchor: horizontalEnd,
-            verticalAnchor: verticalStart
-        }, sizeAttrs);
-    }
-    if (position === 'insideBottomLeft') {
-        return _objectSpread({
-            x: lowerX + horizontalOffset,
-            y: y + height - verticalOffset,
-            textAnchor: horizontalStart,
-            verticalAnchor: verticalEnd
-        }, sizeAttrs);
-    }
-    if (position === 'insideBottomRight') {
-        return _objectSpread({
-            x: lowerX + lowerWidth - horizontalOffset,
-            y: y + height - verticalOffset,
-            textAnchor: horizontalEnd,
-            verticalAnchor: verticalEnd
-        }, sizeAttrs);
-    }
-    if (!!position && typeof position === 'object' && ((0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(position.x) || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isPercent"])(position.x)) && ((0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(position.y) || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isPercent"])(position.y))) {
-        // TODO: This is not quite right. The width of the trapezoid changes with y.
-        // A percentage-based x should be relative to the width at that y.
-        // For now, we use the mid-height width as a reasonable approximation.
-        return _objectSpread({
-            x: x + (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getPercentValue"])(position.x, midHeightWidth),
-            y: y + (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getPercentValue"])(position.y, height),
-            textAnchor: 'end',
-            verticalAnchor: 'end'
-        }, sizeAttrs);
-    }
-    return _objectSpread({
-        x: centerX,
-        y: y + height / 2,
-        textAnchor: 'middle',
-        verticalAnchor: 'middle'
-    }, sizeAttrs);
-};
+var isPolar = (viewBox)=>viewBox != null && 'cx' in viewBox && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumber"])(viewBox.cx);
 var defaultLabelProps = {
+    angle: 0,
     offset: 5,
-    zIndex: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["DefaultZIndexes"].label
+    zIndex: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["DefaultZIndexes"].label,
+    position: 'middle',
+    textBreakAll: false
 };
+function polarViewBoxToTrapezoid(viewBox) {
+    if (!isPolar(viewBox)) {
+        return viewBox;
+    }
+    var { cx, cy, outerRadius } = viewBox;
+    var diameter = outerRadius * 2;
+    return {
+        x: cx - outerRadius,
+        y: cy - outerRadius,
+        width: diameter,
+        upperWidth: diameter,
+        lowerWidth: diameter,
+        height: diameter
+    };
+}
 function Label(outerProps) {
     var props = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$resolveDefaultProps$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["resolveDefaultProps"])(outerProps, defaultLabelProps);
-    var { viewBox: viewBoxFromProps, position, value, children, content, className = '', textBreakAll, labelRef } = props;
+    var { viewBox: viewBoxFromProps, parentViewBox, position, value, children, content, className = '', textBreakAll, labelRef } = props;
     var polarViewBox = usePolarLabelContext();
     var cartesianViewBox = useCartesianLabelContext();
     /*
@@ -1066,6 +949,7 @@ function Label(outerProps) {
     } else {
         viewBox = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$chartLayoutContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["cartesianViewBoxToTrapezoid"])(viewBoxFromProps);
     }
+    var cartesianBox = polarViewBoxToTrapezoid(viewBox);
     if (!viewBox || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(value) && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(children) && !/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["isValidElement"])(content) && typeof content !== 'function') {
         return null;
     }
@@ -1077,8 +961,9 @@ function Label(outerProps) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["cloneElement"])(content, propsWithoutLabelRef);
     }
     if (typeof content === 'function') {
+        var { content: _2 } = propsWithViewBox, propsForContent = _objectWithoutProperties(propsWithViewBox, _excluded2);
         // @ts-expect-error we're not checking if the content component returns something that Text is able to render
-        label = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"])(content, propsWithViewBox);
+        label = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"])(content, propsForContent);
         if (/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["isValidElement"])(label)) {
             return label;
         }
@@ -1087,12 +972,32 @@ function Label(outerProps) {
     }
     var attrs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$svgPropertiesAndEvents$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["svgPropertiesAndEvents"])(props);
     if (isPolar(viewBox)) {
+        // TODO: Generic Polar Hook
         if (position === 'insideStart' || position === 'insideEnd' || position === 'end') {
             return renderRadialLabel(props, position, label, attrs, viewBox);
         }
         positionAttrs = getAttrsOfPolarLabel(viewBox, props.offset, props.position);
     } else {
-        positionAttrs = getAttrsOfCartesianLabel(props, viewBox);
+        if (!cartesianBox) {
+            return null;
+        }
+        var cartesianResult = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$getCartesianPosition$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getCartesianPosition"])({
+            viewBox: cartesianBox,
+            position,
+            offset: props.offset,
+            parentViewBox: isPolar(parentViewBox) ? undefined : parentViewBox,
+            clamp: true
+        });
+        positionAttrs = _objectSpread(_objectSpread({
+            x: cartesianResult.x,
+            y: cartesianResult.y,
+            textAnchor: cartesianResult.horizontalAnchor,
+            verticalAnchor: cartesianResult.verticalAnchor
+        }, cartesianResult.width !== undefined ? {
+            width: cartesianResult.width
+        } : {}), cartesianResult.height !== undefined ? {
+            height: cartesianResult.height
+        } : {});
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$ZIndexLayer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["ZIndexLayer"], {
         zIndex: props.zIndex
@@ -1176,7 +1081,6 @@ __turbopack_context__.s([
     ()=>PolarLabelListContextProvider
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$es$2d$toolkit$2f$compat$2f$last$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/es-toolkit/compat/last.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Label$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/component/Label.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$container$2f$Layer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/container/Layer.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$ChartUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/ChartUtils.js [ssr] (ecmascript)");
@@ -1184,6 +1088,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$svgPropertiesAndEvents$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/svgPropertiesAndEvents.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$ZIndexLayer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/zIndex/ZIndexLayer.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/zIndex/DefaultZIndexes.js [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Text$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/component/Text.js [ssr] (ecmascript)");
 var _excluded = [
     "valueAccessor"
 ], _excluded2 = [
@@ -1246,7 +1151,15 @@ function _objectWithoutPropertiesLoose(r, e) {
  *    is used as <Label content={function} />, so this will be called once for each individual label (so typically once for each data point)
  * object:
  *    the props to be passed to a LabelList component
- */ var defaultAccessor = (entry)=>Array.isArray(entry.value) ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$es$2d$toolkit$2f$compat$2f$last$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"])(entry.value) : entry.value;
+ *
+ * @inline
+ */ var defaultAccessor = (entry)=>{
+    var val = Array.isArray(entry.value) ? entry.value[entry.value.length - 1] : entry.value;
+    if ((0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Text$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isRenderableText"])(val)) {
+        return val;
+    }
+    return undefined;
+};
 var CartesianLabelListContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(undefined);
 var CartesianLabelListContextProvider = CartesianLabelListContext.Provider;
 var PolarLabelListContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(undefined);
@@ -1272,7 +1185,7 @@ function LabelList(_ref) {
         className: "recharts-label-list"
     }, data.map((entry, index)=>{
         var _restProps$fill;
-        var value = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(dataKey) ? valueAccessor(entry, index) : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$ChartUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getValueByDataKey"])(entry && entry.payload, dataKey);
+        var value = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(dataKey) ? valueAccessor(entry, index) : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$ChartUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getValueByDataKey"])(entry.payload, dataKey);
         var idProps = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNullish"])(id) ? {} : {
             id: "".concat(id, "-").concat(index)
         };
@@ -1548,7 +1461,7 @@ function _toPrimitive(t, r) {
 ;
 ;
 var ActivePoint = (_ref)=>{
-    var { point, childIndex, mainColor, activeDot, dataKey } = _ref;
+    var { point, childIndex, mainColor, activeDot, dataKey, clipPath } = _ref;
     if (activeDot === false || point.x == null || point.y == null) {
         return null;
     }
@@ -1576,11 +1489,12 @@ var ActivePoint = (_ref)=>{
         dot = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$shape$2f$Dot$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Dot"], dotProps);
     }
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$container$2f$Layer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Layer"], {
-        className: "recharts-active-dot"
+        className: "recharts-active-dot",
+        clipPath: clipPath
     }, dot);
 };
 function ActivePoints(_ref2) {
-    var { points, mainColor, activeDot, itemDataKey, zIndex = __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["DefaultZIndexes"].activeDot } = _ref2;
+    var { points, mainColor, activeDot, itemDataKey, clipPath, zIndex = __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$zIndex$2f$DefaultZIndexes$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["DefaultZIndexes"].activeDot } = _ref2;
     var activeTooltipIndex = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$state$2f$hooks$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useAppSelector"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$state$2f$selectors$2f$tooltipSelectors$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["selectActiveTooltipIndex"]);
     var activeDataPoints = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$hooks$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useActiveTooltipDataPoints"])();
     if (points == null || activeDataPoints == null) {
@@ -1597,7 +1511,8 @@ function ActivePoints(_ref2) {
         childIndex: Number(activeTooltipIndex),
         mainColor: mainColor,
         dataKey: itemDataKey,
-        activeDot: activeDot
+        activeDot: activeDot,
+        clipPath: clipPath
     }));
 }
 }),
@@ -1606,7 +1521,9 @@ function ActivePoints(_ref2) {
 
 __turbopack_context__.s([
     "DefaultTooltipContent",
-    ()=>DefaultTooltipContent
+    ()=>DefaultTooltipContent,
+    "defaultDefaultTooltipContentProps",
+    ()=>defaultDefaultTooltipContentProps
 ]);
 /**
  * @fileOverview Default Tooltip Content
@@ -1667,15 +1584,41 @@ function _toPrimitive(t, r) {
 function defaultFormatter(value) {
     return Array.isArray(value) && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumOrStr"])(value[0]) && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$DataUtils$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["isNumOrStr"])(value[1]) ? value.join(' ~ ') : value;
 }
+var defaultDefaultTooltipContentProps = {
+    separator: ' : ',
+    contentStyle: {
+        margin: 0,
+        padding: 10,
+        backgroundColor: '#fff',
+        border: '1px solid #ccc',
+        whiteSpace: 'nowrap'
+    },
+    itemStyle: {
+        display: 'block',
+        paddingTop: 4,
+        paddingBottom: 4,
+        color: '#000'
+    },
+    labelStyle: {},
+    accessibilityLayer: false
+};
+function lodashLikeSortBy(array, itemSorter) {
+    if (itemSorter == null) {
+        return array;
+    }
+    // @ts-expect-error sortBy types somehow are returning a number type.
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$es$2d$toolkit$2f$compat$2f$sortBy$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"])(array, itemSorter);
+}
 var DefaultTooltipContent = (props)=>{
-    var { separator = ' : ', contentStyle = {}, itemStyle = {}, labelStyle = {}, payload, formatter, itemSorter, wrapperClassName, labelClassName, label, labelFormatter, accessibilityLayer = false } = props;
+    var { separator = defaultDefaultTooltipContentProps.separator, contentStyle, itemStyle, labelStyle = defaultDefaultTooltipContentProps.labelStyle, payload, formatter, itemSorter, wrapperClassName, labelClassName, label, labelFormatter, accessibilityLayer = defaultDefaultTooltipContentProps.accessibilityLayer } = props;
     var renderContent = ()=>{
         if (payload && payload.length) {
             var listStyle = {
                 padding: 0,
                 margin: 0
             };
-            var items = (itemSorter ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$es$2d$toolkit$2f$compat$2f$sortBy$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"])(payload, itemSorter) : payload).map((entry, i)=>{
+            var sortedPayload = lodashLikeSortBy(payload, itemSorter);
+            var items = sortedPayload.map((entry, i)=>{
                 if (entry.type === 'none') {
                     return null;
                 }
@@ -1693,11 +1636,8 @@ var DefaultTooltipContent = (props)=>{
                         return null;
                     }
                 }
-                var finalItemStyle = _objectSpread({
-                    display: 'block',
-                    paddingTop: 4,
-                    paddingBottom: 4,
-                    color: entry.color || '#000'
+                var finalItemStyle = _objectSpread(_objectSpread({}, defaultDefaultTooltipContentProps.itemStyle), {}, {
+                    color: entry.color || defaultDefaultTooltipContentProps.itemStyle.color
                 }, itemStyle);
                 return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"]("li", {
                     className: "recharts-tooltip-item",
@@ -1720,13 +1660,7 @@ var DefaultTooltipContent = (props)=>{
         }
         return null;
     };
-    var finalStyle = _objectSpread({
-        margin: 0,
-        padding: 10,
-        backgroundColor: '#fff',
-        border: '1px solid #ccc',
-        whiteSpace: 'nowrap'
-    }, contentStyle);
+    var finalStyle = _objectSpread(_objectSpread({}, defaultDefaultTooltipContentProps.contentStyle), contentStyle);
     var finalLabelStyle = _objectSpread({
         margin: 0
     }, labelStyle);
@@ -1759,6 +1693,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$tooltip$2f$translate$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/tooltip/translate.js [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$usePrefersReducedMotion$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/usePrefersReducedMotion.js [ssr] (ecmascript)");
 function ownKeys(e, r) {
     var t = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1805,83 +1740,92 @@ function _toPrimitive(t, r) {
 ;
 ;
 ;
-class TooltipBoundingBox extends __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["PureComponent"] {
-    constructor(){
-        super(...arguments);
-        _defineProperty(this, "state", {
+function resolveTransitionProperty(args) {
+    if (args.prefersReducedMotion && args.isAnimationActive === 'auto') {
+        return undefined;
+    }
+    if (args.isAnimationActive && args.active) {
+        return "transform ".concat(args.animationDuration, "ms ").concat(args.animationEasing);
+    }
+    return undefined;
+}
+function TooltipBoundingBoxImpl(props) {
+    var _props$coordinate3, _props$coordinate4, _props$coordinate$x2, _props$coordinate5, _props$coordinate$y2, _props$coordinate6;
+    var prefersReducedMotion = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$usePrefersReducedMotion$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["usePrefersReducedMotion"])();
+    var [state, setState] = __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"](()=>({
             dismissed: false,
             dismissedAtCoordinate: {
                 x: 0,
                 y: 0
             }
-        });
-        _defineProperty(this, "handleKeyDown", (event)=>{
+        }));
+    __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"](()=>{
+        var handleKeyDown = (event)=>{
             if (event.key === 'Escape') {
-                var _this$props$coordinat, _this$props$coordinat2, _this$props$coordinat3, _this$props$coordinat4;
-                this.setState({
+                var _props$coordinate$x, _props$coordinate, _props$coordinate$y, _props$coordinate2;
+                setState({
                     dismissed: true,
                     dismissedAtCoordinate: {
-                        x: (_this$props$coordinat = (_this$props$coordinat2 = this.props.coordinate) === null || _this$props$coordinat2 === void 0 ? void 0 : _this$props$coordinat2.x) !== null && _this$props$coordinat !== void 0 ? _this$props$coordinat : 0,
-                        y: (_this$props$coordinat3 = (_this$props$coordinat4 = this.props.coordinate) === null || _this$props$coordinat4 === void 0 ? void 0 : _this$props$coordinat4.y) !== null && _this$props$coordinat3 !== void 0 ? _this$props$coordinat3 : 0
+                        x: (_props$coordinate$x = (_props$coordinate = props.coordinate) === null || _props$coordinate === void 0 ? void 0 : _props$coordinate.x) !== null && _props$coordinate$x !== void 0 ? _props$coordinate$x : 0,
+                        y: (_props$coordinate$y = (_props$coordinate2 = props.coordinate) === null || _props$coordinate2 === void 0 ? void 0 : _props$coordinate2.y) !== null && _props$coordinate$y !== void 0 ? _props$coordinate$y : 0
                     }
                 });
             }
-        });
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return ()=>{
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [
+        (_props$coordinate3 = props.coordinate) === null || _props$coordinate3 === void 0 ? void 0 : _props$coordinate3.x,
+        (_props$coordinate4 = props.coordinate) === null || _props$coordinate4 === void 0 ? void 0 : _props$coordinate4.y
+    ]);
+    if (state.dismissed && (((_props$coordinate$x2 = (_props$coordinate5 = props.coordinate) === null || _props$coordinate5 === void 0 ? void 0 : _props$coordinate5.x) !== null && _props$coordinate$x2 !== void 0 ? _props$coordinate$x2 : 0) !== state.dismissedAtCoordinate.x || ((_props$coordinate$y2 = (_props$coordinate6 = props.coordinate) === null || _props$coordinate6 === void 0 ? void 0 : _props$coordinate6.y) !== null && _props$coordinate$y2 !== void 0 ? _props$coordinate$y2 : 0) !== state.dismissedAtCoordinate.y)) {
+        setState(_objectSpread(_objectSpread({}, state), {}, {
+            dismissed: false
+        }));
     }
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyDown);
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeyDown);
-    }
-    componentDidUpdate() {
-        var _this$props$coordinat5, _this$props$coordinat6;
-        if (!this.state.dismissed) {
-            return;
-        }
-        if (((_this$props$coordinat5 = this.props.coordinate) === null || _this$props$coordinat5 === void 0 ? void 0 : _this$props$coordinat5.x) !== this.state.dismissedAtCoordinate.x || ((_this$props$coordinat6 = this.props.coordinate) === null || _this$props$coordinat6 === void 0 ? void 0 : _this$props$coordinat6.y) !== this.state.dismissedAtCoordinate.y) {
-            this.state.dismissed = false;
-        }
-    }
-    render() {
-        var { active, allowEscapeViewBox, animationDuration, animationEasing, children, coordinate, hasPayload, isAnimationActive, offset, position, reverseDirection, useTranslate3d, viewBox, wrapperStyle, lastBoundingBox, innerRef, hasPortalFromProps } = this.props;
-        var { cssClasses, cssProperties } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$tooltip$2f$translate$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getTooltipTranslate"])({
-            allowEscapeViewBox,
-            coordinate,
-            offsetTopLeft: offset,
-            position,
-            reverseDirection,
-            tooltipBox: {
-                height: lastBoundingBox.height,
-                width: lastBoundingBox.width
-            },
-            useTranslate3d,
-            viewBox
-        });
-        // do not use absolute styles if the user has passed a custom portal prop
-        var positionStyles = hasPortalFromProps ? {} : _objectSpread(_objectSpread({
-            transition: isAnimationActive && active ? "transform ".concat(animationDuration, "ms ").concat(animationEasing) : undefined
-        }, cssProperties), {}, {
-            pointerEvents: 'none',
-            visibility: !this.state.dismissed && active && hasPayload ? 'visible' : 'hidden',
-            position: 'absolute',
-            top: 0,
-            left: 0
-        });
-        var outerStyle = _objectSpread(_objectSpread({}, positionStyles), {}, {
-            visibility: !this.state.dismissed && active && hasPayload ? 'visible' : 'hidden'
-        }, wrapperStyle);
-        return(/*#__PURE__*/ // This element allow listening to the `Escape` key. See https://github.com/recharts/recharts/pull/2925
-        __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"]("div", {
-            // @ts-expect-error typescript library does not recognize xmlns attribute, but it's required for an HTML chunk inside SVG.
-            xmlns: "http://www.w3.org/1999/xhtml",
-            tabIndex: -1,
-            className: cssClasses,
-            style: outerStyle,
-            ref: innerRef
-        }, children));
-    }
+    var { cssClasses, cssProperties } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$tooltip$2f$translate$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getTooltipTranslate"])({
+        allowEscapeViewBox: props.allowEscapeViewBox,
+        coordinate: props.coordinate,
+        offsetLeft: typeof props.offset === 'number' ? props.offset : props.offset.x,
+        offsetTop: typeof props.offset === 'number' ? props.offset : props.offset.y,
+        position: props.position,
+        reverseDirection: props.reverseDirection,
+        tooltipBox: {
+            height: props.lastBoundingBox.height,
+            width: props.lastBoundingBox.width
+        },
+        useTranslate3d: props.useTranslate3d,
+        viewBox: props.viewBox
+    });
+    var positionStyle = props.hasPortalFromProps ? {} : _objectSpread(_objectSpread({
+        transition: resolveTransitionProperty({
+            prefersReducedMotion,
+            isAnimationActive: props.isAnimationActive,
+            active: props.active,
+            animationDuration: props.animationDuration,
+            animationEasing: props.animationEasing
+        })
+    }, cssProperties), {}, {
+        pointerEvents: 'none',
+        position: 'absolute',
+        top: 0,
+        left: 0
+    });
+    var outerStyle = _objectSpread(_objectSpread({}, positionStyle), {}, {
+        visibility: !state.dismissed && props.active && props.hasPayload ? 'visible' : 'hidden'
+    }, props.wrapperStyle);
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"]("div", {
+        // @ts-expect-error typescript library does not recognize xmlns attribute, but it's required for an HTML chunk inside SVG.
+        xmlns: "http://www.w3.org/1999/xhtml",
+        tabIndex: -1,
+        className: cssClasses,
+        style: outerStyle,
+        ref: props.innerRef
+    }, props.children);
 }
+var TooltipBoundingBox = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["memo"](TooltipBoundingBoxImpl);
 }),
 "[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/component/Cursor.js [ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -2058,13 +2002,14 @@ function Cursor(props) {
 
 __turbopack_context__.s([
     "Tooltip",
-    ()=>Tooltip
+    ()=>Tooltip,
+    "defaultTooltipProps",
+    ()=>defaultTooltipProps
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$dom__$5b$external$5d$__$28$react$2d$dom$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react-dom [external] (react-dom, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$DefaultTooltipContent$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/component/DefaultTooltipContent.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$TooltipBoundingBox$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/component/TooltipBoundingBox.js [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$Global$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/Global.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$payload$2f$getUniqPayload$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/util/payload/getUniqPayload.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$chartLayoutContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/context/chartLayoutContext.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$context$2f$accessibilityContext$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/recharts/es6/context/accessibilityContext.js [ssr] (ecmascript)");
@@ -2137,7 +2082,6 @@ function _toPrimitive(t, r) {
 ;
 ;
 ;
-;
 function defaultUniqBy(entry) {
     return entry.dataKey;
 }
@@ -2162,7 +2106,8 @@ var defaultTooltipProps = {
     contentStyle: {},
     cursor: true,
     filterNull: true,
-    isAnimationActive: !__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$Global$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Global"].isSsr,
+    includeHidden: false,
+    isAnimationActive: 'auto',
     itemSorter: 'name',
     itemStyle: {},
     labelStyle: {},
@@ -2231,6 +2176,14 @@ function Tooltip(outsideProps) {
         finalPayload = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$util$2f$payload$2f$getUniqPayload$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getUniqPayload"])(finalPayload.filter((entry)=>entry.value != null && (entry.hide !== true || props.includeHidden)), payloadUniqBy, defaultUniqBy);
     }
     var hasPayload = finalPayload.length > 0;
+    var tooltipContentProps = _objectSpread(_objectSpread({}, props), {}, {
+        payload: finalPayload,
+        label: finalLabel,
+        active: finalIsActive,
+        activeIndex,
+        coordinate,
+        accessibilityLayer
+    });
     var tooltipElement = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$TooltipBoundingBox$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["TooltipBoundingBox"], {
         allowEscapeViewBox: allowEscapeViewBox,
         animationDuration: animationDuration,
@@ -2248,14 +2201,7 @@ function Tooltip(outsideProps) {
         lastBoundingBox: lastBoundingBox,
         innerRef: updateBoundingBox,
         hasPortalFromProps: Boolean(portalFromProps)
-    }, renderContent(content, _objectSpread(_objectSpread({}, props), {}, {
-        payload: finalPayload,
-        label: finalLabel,
-        active: finalIsActive,
-        activeIndex,
-        coordinate,
-        accessibilityLayer
-    })));
+    }, renderContent(content, tooltipContentProps));
     return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["Fragment"], null, /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$dom__$5b$external$5d$__$28$react$2d$dom$2c$__cjs$29$__["createPortal"])(tooltipElement, tooltipPortal), finalIsActive && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cursor$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Cursor"], {
         cursor: cursor,
         tooltipEventType: tooltipEventType,
@@ -2269,7 +2215,17 @@ function Tooltip(outsideProps) {
 "use strict";
 
 /**
- * @fileOverview Cross
+ * Cell component used to define colors and styles of chart elements.
+ *
+ * This component is now deprecated and will be removed in Recharts 4.0.
+ *
+ * Please use the `shape` prop or `content` prop on the respective chart components
+ * to customize the rendering of chart elements instead of using `Cell`.
+ *
+ * @see {@link https://recharts.github.io/en-US/guide/cell/ Guide: Migrate from Cell component to shape prop}
+ *
+ * @deprecated
+ * @consumes CellReader
  */ __turbopack_context__.s([
     "Cell",
     ()=>Cell

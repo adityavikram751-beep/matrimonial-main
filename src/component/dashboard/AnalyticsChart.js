@@ -13,31 +13,41 @@ import {
 
 export default function AnalyticsPage() {
   const API =
-    "https://matrimonial-backend-7ahc.onrender.com/admin/getByGender";
+    "https://merimonial-backend.onrender.com/admin/getByGender";
 
   // Month list
   const MONTHS = [
-    "January","February","March","April","May","June",
-    "July","August","September","October","November","December"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
-  // backend lowercase mapping
-  const MONTH_MAP = {
-    January: "january",
-    February: "february",
-    March: "march",
-    April: "april",
+  // Backend month abbreviations (3‑letter lowercase)
+  const ABBR_MAP = {
+    January: "jan",
+    February: "feb",
+    March: "mar",
+    April: "apr",
     May: "may",
-    June: "june",
-    July: "july",
-    August: "august",
-    September: "september",
-    October: "october",
-    November: "november",
-    December: "december",
+    June: "jun",
+    July: "jul",
+    August: "aug",
+    September: "sep",
+    October: "oct",
+    November: "nov",
+    December: "dec",
   };
 
-  // Auto previous month
+  // Helper to get previous month
   function getPrevMonth(m) {
     const i = MONTHS.indexOf(m);
     return i === 0 ? "December" : MONTHS[i - 1];
@@ -50,9 +60,11 @@ export default function AnalyticsPage() {
     return MONTHS[currentMonthIndex];
   }
 
-  // STATES - Current month automatically set hoga
+  // States
   const [selectedMonth, setSelectedMonth] = useState(getCurrentMonth());
-  const [previousMonth, setPreviousMonth] = useState(getPrevMonth(getCurrentMonth()));
+  const [previousMonth, setPreviousMonth] = useState(
+    getPrevMonth(getCurrentMonth())
+  );
   const [genderData, setGenderData] = useState([]);
   const [matchData, setMatchData] = useState([]);
   const [signInData, setSignInData] = useState([]);
@@ -61,7 +73,7 @@ export default function AnalyticsPage() {
   const [loading, setLoading] = useState(true);
   const [hover, setHover] = useState(null);
 
-  // LOAD DATA BY MONTH - Automatically current month ka data fetch hoga
+  // Load data when selectedMonth changes
   useEffect(() => {
     let mounted = true;
 
@@ -71,7 +83,7 @@ export default function AnalyticsPage() {
       const prev = getPrevMonth(selectedMonth);
       setPreviousMonth(prev);
 
-      const backendMonth = MONTH_MAP[selectedMonth];
+      const backendMonth = ABBR_MAP[selectedMonth]; // e.g., "mar"
 
       try {
         const res = await fetch(
@@ -83,12 +95,38 @@ export default function AnalyticsPage() {
 
         setGenderData(json.genderData || []);
         setMatchData(json.matchData || []);
-        setSignInData(json.signInData || []);
 
-        setTotalSignIn(json.totalCurrentMonthSignIns ?? 0);
-        setPercentGrowth(json.percentGrowth ?? 0);
+        // --- Transform signInData to use currentMonth / previousMonth ---
+        const currentMonthField = ABBR_MAP[selectedMonth]; // e.g., "mar"
+        const previousMonthField = ABBR_MAP[prev]; // e.g., "feb"
+
+        const transformedSignIn = (json.signInData || []).map((day) => ({
+          day: day.day,
+          currentMonth: day[currentMonthField] ?? 0,
+          previousMonth: day[previousMonthField] ?? 0,
+        }));
+        setSignInData(transformedSignIn);
+
+        // --- Calculate totals and growth ---
+        const currentTotal = transformedSignIn.reduce(
+          (sum, d) => sum + d.currentMonth,
+          0
+        );
+        const previousTotal = transformedSignIn.reduce(
+          (sum, d) => sum + d.previousMonth,
+          0
+        );
+        setTotalSignIn(currentTotal);
+
+        let growth = 0;
+        if (previousTotal > 0) {
+          growth = ((currentTotal - previousTotal) / previousTotal) * 100;
+        } else if (currentTotal > 0) {
+          growth = 100; // from zero to something
+        }
+        setPercentGrowth(Math.round(growth));
       } catch (err) {
-        console.log("API error:", err);
+        console.error("API error:", err);
       }
 
       setLoading(false);
@@ -97,8 +135,12 @@ export default function AnalyticsPage() {
     return () => (mounted = false);
   }, [selectedMonth]);
 
-  // COLORS
-  const genderColors = { Male: "#34D399", Female: "#FDE047", Others: "#F87171" };
+  // Colors
+  const genderColors = {
+    Male: "#34D399",
+    Female: "#FDE047",
+    Others: "#F87171",
+  };
   const matchColors = {
     "Still Looking": "#10B981",
     "Successfully Matched": "#FB923C",
@@ -106,7 +148,7 @@ export default function AnalyticsPage() {
     Inactive: "#FBBF24",
   };
 
-  // 3D PIE CALC
+  // 3D PIE HELPER (fixed for full circle)
   function build3DSlices(data = [], cx, cy, r, h) {
     const total = Math.max(1, data.reduce((t, a) => t + (a.value || 0), 0));
     let start = -Math.PI / 2 + 0.2;
@@ -115,20 +157,25 @@ export default function AnalyticsPage() {
       const angle = (item.value / total) * Math.PI * 2;
       const end = start + angle;
 
-      const x1 = cx + r * Math.cos(start);
-      const y1 = cy + r * Math.sin(start);
-      const x2 = cx + r * Math.cos(end);
-      const y2 = cy + r * Math.sin(end);
+      let topPath;
+      let sidePath;
 
-      const largeArc = angle > Math.PI ? 1 : 0;
+      // Special case: full circle (angle ≈ 2π)
+      if (Math.abs(angle - Math.PI * 2) < 0.0001) {
+        // Draw a complete circle as top, and a ring as side
+        topPath = `M ${cx + r} ${cy} A ${r} ${r} 0 1 1 ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy} Z`;
+        sidePath = `M ${cx + r} ${cy} L ${cx + r} ${cy + h} A ${r} ${r} 0 1 1 ${cx - r} ${cy + h} L ${cx - r} ${cy} Z`;
+      } else {
+        const x1 = cx + r * Math.cos(start);
+        const y1 = cy + r * Math.sin(start);
+        const x2 = cx + r * Math.cos(end);
+        const y2 = cy + r * Math.sin(end);
 
-      const topPath = `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+        const largeArc = angle > Math.PI ? 1 : 0;
 
-      const sidePath = `M ${x1} ${y1} L ${x1} ${
-        y1 + h
-      } A ${r} ${r} 0 ${largeArc} 1 ${x2} ${
-        y2 + h
-      } L ${x2} ${y2} Z`;
+        topPath = `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+        sidePath = `M ${x1} ${y1} L ${x1} ${y1 + h} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2 + h} L ${x2} ${y2} Z`;
+      }
 
       start = end;
 
@@ -144,21 +191,28 @@ export default function AnalyticsPage() {
   const genderSlices = build3DSlices(genderData, 150, 120, 110, 24);
   const matchSlices = build3DSlices(matchData, 150, 150, 110, 30);
 
-  const xTicks = ["01","05","10","15","20","25","30"];
-  const yTicks = [0,5,10,15,20,25,30,35,40,45];
+  const xTicks = ["01", "05", "10", "15", "20", "25", "30"];
+  const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
 
-  // Tooltip
+  // Custom tooltip for line chart
   function LineTooltip({ active, payload, label }) {
     if (!active || !payload?.length) return null;
     return (
-      <div style={{ background: "#111827", color: "#fff", padding: 10, borderRadius: 8 }}>
+      <div
+        style={{
+          background: "#111827",
+          color: "#fff",
+          padding: 10,
+          borderRadius: 8,
+        }}
+      >
         <b>Day {label}</b>
         <div>{payload[0].value}</div>
       </div>
     );
   }
 
-  // Tooltip hover handlers
+  // Hover handlers for 3D pie
   function handleSliceEnter(e, slice) {
     setHover({
       ...slice,
@@ -182,40 +236,31 @@ export default function AnalyticsPage() {
 
   return (
     <div className="p-4 md:p-8 min-h-screen bg-gray-100">
-      
       <div className="flex flex-col xl:flex-row gap-8 max-w-[1250px] mx-auto">
-
         {/* LEFT: Sign-In Analytics (Line Chart) */}
         <div className="bg-white rounded-2xl shadow-lg border h-[700px] p-6 w-full xl:w-[700px]">
-
           <div className="flex justify-between items-start">
             <div>
               <h2 className="text-2xl font-bold">Sign-In Analytics</h2>
-
               <div className="flex items-end gap-4 mt-2">
-                <div className="text-4xl font-extrabold">{totalSignIn}.</div>
-
+                <div className="text-4xl font-extrabold">{totalSignIn}</div>
                 <div className="bg-green-100 border border-green-400 px-3 py-1 rounded-lg text-green-700 font-semibold flex items-center gap-2">
                   <span style={{ fontSize: 18 }}>↑</span> {percentGrowth}%
                 </div>
-
                 <div className="text-gray-600 font-medium">Vs Last Month</div>
               </div>
             </div>
 
-            {/* MONTH DISPLAY */}
+            {/* MONTH SELECTOR */}
             <div className="flex items-center gap-6">
-
               <div className="flex items-center gap-2 text-lg">
-                <div className="w-3 h-3 rounded-full bg-black"></div> 
+                <div className="w-3 h-3 rounded-full bg-black"></div>
                 {selectedMonth}
               </div>
-
               <div className="flex items-center gap-2 text-lg">
-                <div className="w-3 h-3 rounded-full bg-gray-400"></div> 
+                <div className="w-3 h-3 rounded-full bg-gray-400"></div>
                 {previousMonth}
               </div>
-
               <select
                 className="border rounded-xl px-4 py-2"
                 value={selectedMonth}
@@ -225,7 +270,6 @@ export default function AnalyticsPage() {
                   <option key={m}>{m}</option>
                 ))}
               </select>
-
             </div>
           </div>
 
@@ -237,8 +281,12 @@ export default function AnalyticsPage() {
                 <XAxis dataKey="day" ticks={xTicks} />
                 <YAxis ticks={yTicks} />
                 <ReTooltip content={<LineTooltip />} />
-
-                <Line dataKey="currentMonth" stroke="#000" strokeWidth={3} dot />
+                <Line
+                  dataKey="currentMonth"
+                  stroke="#000"
+                  strokeWidth={3}
+                  dot
+                />
                 <Line
                   dataKey="previousMonth"
                   stroke="#9ca3af"
@@ -253,8 +301,7 @@ export default function AnalyticsPage() {
 
         {/* RIGHT: Gender and Matchmaking Charts */}
         <div className="flex flex-col gap-8 w-full xl:w-[500px]">
-
-          {/* GENDER */}
+          {/* GENDER PIE */}
           <div className="bg-white rounded-2xl shadow-lg border p-4 relative h-[330px] w-full">
             {hover && (
               <div
@@ -276,18 +323,57 @@ export default function AnalyticsPage() {
 
             <div className="flex justify-between items-center">
               <h3 className="text-2xl font-bold">Gender Analytics</h3>
-
               <div className="flex items-center gap-1">
-                <div className="flex items-center gap-1"><div style={{ width:22,height:22,borderRadius:6,border:`12px solid ${genderColors.Male}` }}></div> Male</div>
-                <div className="flex items-center gap-1"><div style={{ width:22,height:22,borderRadius:6,border:`12px solid ${genderColors.Female}` }}></div> Female</div>
-                <div className="flex items-center gap-1"><div style={{ width:22,height:22,borderRadius:6,border:`12px solid ${genderColors.Others}` }}></div> Ots.</div>
+                <div className="flex items-center gap-1">
+                  <div
+                    style={{
+                      width: 22,
+                      height: 22,
+                      borderRadius: 6,
+                      border: `12px solid ${genderColors.Male}`,
+                    }}
+                  ></div>{" "}
+                  Male
+                </div>
+                <div className="flex items-center gap-1">
+                  <div
+                    style={{
+                      width: 22,
+                      height: 22,
+                      borderRadius: 6,
+                      border: `12px solid ${genderColors.Female}`,
+                    }}
+                  ></div>{" "}
+                  Female
+                </div>
+                <div className="flex items-center gap-1">
+                  <div
+                    style={{
+                      width: 22,
+                      height: 22,
+                      borderRadius: 6,
+                      border: `12px solid ${genderColors.Others}`,
+                    }}
+                  ></div>{" "}
+                  Ots.
+                </div>
               </div>
             </div>
 
-            <svg width="100%" height="280">
-              <g transform="translate(80,16)">
+            <svg
+              width="100%"
+              height="280"
+              viewBox="0 0 400 280"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g transform="translate(80, 16)">
                 {genderSlices.map((s, i) => (
-                  <path key={i} d={s.sidePath} fill={genderColors[s.name]} opacity="0.66" />
+                  <path
+                    key={i}
+                    d={s.sidePath}
+                    fill={genderColors[s.name]}
+                    opacity="0.66"
+                  />
                 ))}
 
                 {genderSlices.map((s, i) => (
@@ -297,16 +383,20 @@ export default function AnalyticsPage() {
                     onMouseMove={(e) => handleSliceMove(e, s)}
                     onMouseLeave={handleSliceLeave}
                   >
-                    <path d={s.topPath} fill={genderColors[s.name]} stroke="#fff" strokeWidth={2} />
+                    <path
+                      d={s.topPath}
+                      fill={genderColors[s.name]}
+                      stroke="#fff"
+                      strokeWidth={2}
+                    />
                   </g>
                 ))}
               </g>
             </svg>
           </div>
 
-          {/* MATCHMAKING */}
+          {/* MATCHMAKING PIE */}
           <div className="bg-white rounded-2xl shadow-lg border p-4 relative h-[340px] w-full overflow-hidden">
-
             {hover && (
               <div
                 style={{
@@ -327,11 +417,17 @@ export default function AnalyticsPage() {
 
             <div className="flex justify-between items-start">
               <h3 className="text-2xl font-bold">Matchmaking Status</h3>
-
-              <div className="space-y-">
+              <div className="space-y-1">
                 {Object.keys(matchColors).map((k) => (
                   <div key={k} className="flex items-center gap-1">
-                    <div style={{ width:16,height:18,borderRadius:8,border:`10px solid ${matchColors[k]}` }}></div>
+                    <div
+                      style={{
+                        width: 16,
+                        height: 18,
+                        borderRadius: 8,
+                        border: `10px solid ${matchColors[k]}`,
+                      }}
+                    ></div>
                     <div className="text-[14px] font-bold">{k}</div>
                   </div>
                 ))}
@@ -339,10 +435,20 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="absolute left-1/3 top-[51%] -translate-x-1/2 -translate-y-1/2">
-              <svg width="520" height="320">
-                <g transform="translate(160,28)">
+              <svg
+                width="400"
+                height="320"
+                viewBox="0 0 400 320"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g transform="translate(60, 28)">
                   {matchSlices.map((s, i) => (
-                    <path key={i} d={s.sidePath} fill={matchColors[s.name]} opacity="0.65" />
+                    <path
+                      key={i}
+                      d={s.sidePath}
+                      fill={matchColors[s.name]}
+                      opacity="0.65"
+                    />
                   ))}
 
                   {matchSlices.map((s, i) => (
@@ -352,7 +458,12 @@ export default function AnalyticsPage() {
                       onMouseMove={(e) => handleSliceMove(e, s)}
                       onMouseLeave={handleSliceLeave}
                     >
-                      <path d={s.topPath} fill={matchColors[s.name]} stroke="#fff" strokeWidth={3} />
+                      <path
+                        d={s.topPath}
+                        fill={matchColors[s.name]}
+                        stroke="#fff"
+                        strokeWidth={3}
+                      />
                     </g>
                   ))}
 
@@ -360,11 +471,8 @@ export default function AnalyticsPage() {
                 </g>
               </svg>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   );

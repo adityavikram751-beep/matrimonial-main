@@ -478,7 +478,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matri
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matrimonial$2d$admin$2f$node_modules$2f$socket$2e$io$2d$client$2f$build$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matrimonial$2d$admin$2f$node_modules$2f$socket$2e$io$2d$client$2f$build$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -536,13 +536,13 @@ const Search = ({ onSearch })=>{
     const [unreadCount, setUnreadCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matrimonial$2d$admin$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matrimonial$2d$admin$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const dropdownRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$matrimonial$2d$admin$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+    const BASE_URL = "https://merimonial-backend.onrender.com";
     /* --------------------------------------------
       1) ADMIN PREF → CONNECT SOCKET
   -------------------------------------------- */ const loadAdminPrefs = async ()=>{
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -1036,7 +1036,7 @@ __turbopack_context__.s([
     "API_URL",
     ()=>API_URL
 ]);
-const API_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const API_URL = "https://merimonial-backend.onrender.com";
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

@@ -1,2 +1,1293 @@
-[00:00:01.649] Server  LOG      ✓ Ready in 1154ms
-[00:00:59.962] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:01.689] Server  LOG      ✓ Ready in 1210ms
+[00:00:01.750] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:00:01.750] Browser LOG      SOCKET CONNECTED: KeWeu85E3RRr_tF0AAAB
+[00:00:01.750] Browser LOG      adminId: undefined
+[00:00:04.767] Server  LOG      ○ Compiling /manageusers ...
+[00:00:29.547] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:29.700] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[00:00:29.700] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[00:00:29.700] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:30.058] Browser LOG      SOCKET CONNECTED: Mtf2UwYU2R31WSPTAAAB
+[00:00:30.059] Browser LOG      adminId: 69c227ce028e81beff64a401
+[00:00:30.417] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:30.417] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:30.522] Browser WARN    Image with src "https://res.cloudinary.com/dsnmnwusd/image/upload/v1774588532/chat-files/1774588529620-140649131-sadi.avif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:14.925] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:01:48.619] Browser LOG      SOCKET CONNECTED: nI2zzKln-vDRWLBRAAAB
+[00:01:48.619] Browser LOG      adminId: 69c227ce028e81beff64a401
+[00:02:28.609] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[00:02:28.609] Browser LOG     🟢 Socket Active For Analytics Page
+[00:02:28.609] Browser LOG     🟢 Socket Active For Analytics Page
+[00:02:29.352] Browser LOG     name 
+[00:02:29.352] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:02:29.352] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:02:29.548] Browser LOG     name 
+[00:02:56.532] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[00:02:56.532] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[00:02:56.532] Browser LOG     Fetch Error {}
+[00:02:56.532] Browser LOG     Admin Pref Error: {}
+[00:02:56.532] Browser LOG     Admin Pref Error: {}
+[00:02:56.532] Browser LOG     Notification Fetch Error: {}
+[00:02:56.532] Browser LOG     Notification Fetch Error: {}
+[00:02:56.532] Browser ERROR   Error fetching users: {}
+[00:02:56.532] Browser LOG     Fetch Error {}
+[00:02:59.529] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:03:00.529] Browser LOG      SOCKET CONNECTED: OPqMBXRJfNC8iEePAAAB
+[00:03:00.529] Browser LOG      adminId: 69c227ce028e81beff64a401
+[00:04:11.540] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:04:13.538] Browser LOG      SOCKET CONNECTED: z_QCKzk3nxQrJUmGAAAB
+[00:04:13.538] Browser LOG      adminId: 69c227ce028e81beff64a401
+[00:04:14.529] Browser ERROR   Failed to fetch stats: {}
+[00:04:36.530] Browser ERROR   Error fetching users: {}
+[00:08:44.528] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:08:47.529] Browser LOG      SOCKET CONNECTED: rWKn_aXPnOUnXaxjAAAB
+[00:08:47.529] Browser LOG      adminId: 69c227ce028e81beff64a401
+[00:09:15.904] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:15.904] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:18.649] Browser LOG      SOCKET CONNECTED: undefined
+[00:09:18.649] Browser LOG      adminId: undefined
+[00:09:18.941] Browser LOG      SOCKET CONNECTED: 3MtCWcQKhvYA_YHeAAAF
+[00:09:18.941] Browser LOG      adminId: undefined
+[00:09:36.570] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:41.124] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[00:09:41.124] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[00:10:04.532] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:10:05.558] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:10:06.533] Browser LOG      SOCKET CONNECTED: undefined
+[00:10:06.533] Browser LOG      adminId: undefined
+[00:10:07.532] Browser LOG      SOCKET CONNECTED: t6B5h18FyhSKKbzLAAAD
+[00:10:07.532] Browser LOG      adminId: undefined
+[00:11:21.532] Browser LOG     Notification Fetch Error: {}
+[00:15:04.533] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:15:04.533] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:15:23.537] Browser LOG      SOCKET CONNECTED: xrxK37GvRoq7OL_9AAAB
+[00:15:23.537] Browser LOG      adminId: undefined
+[00:15:23.537] Browser LOG      SOCKET CONNECTED: xrxK37GvRoq7OL_9AAAB
+[00:15:23.537] Browser LOG      adminId: undefined
+[00:16:07.539] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:16:08.539] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:16:57.539] Browser LOG      SOCKET CONNECTED: 9sCxqSMWFKPeR1aBAAAB
+[00:16:57.539] Browser LOG      adminId: undefined
+[00:16:57.539] Browser LOG      SOCKET CONNECTED: 9sCxqSMWFKPeR1aBAAAB
+[00:16:57.539] Browser LOG      adminId: undefined
+[00:17:41.537] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:17:42.536] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:17:43.537] Browser LOG      SOCKET CONNECTED: B0wyuvCNfm64_hk4AAAB
+[00:17:43.537] Browser LOG      adminId: undefined
+[00:18:09.533] Browser LOG      SOCKET CONNECTED: B0wyuvCNfm64_hk4AAAB
+[00:18:09.533] Browser LOG      adminId: undefined
+[00:18:28.538] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:18:29.537] Browser LOG      SOCKET CONNECTED: uSx8aY0GgDHPTaywAAAD
+[00:18:29.537] Browser LOG      adminId: undefined
+[00:19:15.531] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:19:18.538] Browser LOG      SOCKET CONNECTED: kaIQ-8guVwcOnJObAAAB
+[00:19:18.538] Browser LOG      adminId: undefined
+[00:19:19.537] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:19:20.537] Browser LOG      SOCKET CONNECTED: kaIQ-8guVwcOnJObAAAB
+[00:19:20.537] Browser LOG      adminId: undefined
+[00:20:53.532] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:20:56.530] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:20:56.530] Browser LOG      SOCKET CONNECTED: EmM8hqreLk4g357CAAAB
+[00:20:56.530] Browser LOG      adminId: undefined
+[00:20:58.535] Browser LOG      SOCKET CONNECTED: EmM8hqreLk4g357CAAAB
+[00:20:58.535] Browser LOG      adminId: undefined
+[00:21:41.536] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:21:42.536] Browser LOG      SOCKET CONNECTED: SvxQWcsrVVOz77lBAAAB
+[00:21:42.536] Browser LOG      adminId: undefined
+[00:21:44.528] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[00:21:45.527] Browser LOG      SOCKET CONNECTED: SvxQWcsrVVOz77lBAAAB
+[00:21:45.527] Browser LOG      adminId: undefined
+[00:25:05.541] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[00:25:05.541] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[00:56:10.688] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:56:10.688] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:56:10.935] Browser ERROR   Failed to fetch stats: {}
+[00:56:14.026] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:56:14.026] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:56:14.026] Browser ERROR   Failed to fetch stats: {}
+[00:56:57.387] Browser ERROR   Login error: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"email\":\"rahulsingh@gmail.com\",\"password\":\"12345678\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://merimonial-backend.onrender.com/api/auth/admin/login","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:2486:20)\n    at Axios.request (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:3161:49)\n    at async handleLogin (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__f0962cf0._.js:634:25)\n    at async http://localhost:3000/_next/static/chunks/647d8_68cf5390._.js:3411:21"}
+[00:57:36.702] Browser ERROR   Login error: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"email\":\"rahulsingh@gmail.com\",\"password\":\"12345678\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://merimonial-backend.onrender.com/api/auth/admin/login","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:2486:20)\n    at Axios.request (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:3161:49)\n    at async handleLogin (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__f0962cf0._.js:634:25)\n    at async http://localhost:3000/_next/static/chunks/647d8_68cf5390._.js:3411:21"}
+[00:58:18.658] Browser ERROR   Login error: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"email\":\"rahul@gmail.com\",\"password\":\"12345678\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://merimonial-backend.onrender.com/api/auth/admin/login","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:2486:20)\n    at Axios.request (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:3161:49)\n    at async handleLogin (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__f0962cf0._.js:634:25)\n    at async http://localhost:3000/_next/static/chunks/647d8_68cf5390._.js:3411:21"}
+[00:58:20.711] Browser ERROR   Login error: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"email\":\"rahul@gmail.com\",\"password\":\"12345678\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://merimonial-backend.onrender.com/api/auth/admin/login","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:2486:20)\n    at Axios.request (http://localhost:3000/_next/static/chunks/647d8_axios_lib_1d832328._.js:3161:49)\n    at async handleLogin (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__f0962cf0._.js:634:25)\n    at async http://localhost:3000/_next/static/chunks/647d8_68cf5390._.js:3411:21"}
+[01:02:40.533] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[01:02:40.533] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:02:40.533] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[01:02:41.307] Browser LOG      SOCKET CONNECTED: rQf7WahLCFm8w9K-AAAB
+[01:02:41.307] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:02:41.307] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:02:41.307] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:02:58.260] Browser LOG     🟢 Verification Page Socket Active
+[01:02:58.260] Browser LOG     🟢 Verification Page Socket Active
+[01:02:58.260] Browser LOG     🟢 Verification Page Socket Active
+[01:02:58.260] Browser LOG     🟢 Verification Page Socket Active
+[01:03:06.210] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:03:06.210] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:03:11.209] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:25:12.538] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:25:14.530] Browser LOG      SOCKET CONNECTED: rOCv88QyGidG6HoSAAAB
+[01:25:14.530] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:26:24.537] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:26:25.535] Browser LOG      SOCKET CONNECTED: _jkhzc--YVkWdE1oAAAB
+[01:26:25.535] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:28:01.544] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:28:03.531] Browser LOG      SOCKET CONNECTED: fiL461aPKSXUgAylAAAB
+[01:28:03.531] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:29:13.535] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:29:15.530] Browser LOG      SOCKET CONNECTED: wTJDH8OM-cgHkPxvAAAB
+[01:29:15.531] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:30:26.530] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:31:21.527] Browser LOG      SOCKET CONNECTED: 51FQcTD_-Ic0xVQoAAAB
+[01:31:21.527] Browser LOG      adminId: 69c227ce028e81beff64a401
+[01:35:03.533] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[01:47:01.348] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:47:01.941] Browser ERROR   Failed to fetch stats: {}
+[01:47:01.941] Browser ERROR   Failed to fetch stats: {}
+[01:47:07.466] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:47:07.466] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:47:07.931] Browser ERROR   Failed to fetch stats: {}
+[02:04:04.198] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:04:04.198] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:04:06.471] Browser LOG      SOCKET CONNECTED: undefined
+[02:04:06.471] Browser LOG      adminId: undefined
+[02:04:06.751] Browser LOG      SOCKET CONNECTED: YooiKGJyE6m4rgL2AAAD
+[02:04:06.751] Browser LOG      adminId: undefined
+[02:04:40.621] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[02:04:40.621] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[02:04:40.621] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[02:04:40.621] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[02:04:40.621] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[02:04:40.621] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[02:04:41.531] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:04:41.531] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:04:41.531] Browser LOG      SOCKET CONNECTED: 1H4wft6qgZeudcNbAAAF
+[02:04:41.531] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:12:24.540] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:12:26.528] Browser LOG      SOCKET CONNECTED: 1H4wft6qgZeudcNbAAAF
+[02:12:26.528] Browser LOG      adminId: undefined
+[02:12:34.542] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:12:36.539] Browser LOG      SOCKET CONNECTED: md9TlYwYpzcbTkv_AAAB
+[02:12:36.539] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:13:12.530] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:13:14.542] Browser LOG      SOCKET CONNECTED: md9TlYwYpzcbTkv_AAAB
+[02:13:14.542] Browser LOG      adminId: undefined
+[02:13:22.531] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:13:23.537] Browser LOG      SOCKET CONNECTED: TKpTHuj9lroif3eTAAAD
+[02:13:23.537] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:19:26.537] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:19:29.537] Browser LOG      SOCKET CONNECTED: TKpTHuj9lroif3eTAAAD
+[02:19:29.537] Browser LOG      adminId: undefined
+[02:19:35.534] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:19:37.531] Browser LOG      SOCKET CONNECTED: Dm0NMx84BM1CMKEwAAAD
+[02:19:37.531] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:20:15.531] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:20:17.531] Browser LOG      SOCKET CONNECTED: Dm0NMx84BM1CMKEwAAAD
+[02:20:17.531] Browser LOG      adminId: undefined
+[02:20:23.533] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:20:24.541] Browser LOG      SOCKET CONNECTED: 5-e-kavgab8n98mGAAAB
+[02:20:24.541] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:21:03.531] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:21:05.529] Browser LOG      SOCKET CONNECTED: 5-e-kavgab8n98mGAAAB
+[02:21:05.529] Browser LOG      adminId: undefined
+[02:21:10.529] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:21:12.532] Browser LOG      SOCKET CONNECTED: yZoZvAn1Z9VI7f1zAAAB
+[02:21:12.532] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:21:50.540] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:21:52.538] Browser LOG      SOCKET CONNECTED: yZoZvAn1Z9VI7f1zAAAB
+[02:21:52.538] Browser LOG      adminId: undefined
+[02:21:58.539] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:21:59.526] Browser LOG      SOCKET CONNECTED: cdaZ6Q3QC21OjaGvAAAD
+[02:21:59.526] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:24:18.535] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:24:19.540] Browser LOG      SOCKET CONNECTED: cdaZ6Q3QC21OjaGvAAAD
+[02:24:19.540] Browser LOG      adminId: undefined
+[02:24:25.531] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:24:27.528] Browser LOG      SOCKET CONNECTED: TEomzRHf8i9czJfrAAAD
+[02:24:27.528] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:27:10.533] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:27:11.529] Browser LOG      SOCKET CONNECTED: TEomzRHf8i9czJfrAAAD
+[02:27:11.529] Browser LOG      adminId: undefined
+[02:27:18.542] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:27:19.538] Browser LOG      SOCKET CONNECTED: vR6aBNCEo6PW4QBvAAAD
+[02:27:19.538] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:29:11.337] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:29:12.757] Browser LOG      SOCKET CONNECTED: vR6aBNCEo6PW4QBvAAAD
+[02:29:12.758] Browser LOG      adminId: undefined
+[02:29:19.387] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:29:32.527] Browser LOG      SOCKET CONNECTED: ZxBMfPWrfXWql3c1AAAB
+[02:29:32.527] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:29:59.534] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:30:01.539] Browser LOG      SOCKET CONNECTED: ZxBMfPWrfXWql3c1AAAB
+[02:30:01.539] Browser LOG      adminId: undefined
+[02:30:18.539] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:30:21.542] Browser LOG      SOCKET CONNECTED: 6gVVj-Zs0f1cbVR0AAAD
+[02:30:21.542] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:30:25.533] Browser LOG     :bell: NOTIFICATION RECEIVED: {"__v":0,"_id":"69c781f92699e4e7d5f754c0","createdAt":"2026-03-28T07:23:37.117Z","message":"Aditya Singh has just created an account.","read":false,"title":"New user registered","updatedAt":"2026-03-28T07:23:37.117Z","user":"69c227ce028e81beff64a401","userModel":"Admin"}
+[02:30:30.430] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:30:30.430] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:30:43.734] Browser LOG     🟢 Verification Page Socket Active
+[02:30:43.735] Browser LOG     🟢 Verification Page Socket Active
+[02:30:43.735] Browser LOG     🟢 Verification Page Socket Active
+[02:30:43.735] Browser LOG     🟢 Verification Page Socket Active
+[02:30:43.981] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[02:30:43.981] Browser LOG     Admin Pref Error: {}
+[02:30:43.981] Browser LOG     Admin Pref Error: {}
+[02:30:43.981] Browser LOG     Notification Fetch Error: {}
+[02:30:43.981] Browser LOG     Notification Fetch Error: {}
+[02:30:43.981] Browser LOG     Admin Pref Error: {}
+[02:30:43.981] Browser LOG     Admin Pref Error: {}
+[02:30:43.981] Browser LOG     Notification Fetch Error: {}
+[02:30:43.981] Browser LOG     Notification Fetch Error: {}
+[02:30:48.106] Browser LOG      SOCKET CONNECTED: mxQx7RUCI60nJdePAAAB
+[02:30:48.106] Browser LOG      adminId: undefined
+[02:30:55.869] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[02:30:55.869] Browser LOG     🟢 Socket Active For Analytics Page
+[02:30:55.869] Browser LOG     🟢 Socket Active For Analytics Page
+[02:30:56.101] Browser LOG     name 
+[02:30:56.101] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:30:56.101] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:30:56.373] Browser LOG     name 
+[02:30:56.984] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:30:57.591] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:30:57.591] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:30:59.770] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:31:28.381] Browser LOG     🟢 Socket Active For Analytics Page
+[02:31:28.381] Browser LOG     🟢 Socket Active For Analytics Page
+[02:31:29.255] Browser LOG     name 
+[02:31:29.255] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:31:29.255] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:31:29.440] Browser LOG     name 
+[02:33:13.257] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:33:15.716] Browser LOG      SOCKET CONNECTED: Up2WxzAuD9gxJUpYAAAB
+[02:33:15.716] Browser LOG      adminId: undefined
+[02:33:24.348] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[02:33:24.348] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[02:33:24.348] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[02:33:24.348] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[02:33:24.348] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[02:33:24.348] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[02:33:24.953] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:33:24.953] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:33:24.953] Browser LOG      SOCKET CONNECTED: hnHdclgDPloHcJdpAAAD
+[02:33:24.953] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:37:06.534] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:37:07.527] Browser LOG      SOCKET CONNECTED: VKsxLTKQfWjwpyl-AAAB
+[02:37:07.527] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:40:24.541] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[02:57:17.969] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[02:57:17.969] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:57:17.969] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[02:57:18.590] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:57:18.590] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:57:18.814] Browser LOG      SOCKET CONNECTED: a4GECdgVRn9m4DPTAAAB
+[02:57:18.815] Browser LOG      adminId: 69c227ce028e81beff64a401
+[02:59:43.960] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[03:01:45.637] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[03:01:45.637] Browser LOG     🟢 Socket Active For Analytics Page
+[03:01:45.637] Browser LOG     🟢 Socket Active For Analytics Page
+[03:01:46.116] Browser LOG     Admin Pref Error: {}
+[03:01:46.116] Browser LOG     Admin Pref Error: {}
+[03:01:46.116] Browser LOG     Fetch Notification Error: {}
+[03:01:46.116] Browser ERROR   {}
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:46.116] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser LOG     Fetch Notification Error: {}
+[03:01:46.116] Browser ERROR   {}
+[03:01:46.116] Browser ERROR   {}
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:46.116] Browser ERROR   {}
+[03:01:49.286] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[03:01:49.427] Browser LOG     Admin Pref Error: {}
+[03:01:49.427] Browser LOG     Fetch Notification Error: {}
+[03:01:49.427] Browser ERROR   {}
+[03:01:49.427] Browser ERROR   {}
+[03:01:49.427] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:49.427] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:49.427] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:49.427] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:49.427] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:01:54.091] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[03:01:54.091] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[03:01:54.091] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[03:01:54.091] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[03:01:54.091] Browser LOG     Notification fetch error: {}
+[03:01:54.091] Browser LOG     Notification fetch error: {}
+[03:01:54.091] Browser ERROR   API error: {}
+[03:01:54.091] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:54.091] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:01:54.091] Browser ERROR   API error: {}
+[03:09:24.504] Browser LOG     🟢 Socket Active For Analytics Page
+[03:09:24.504] Browser LOG     🟢 Socket Active For Analytics Page
+[03:09:25.036] Browser LOG     Fetch Notification Error: {}
+[03:09:25.036] Browser LOG     Admin Pref Error: {}
+[03:09:25.036] Browser LOG     Admin Pref Error: {}
+[03:09:25.036] Browser ERROR   {}
+[03:09:25.036] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:09:25.036] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser LOG     Fetch Notification Error: {}
+[03:09:25.036] Browser ERROR   {}
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser ERROR   {}
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:09:25.036] Browser ERROR   {}
+[03:34:48.477] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[03:34:48.477] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[03:34:48.477] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[03:34:48.477] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[03:34:48.477] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[03:34:48.847] Browser LOG     Notification fetch error: {}
+[03:34:48.847] Browser LOG     Notification fetch error: {}
+[03:34:48.847] Browser ERROR   API error: {}
+[03:34:48.847] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:34:48.847] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:34:48.847] Browser ERROR   API error: {}
+[03:35:11.068] Browser LOG     🟢 Socket Active For Analytics Page
+[03:35:11.068] Browser LOG     🟢 Socket Active For Analytics Page
+[03:35:11.068] Browser LOG     Admin Pref Error: {}
+[03:35:11.068] Browser LOG     Fetch Notification Error: {}
+[03:35:11.068] Browser ERROR   {}
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:11.068] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:35:11.068] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:11.068] Browser ERROR   {}
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:11.068] Browser LOG     Fetch Notification Error: {}
+[03:35:11.068] Browser LOG     Admin Pref Error: {}
+[03:35:11.068] Browser ERROR   {}
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:11.068] Browser ERROR   {}
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:11.068] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:13.042] Browser ERROR   Failed to fetch stats: {}
+[03:35:13.042] Browser ERROR   Failed to fetch stats: {}
+[03:35:16.189] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[03:35:16.189] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[03:35:16.189] Browser LOG     Fetch error: {}
+[03:35:16.190] Browser LOG     Admin Pref Error: {}
+[03:35:16.190] Browser LOG     Admin Pref Error: {}
+[03:35:16.190] Browser LOG     Fetch error: {}
+[03:35:16.190] Browser ERROR   Failed to fetch reports: {}
+[03:35:16.190] Browser ERROR   Failed to fetch reports: {}
+[03:35:21.917] Browser LOG     🟢 Verification Page Socket Active
+[03:35:21.917] Browser LOG     🟢 Verification Page Socket Active
+[03:35:21.917] Browser LOG     🟢 Verification Page Socket Active
+[03:35:21.917] Browser LOG     🟢 Verification Page Socket Active
+[03:35:21.917] Browser LOG     Notification Fetch Error: {}
+[03:35:21.917] Browser LOG     Admin Pref Error: {}
+[03:35:21.917] Browser LOG     Notification Fetch Error: {}
+[03:35:21.917] Browser LOG     Notification Fetch Error: {}
+[03:35:21.917] Browser LOG     Admin Pref Error: {}
+[03:35:21.917] Browser LOG     Admin Pref Error: {}
+[03:35:21.917] Browser LOG     Notification Fetch Error: {}
+[03:35:21.917] Browser LOG     Admin Pref Error: {}
+[03:35:21.917] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[03:35:21.917] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:15:36.262] Browser LOG     Admin Pref Error: {}
+[04:15:36.262] Browser LOG     Notification Fetch Error: {}
+[04:15:36.262] Browser LOG     Admin Pref Error: {}
+[04:15:36.262] Browser LOG     Notification Fetch Error: {}
+[04:15:36.262] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:15:41.543] Browser LOG     Notification Fetch Error: {}
+[04:15:41.543] Browser LOG     Admin Pref Error: {}
+[04:15:41.543] Browser LOG     Admin Pref Error: {}
+[04:15:41.543] Browser LOG     Notification Fetch Error: {}
+[04:15:41.543] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:26.736] Server  WARN     ⚠ The requested resource "/loading2.gif" is an animated image so it will not be optimized. Consider adding the "unoptimized" property to the <Image>.
+[04:16:26.949] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:16:26.949] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:16:26.949] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:16:26.949] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[04:16:26.949] Browser LOG     Notification fetch error: {}
+[04:16:26.949] Browser LOG     Notification fetch error: {}
+[04:16:26.949] Browser ERROR   API error: {}
+[04:16:26.949] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:26.949] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:26.949] Browser ERROR   API error: {}
+[04:16:48.093] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[04:16:48.093] Browser LOG     🟢 Socket Active For Analytics Page
+[04:16:48.093] Browser LOG     🟢 Socket Active For Analytics Page
+[04:16:48.093] Browser LOG     Fetch Notification Error: {}
+[04:16:48.093] Browser LOG     Admin Pref Error: {}
+[04:16:48.093] Browser LOG     Fetch Notification Error: {}
+[04:16:48.093] Browser ERROR   {}
+[04:16:48.093] Browser ERROR   {}
+[04:16:48.093] Browser LOG     Admin Pref Error: {}
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:48.093] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:48.093] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:48.093] Browser ERROR   {}
+[04:16:48.093] Browser ERROR   {}
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:48.093] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:49.676] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:16:49.676] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:16:49.676] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:16:49.676] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:16:49.676] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:16:49.676] Browser LOG     Notification fetch error: {}
+[04:16:49.676] Browser LOG     Notification fetch error: {}
+[04:16:49.676] Browser ERROR   API error: {}
+[04:16:49.676] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:49.676] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:49.676] Browser ERROR   API error: {}
+[04:16:53.547] Browser LOG     🟢 Socket Active For Analytics Page
+[04:16:53.547] Browser LOG     🟢 Socket Active For Analytics Page
+[04:16:53.547] Browser LOG     Admin Pref Error: {}
+[04:16:53.547] Browser LOG     Fetch Notification Error: {}
+[04:16:53.547] Browser ERROR   {}
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:53.547] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser ERROR   {}
+[04:16:53.547] Browser LOG     Fetch Notification Error: {}
+[04:16:53.547] Browser LOG     Admin Pref Error: {}
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser ERROR   {}
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:16:53.547] Browser ERROR   {}
+[04:16:54.940] Browser ERROR   Failed to fetch stats: {}
+[04:16:54.940] Browser ERROR   Failed to fetch stats: {}
+[04:17:00.682] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:00.682] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:00.682] Browser LOG     Admin Pref Error: {}
+[04:17:00.682] Browser LOG     Fetch Notification Error: {}
+[04:17:00.682] Browser ERROR   {}
+[04:17:00.682] Browser ERROR   {}
+[04:17:00.682] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:00.682] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:00.682] Browser LOG     Fetch Notification Error: {}
+[04:17:00.682] Browser LOG     Admin Pref Error: {}
+[04:17:00.682] Browser ERROR   {}
+[04:17:00.682] Browser ERROR   {}
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:00.682] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:02.673] Browser ERROR   Failed to fetch stats: {}
+[04:17:02.673] Browser ERROR   Failed to fetch stats: {}
+[04:17:03.833] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:03.833] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:03.833] Browser LOG     Fetch error: {}
+[04:17:03.833] Browser LOG     Admin Pref Error: {}
+[04:17:03.833] Browser LOG     Admin Pref Error: {}
+[04:17:03.833] Browser LOG     Fetch error: {}
+[04:17:03.833] Browser ERROR   Failed to fetch reports: {}
+[04:17:03.833] Browser ERROR   Failed to fetch reports: {}
+[04:17:05.131] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:05.131] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:05.131] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:05.131] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:05.131] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:17:05.131] Browser LOG     Notification fetch error: {}
+[04:17:05.131] Browser LOG     Notification fetch error: {}
+[04:17:05.131] Browser ERROR   API error: {}
+[04:17:05.131] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:05.131] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:05.131] Browser ERROR   API error: {}
+[04:17:06.255] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:06.255] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:06.255] Browser LOG     Admin Pref Error: {}
+[04:17:06.255] Browser ERROR   {}
+[04:17:06.255] Browser LOG     Fetch Notification Error: {}
+[04:17:06.255] Browser ERROR   {}
+[04:17:06.255] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:06.256] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:06.256] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:06.256] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:06.256] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:06.256] Browser LOG     Fetch Notification Error: {}
+[04:17:06.256] Browser LOG     Admin Pref Error: {}
+[04:17:06.256] Browser ERROR   {}
+[04:17:06.256] Browser ERROR   {}
+[04:17:06.256] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:06.256] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:06.256] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:07.451] Browser ERROR   Failed to fetch stats: {}
+[04:17:07.451] Browser ERROR   Failed to fetch stats: {}
+[04:17:08.494] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:08.494] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:08.494] Browser LOG     Fetch error: {}
+[04:17:08.494] Browser LOG     Admin Pref Error: {}
+[04:17:08.494] Browser LOG     Fetch error: {}
+[04:17:08.494] Browser LOG     Admin Pref Error: {}
+[04:17:08.494] Browser ERROR   Failed to fetch reports: {}
+[04:17:08.494] Browser ERROR   Failed to fetch reports: {}
+[04:17:12.353] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:12.353] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:12.353] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:12.353] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:12.353] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:17:12.353] Browser LOG     Notification fetch error: {}
+[04:17:12.353] Browser LOG     Notification fetch error: {}
+[04:17:12.353] Browser ERROR   API error: {}
+[04:17:12.353] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:12.353] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:12.353] Browser ERROR   API error: {}
+[04:17:16.258] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:16.258] Browser LOG     🟢 Socket Active For Analytics Page
+[04:17:16.258] Browser LOG     Fetch Notification Error: {}
+[04:17:16.258] Browser LOG     Admin Pref Error: {}
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:16.258] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser LOG     Fetch Notification Error: {}
+[04:17:16.258] Browser LOG     Admin Pref Error: {}
+[04:17:16.258] Browser ERROR   {}
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:16.258] Browser ERROR   {}
+[04:17:16.258] Browser ERROR   {}
+[04:17:16.258] Browser ERROR   {}
+[04:17:17.437] Browser ERROR   Failed to fetch stats: {}
+[04:17:17.437] Browser ERROR   Failed to fetch stats: {}
+[04:17:18.617] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:18.618] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:17:18.618] Browser LOG     Admin Pref Error: {}
+[04:17:18.618] Browser LOG     Fetch error: {}
+[04:17:18.618] Browser LOG     Admin Pref Error: {}
+[04:17:18.618] Browser LOG     Fetch error: {}
+[04:17:18.618] Browser ERROR   Failed to fetch reports: {}
+[04:17:18.618] Browser ERROR   Failed to fetch reports: {}
+[04:17:20.645] Browser LOG     🟢 Verification Page Socket Active
+[04:17:20.645] Browser LOG     🟢 Verification Page Socket Active
+[04:17:20.645] Browser LOG     🟢 Verification Page Socket Active
+[04:17:20.645] Browser LOG     🟢 Verification Page Socket Active
+[04:17:20.645] Browser LOG     Admin Pref Error: {}
+[04:17:20.645] Browser LOG     Notification Fetch Error: {}
+[04:17:20.645] Browser LOG     Admin Pref Error: {}
+[04:17:20.645] Browser LOG     Notification Fetch Error: {}
+[04:17:20.645] Browser LOG     Admin Pref Error: {}
+[04:17:20.645] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:20.645] Browser LOG     Notification Fetch Error: {}
+[04:17:20.645] Browser LOG     Admin Pref Error: {}
+[04:17:20.645] Browser LOG     Notification Fetch Error: {}
+[04:17:20.645] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:17:22.104] Browser LOG     🟢 Realtime Listener Enabled
+[04:17:22.104] Browser LOG     🟢 Realtime Listener Enabled
+[04:17:22.104] Browser LOG     Admin Pref error: {}
+[04:17:22.104] Browser LOG     Admin Pref error: {}
+[04:17:22.104] Browser LOG     Fetch Notification Error: {}
+[04:17:22.104] Browser LOG     Fetch Notification Error: {}
+[04:17:23.615] Browser LOG     🟢 Realtime Listener Enabled
+[04:17:23.615] Browser LOG     🟢 Realtime Listener Enabled
+[04:17:23.615] Browser LOG     Fetch Notification Error: {}
+[04:17:23.615] Browser LOG     Admin Pref error: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser LOG     Admin Pref error: {}
+[04:17:23.615] Browser LOG     Fetch Notification Error: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching states: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching options: {}
+[04:17:23.615] Browser ERROR   Error fetching states: {}
+[04:17:24.631] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:24.631] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:24.631] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:17:24.631] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:17:24.631] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:17:24.631] Browser LOG     Notification fetch error: {}
+[04:17:24.631] Browser LOG     Notification fetch error: {}
+[04:17:24.631] Browser ERROR   API error: {}
+[04:17:24.631] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:24.631] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:17:24.631] Browser ERROR   API error: {}
+[04:18:26.848] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:26.848] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:26.848] Browser LOG     Fetch Notification Error: {}
+[04:18:26.848] Browser LOG     Admin Pref Error: {}
+[04:18:26.848] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:26.848] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:26.848] Browser ERROR   {}
+[04:18:26.848] Browser ERROR   {}
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:26.848] Browser LOG     Fetch Notification Error: {}
+[04:18:26.848] Browser LOG     Admin Pref Error: {}
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:26.848] Browser ERROR   {}
+[04:18:26.848] Browser ERROR   {}
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:26.848] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:28.351] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:18:28.351] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:18:28.351] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:18:28.351] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:18:28.351] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:18:28.351] Browser LOG     Notification fetch error: {}
+[04:18:28.351] Browser LOG     Notification fetch error: {}
+[04:18:28.351] Browser ERROR   API error: {}
+[04:18:28.351] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:28.351] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:28.351] Browser ERROR   API error: {}
+[04:18:29.522] Browser ERROR   Failed to fetch stats: {}
+[04:18:29.522] Browser ERROR   Failed to fetch stats: {}
+[04:18:30.701] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:30.701] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:30.701] Browser LOG     Admin Pref Error: {}
+[04:18:30.701] Browser LOG     Fetch Notification Error: {}
+[04:18:30.701] Browser ERROR   {}
+[04:18:30.701] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:30.701] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:30.701] Browser ERROR   {}
+[04:18:30.701] Browser LOG     Admin Pref Error: {}
+[04:18:30.701] Browser LOG     Fetch Notification Error: {}
+[04:18:30.701] Browser ERROR   {}
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:30.701] Browser ERROR   {}
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:30.701] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:31.687] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:18:31.687] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:18:31.687] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[04:18:31.687] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[04:18:31.687] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[04:18:31.687] Browser LOG     Notification fetch error: {}
+[04:18:31.687] Browser LOG     Notification fetch error: {}
+[04:18:31.687] Browser ERROR   API error: {}
+[04:18:31.687] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:31.687] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:31.687] Browser ERROR   API error: {}
+[04:18:32.867] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:32.867] Browser LOG     🟢 Socket Active For Analytics Page
+[04:18:32.867] Browser LOG     Admin Pref Error: {}
+[04:18:32.867] Browser LOG     Fetch Notification Error: {}
+[04:18:32.867] Browser ERROR   {}
+[04:18:32.867] Browser ERROR   {}
+[04:18:32.867] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:32.867] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:32.867] Browser LOG     Admin Pref Error: {}
+[04:18:32.867] Browser LOG     Fetch Notification Error: {}
+[04:18:32.867] Browser ERROR   {}
+[04:18:32.867] Browser ERROR   {}
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:32.867] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:34.213] Browser ERROR   Failed to fetch stats: {}
+[04:18:34.213] Browser ERROR   Failed to fetch stats: {}
+[04:18:35.717] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:18:35.717] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[04:18:35.717] Browser LOG     Fetch error: {}
+[04:18:35.717] Browser LOG     Admin Pref Error: {}
+[04:18:35.717] Browser LOG     Admin Pref Error: {}
+[04:18:35.717] Browser LOG     Fetch error: {}
+[04:18:35.717] Browser ERROR   Failed to fetch reports: {}
+[04:18:35.717] Browser ERROR   Failed to fetch reports: {}
+[04:18:58.134] Browser LOG     🟢 Verification Page Socket Active
+[04:18:58.134] Browser LOG     🟢 Verification Page Socket Active
+[04:18:58.134] Browser LOG     🟢 Verification Page Socket Active
+[04:18:58.134] Browser LOG     🟢 Verification Page Socket Active
+[04:18:58.134] Browser LOG     Notification Fetch Error: {}
+[04:18:58.134] Browser LOG     Admin Pref Error: {}
+[04:18:58.134] Browser LOG     Notification Fetch Error: {}
+[04:18:58.134] Browser LOG     Notification Fetch Error: {}
+[04:18:58.134] Browser LOG     Notification Fetch Error: {}
+[04:18:58.134] Browser LOG     Admin Pref Error: {}
+[04:18:58.134] Browser LOG     Admin Pref Error: {}
+[04:18:58.134] Browser LOG     Admin Pref Error: {}
+[04:18:58.134] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:18:58.134] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:55:24.352] Browser LOG     Notification Fetch Error: {}
+[04:55:24.760] Browser LOG     Admin Pref Error: {}
+[04:55:24.761] Browser LOG     Notification Fetch Error: {}
+[04:55:24.761] Browser LOG     Admin Pref Error: {}
+[04:55:24.761] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:55:48.032] Browser LOG     Admin Pref Error: {}
+[04:55:48.032] Browser LOG     Notification Fetch Error: {}
+[04:55:48.032] Browser LOG     Admin Pref Error: {}
+[04:55:48.032] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:55:48.032] Browser LOG     Notification Fetch Error: {}
+[04:55:51.245] Browser LOG     Notification Fetch Error: {}
+[04:55:51.245] Browser LOG     Admin Pref Error: {}
+[04:55:51.245] Browser LOG     Notification Fetch Error: {}
+[04:55:51.245] Browser LOG     Admin Pref Error: {}
+[04:55:51.245] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:56:08.334] Browser LOG     Admin Pref Error: {}
+[04:56:08.334] Browser LOG     Notification Fetch Error: {}
+[04:56:08.334] Browser LOG     Admin Pref Error: {}
+[04:56:08.334] Browser LOG     Notification Fetch Error: {}
+[04:56:08.334] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[04:56:47.567] Browser LOG      SOCKET CONNECTED: undefined
+[04:56:47.567] Browser LOG      adminId: undefined
+[04:56:47.804] Browser LOG      SOCKET CONNECTED: nPV46llhXgXA5CwRAAAD
+[04:56:47.804] Browser LOG      adminId: undefined
+[05:01:12.020] Browser LOG     🟢 Realtime Listener Enabled
+[05:01:12.020] Browser LOG     🟢 Realtime Listener Enabled
+[05:01:15.432] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:01:15.432] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:01:15.432] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:01:15.432] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:01:15.432] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:01:15.432] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:01:15.538] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:01:16.282] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:01:16.283] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:01:16.283] Browser LOG      SOCKET CONNECTED: kNJ_CdDaXg-GipVJAAAF
+[05:01:16.283] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:01:50.300] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:01:50.300] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:01:50.300] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:01:50.972] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:01:50.972] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:01:51.590] Browser LOG      SOCKET CONNECTED: 8HUnmU78h37AvAq9AAAH
+[05:01:51.590] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:05:24.390] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:05:24.391] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:05:24.391] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:05:25.183] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:05:25.183] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:05:25.183] Browser LOG      SOCKET CONNECTED: 2mQ-PwRKZbFC-Qx_AAAJ
+[05:05:25.183] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:06:06.229] Browser LOG     🟢 Realtime Listener Enabled
+[05:06:06.229] Browser LOG     🟢 Realtime Listener Enabled
+[05:06:12.056] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:06:12.056] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:06:12.056] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:06:12.056] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:06:12.056] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:06:12.056] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:06:12.571] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:06:12.571] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:06:12.740] Browser LOG      SOCKET CONNECTED: RRluVwcZQfuaOZvWAAAL
+[05:06:12.740] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:08:15.439] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:08:15.439] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:08:15.439] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:08:16.106] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:08:16.106] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:08:16.657] Browser LOG      SOCKET CONNECTED: bTQw5NIq07vWsZU6AAAN
+[05:08:16.657] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:09:52.535] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[05:09:54.535] Browser LOG      SOCKET CONNECTED: nWbMyze0DGRz93QcAAAB
+[05:09:54.535] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:31:28.712] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:31:28.712] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:31:28.712] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:31:29.876] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:31:29.876] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:31:30.370] Browser LOG      SOCKET CONNECTED: 76XxVX9Tgwa4dxw1AAAH
+[05:31:30.370] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:32:25.011] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[05:32:25.011] Browser LOG     🟢 Socket Active For Analytics Page
+[05:32:25.011] Browser LOG     🟢 Socket Active For Analytics Page
+[05:32:25.268] Browser LOG     name 
+[05:32:25.268] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:25.268] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:25.393] Browser LOG     name 
+[05:46:40.067] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:46:40.067] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:46:44.960] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:46:56.177] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:46:56.177] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:46:56.177] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:46:56.177] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:46:56.177] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:46:56.177] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:46:56.611] Browser LOG      SOCKET CONNECTED: WXGUpS_zZ4enCXiAAAAJ
+[05:46:56.611] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:46:56.729] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:46:56.729] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:07.266] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:47:07.266] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:47:08.148] Browser LOG     🟢 Socket Active For Analytics Page
+[05:47:08.148] Browser LOG     🟢 Socket Active For Analytics Page
+[05:47:08.475] Browser LOG     name 
+[05:47:08.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:08.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:08.622] Browser LOG     name 
+[05:47:10.947] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:47:10.947] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:47:11.839] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[05:47:11.839] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[05:47:13.086] Browser LOG     🟢 Verification Page Socket Active
+[05:47:13.086] Browser LOG     🟢 Verification Page Socket Active
+[05:47:13.086] Browser LOG     🟢 Verification Page Socket Active
+[05:47:13.086] Browser LOG     🟢 Verification Page Socket Active
+[05:47:16.335] Browser LOG     🟢 Realtime Listener Enabled
+[05:47:16.335] Browser LOG     🟢 Realtime Listener Enabled
+[05:47:25.443] Browser LOG     🟢 Realtime Listener Enabled
+[05:47:25.443] Browser LOG     🟢 Realtime Listener Enabled
+[05:47:31.020] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:47:31.020] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:47:31.020] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:47:31.020] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:47:31.020] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:47:31.020] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:47:31.428] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:31.428] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:31.688] Browser LOG      SOCKET CONNECTED: RRbiU0Ru7PxrBUHiAAAL
+[05:47:31.688] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:47:34.166] Browser LOG     🟢 Socket Active For Analytics Page
+[05:47:34.167] Browser LOG     🟢 Socket Active For Analytics Page
+[05:47:34.416] Browser LOG     name 
+[05:47:34.416] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:34.416] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:47:34.558] Browser LOG     name 
+[05:47:37.750] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:47:37.750] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:48:50.994] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:48:50.994] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:48:52.922] Browser LOG      SOCKET CONNECTED: undefined
+[05:48:52.922] Browser LOG      adminId: undefined
+[05:48:53.250] Browser LOG      SOCKET CONNECTED: NkqYR2QPZ0jw29F2AAAP
+[05:48:53.250] Browser LOG      adminId: undefined
+[05:48:55.268] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:48:55.268] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:48:55.268] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:48:55.268] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:48:55.268] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:48:55.268] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:48:55.801] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:48:55.801] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:48:56.144] Browser LOG      SOCKET CONNECTED: Y-BjYGvUUnNrbBgiAAAR
+[05:48:56.144] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:49:21.380] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[05:49:21.380] Browser LOG     🟢 Socket Active For Analytics Page
+[05:49:21.380] Browser LOG     🟢 Socket Active For Analytics Page
+[05:49:21.656] Browser LOG     name 
+[05:49:21.656] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:49:21.656] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:49:22.231] Browser LOG     name 
+[05:49:30.851] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:49:30.851] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:49:36.460] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[05:49:36.460] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[05:49:43.405] Browser LOG      SOCKET CONNECTED: 25a-8FicmRfzTYPKAAAT
+[05:49:43.405] Browser LOG      adminId: undefined
+[05:49:43.979] Browser LOG     🟢 Verification Page Socket Active
+[05:49:43.979] Browser LOG     🟢 Verification Page Socket Active
+[05:49:43.979] Browser LOG     🟢 Verification Page Socket Active
+[05:49:43.979] Browser LOG     🟢 Verification Page Socket Active
+[05:51:56.743] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:51:56.743] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[05:51:56.743] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:51:56.743] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:51:56.743] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[05:51:56.743] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:51:56.743] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:51:57.232] Browser LOG      SOCKET CONNECTED: gYEb70eCJsr0Nk9wAAAV
+[05:51:57.232] Browser LOG      adminId: 69c227ce028e81beff64a401
+[05:51:57.232] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:51:57.232] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:54:46.060] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[05:54:46.060] Browser LOG     🟢 Socket Active For Analytics Page
+[05:54:46.060] Browser LOG     🟢 Socket Active For Analytics Page
+[05:54:46.663] Browser LOG     name 
+[05:54:46.663] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:54:46.663] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:54:46.924] Browser LOG     name 
+[05:55:39.276] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[05:55:41.869] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[05:55:42.227] Browser ERROR   {}
+[05:55:42.227] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:42.227] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:42.227] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[05:55:42.227] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[05:55:42.227] Browser LOG     Fetch Notification Error: {}
+[05:55:42.443] Browser LOG     Admin Pref Error: {}
+[05:55:42.443] Browser ERROR   unhandledRejection: TypeError: Failed to fetch
+[05:55:42.443] Browser ERROR   {}
+[05:55:44.382] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:55:44.382] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[05:55:44.382] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[05:55:44.382] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:55:44.757] Browser LOG     Notification fetch error: {}
+[05:55:44.757] Browser LOG     Notification fetch error: {}
+[05:55:44.757] Browser ERROR   API error: {}
+[05:55:44.757] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:44.757] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:45.181] Browser ERROR   API error: {}
+[06:08:48.524] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[06:08:48.524] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:08:48.524] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[06:08:49.497] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:08:49.497] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:08:49.497] Browser LOG      SOCKET CONNECTED: jET2yL_168yMMIEVAAAB
+[06:08:49.497] Browser LOG      adminId: 69c227ce028e81beff64a401
+[06:09:35.538] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[06:09:36.537] Browser LOG      SOCKET CONNECTED: QDrDrIWs0Yaq_Y9XAAAB
+[06:09:36.537] Browser LOG      adminId: 69c227ce028e81beff64a401
+[06:15:26.335] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[06:15:26.335] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:15:26.335] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[06:15:27.150] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:15:27.150] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:15:27.150] Browser LOG      SOCKET CONNECTED: vIiB1X35sg_0a7mDAAAD
+[06:15:27.150] Browser LOG      adminId: 69c227ce028e81beff64a401
+[06:21:48.256] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[06:21:48.256] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:21:48.256] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[06:21:48.531] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:21:48.531] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:21:48.826] Browser LOG      SOCKET CONNECTED: Hbf14R-r4geXYMSFAAAF
+[06:21:48.826] Browser LOG      adminId: 69c227ce028e81beff64a401
+[06:22:12.765] Browser LOG     Admin ID from localStorage: 69c227ce028e81beff64a401
+[06:22:12.765] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:22:12.765] Browser LOG     Connecting socket with adminId: 69c227ce028e81beff64a401
+[06:22:13.094] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:22:13.094] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:22:13.330] Browser LOG      SOCKET CONNECTED: zVK9hY1i4ZmKOzmMAAAH
+[06:22:13.330] Browser LOG      adminId: 69c227ce028e81beff64a401
+[06:26:10.098] Browser ERROR   Failed to fetch stats: {}
+[06:26:10.549] Browser ERROR   Failed to fetch stats: {}
+[06:26:44.082] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: ping timeout
+[06:30:38.176] Server  LOG        Reload env: .env
+[06:30:40.657] Server  LOG      ✓ Compiled in 2.6s
+[06:30:40.731] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./Downloads/matrimonial-main/matrimonial-main/node_modules/next/dist/client/index.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

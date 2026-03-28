@@ -11,7 +11,7 @@ const Search = () => {
   const [open, setOpen] = useState(false);
 
   const dropdownRef = useRef(null);
-  const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+  const BASE_URL = "https://merimonial-backend.onrender.com";
 
   /* --------------------------------------------------------
         1) LOAD ADMIN PREF → CONNECT SOCKET
@@ -19,7 +19,7 @@ const Search = () => {
   const loadAdminPrefs = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${BASE_URL}/admin/profile`, {
+      const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

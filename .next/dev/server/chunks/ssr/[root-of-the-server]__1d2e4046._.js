@@ -31,7 +31,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 let socket = null;
 function connectSocket(adminId) {
     if (socket && socket.connected) return socket;
-    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://matrimonial-backend-7ahc.onrender.com", {
+    socket = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$socket$2e$io$2d$client__$5b$external$5d$__$28$socket$2e$io$2d$client$2c$__esm_import$29$__["io"])("https://merimonial-backend.onrender.com", {
         transports: [
             "websocket"
         ],
@@ -89,7 +89,7 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
-const BASE_URL = "https://matrimonial-backend-7ahc.onrender.com";
+const BASE_URL = "https://merimonial-backend.onrender.com";
 ;
 /* ---------------------------
    TOKEN FINDER (unchanged)
@@ -948,7 +948,7 @@ function AdminProfilePage() {
     /* FETCH PROFILE */ const loadProfile = async ()=>{
         try {
             const token = getAuthTokenFromLocalStorage();
-            const res = await fetch(`${BASE_URL}/admin/profile`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/profile`, {
                 headers: token ? {
                     Authorization: `Bearer ${token}`
                 } : {}
@@ -1003,7 +1003,7 @@ function AdminProfilePage() {
             fd.append("assignedRegion", values.assignedRegion);
             fd.append("phone", values.phone);
             if (values.profileImage) fd.append("profileImage", values.profileImage);
-            const res = await fetch(`${BASE_URL}/admin/profile/basic`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/api/auth/admin/update-basic/profile`, {
                 method: "PUT",
                 headers: token ? {
                     Authorization: `Bearer ${token}`
@@ -1035,7 +1035,7 @@ function AdminProfilePage() {
     const handleSaveSecurity = async (values)=>{
         try {
             const token = getAuthTokenFromLocalStorage();
-            const res = await fetch(`${BASE_URL}/admin/profile/security`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/update/security`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -1073,7 +1073,7 @@ function AdminProfilePage() {
   ----------------------------*/ const handleSavePreferences = async (values)=>{
         try {
             const token = getAuthTokenFromLocalStorage();
-            const res = await fetch(`${BASE_URL}/admin/profile/preferences`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/update-profile/preferences`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -1123,7 +1123,7 @@ function AdminProfilePage() {
   ----------------------------*/ const handleNotificationToggle = async (value)=>{
         try {
             const token = getAuthTokenFromLocalStorage();
-            const res = await fetch(`${BASE_URL}/admin/profile/preferences`, {
+            const res = await fetch(`${BASE_URL}/api/auth/admin/update-profile/preferences`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
