@@ -223,22 +223,25 @@ const Search = () => {
 
       <div className="flex items-center gap-4">
 
-        {/* 🔔 Notification Bell */}
+           {/* NOTIFICATION BELL */}
         <div className="relative" ref={dropdownRef}>
-          <div
-            className="cursor-pointer relative"
-            onClick={handleBellClick}
-          >
-            <Bell className="h-7 w-7 text-yellow-500" />
+          <div onClick={handleBellClick} className="cursor-pointer">
+            <svg 
+              width="28" 
+              height="28" 
+              viewBox="0 0 24 24" 
+              fill="#FFC107"
+              className="hover:fill-orange-500 transition-colors"
+            >
+              <path d="M12 24c1.104 0 2-.897 2-2h-4c0 1.103.896 2 2 2zm6.707-5l1.293 1.293V21H4v-1.707L5.293 19H6v-7c0-3.309 2.691-6 6-6s6 2.691 6 6v7h.707z" />
+            </svg>
 
             {unreadCount > 0 && (
-              <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-600 text-white 
-              text-[10px] flex items-center justify-center rounded-full border-2 border-white">
-                {unreadCount}
+              <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-600 text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white">
+                {unreadCount > 9 ? "9+" : unreadCount}
               </span>
             )}
           </div>
-
           {/* DROPDOWN */}
           {open && (
             <div className="absolute right-0 mt-3 w-[330px] bg-white shadow-lg border rounded-lg p-3 z-50">

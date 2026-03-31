@@ -44,21 +44,6 @@
       "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages__error_2da965e7._.js",
       "static/chunks/turbopack-Downloads_matrimonial-main_matrimonial-main_pages__error_800a6a80._.js"
     ],
-    "/adminprofile": [
-      "static/chunks/[root-of-the-server]__def935cc._.js",
-      "static/chunks/647d8_next_dist_compiled_16597b3a._.js",
-      "static/chunks/647d8_next_dist_shared_lib_05f3e4ff._.js",
-      "static/chunks/647d8_next_dist_client_29d77942._.js",
-      "static/chunks/647d8_next_dist_c077c4a9._.js",
-      "static/chunks/647d8_next_image_35313d4d.js",
-      "static/chunks/647d8_react-dom_4e5e3a70._.js",
-      "static/chunks/647d8_react-icons_fi_index_mjs_7118e923._.js",
-      "static/chunks/647d8_react-icons_ai_index_mjs_5d329aad._.js",
-      "static/chunks/647d8_react-icons_lib_e6215aa5._.js",
-      "static/chunks/647d8_87aeb312._.js",
-      "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_adminprofile_index_2da965e7.js",
-      "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_adminprofile_index_a8ae480a.js"
-    ],
     "/analytics": [
       "static/chunks/647d8_highcharts-react-official_dist_highcharts-react_min_85b70fac.js",
       "static/chunks/[root-of-the-server]__75decc3f._.js",
@@ -97,18 +82,6 @@
       "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_dashboard_index_2da965e7.js",
       "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_dashboard_index_bf09c959.js"
     ],
-    "/logout": [
-      "static/chunks/647d8_next_dist_compiled_16597b3a._.js",
-      "static/chunks/647d8_next_dist_shared_lib_05f3e4ff._.js",
-      "static/chunks/647d8_next_dist_client_29d77942._.js",
-      "static/chunks/647d8_next_dist_c077c4a9._.js",
-      "static/chunks/647d8_next_b91371f2._.js",
-      "static/chunks/647d8_react-dom_4e5e3a70._.js",
-      "static/chunks/647d8_10a2c3d3._.js",
-      "static/chunks/[root-of-the-server]__bc9d05be._.js",
-      "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_logout_index_jsx_2da965e7._.js",
-      "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_logout_index_jsx_4be4c128._.js"
-    ],
     "/managesubadmin": [
       "static/chunks/[root-of-the-server]__0f29eea1._.js",
       "static/chunks/647d8_next_dist_compiled_456e2be2._.js",
@@ -133,18 +106,6 @@
       "static/chunks/647d8_24f0724f._.js",
       "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_manageusers_index_2da965e7.js",
       "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_manageusers_index_afbab887.js"
-    ],
-    "/manageusers/[id]": [
-      "static/chunks/647d8_next_dist_compiled_16597b3a._.js",
-      "static/chunks/647d8_next_dist_shared_lib_0e3c7894._.js",
-      "static/chunks/647d8_next_dist_client_60695e8e._.js",
-      "static/chunks/647d8_next_dist_c077c4a9._.js",
-      "static/chunks/647d8_next_0e01d4af._.js",
-      "static/chunks/647d8_react-dom_4e5e3a70._.js",
-      "static/chunks/647d8_10a2c3d3._.js",
-      "static/chunks/[root-of-the-server]__965ba0d7._.js",
-      "static/chunks/Downloads_matrimonial-main_matrimonial-main_pages_manageusers_[id]_2da965e7.js",
-      "static/chunks/63a6e_matrimonial-main_matrimonial-main_pages_manageusers_[id]_c1bd60bb.js"
     ],
     "/profileDetails": [
       "static/chunks/647d8_next_dist_compiled_456e2be2._.js",

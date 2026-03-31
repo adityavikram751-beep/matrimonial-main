@@ -7,7 +7,7 @@
   "static/chunks/647d8_next_dist_client_b853d865._.js",
   "static/chunks/647d8_next_dist_c077c4a9._.js",
   "static/chunks/647d8_react-dom_4e5e3a70._.js",
-  "static/chunks/647d8_778b9da8._.js"
+  "static/chunks/647d8_111149c2._.js"
 ],
     source: "entry"
 });

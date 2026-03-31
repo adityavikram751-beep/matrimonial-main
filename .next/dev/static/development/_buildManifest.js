@@ -5,26 +5,17 @@ self.__BUILD_MANIFEST = {
   "/_error": [
     "static/chunks/pages/_error.js"
   ],
-  "/adminprofile": [
-    "static/chunks/pages/adminprofile.js"
-  ],
   "/analytics": [
     "static/chunks/pages/analytics.js"
   ],
   "/dashboard": [
     "static/chunks/pages/dashboard.js"
   ],
-  "/logout": [
-    "static/chunks/pages/logout.js"
-  ],
   "/managesubadmin": [
     "static/chunks/pages/managesubadmin.js"
   ],
   "/manageusers": [
     "static/chunks/pages/manageusers.js"
-  ],
-  "/manageusers/[id]": [
-    "static/chunks/pages/manageusers/[id].js"
   ],
   "/profileDetails": [
     "static/chunks/pages/profileDetails.js"

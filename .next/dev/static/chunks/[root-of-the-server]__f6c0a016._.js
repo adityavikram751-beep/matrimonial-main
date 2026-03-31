@@ -527,7 +527,6 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/react/index.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bell$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bell$3e$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/lucide-react/dist/esm/icons/bell.js [client] (ecmascript) <export default as Bell>");
 // ⭐ WebSocket imports
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$src$2f$lib$2f$socket$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/src/lib/socket.js [client] (ecmascript)");
 ;
@@ -785,22 +784,33 @@ const Search = ()=>{
                     ref: dropdownRef,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "cursor-pointer relative",
                             onClick: handleBellClick,
+                            className: "cursor-pointer",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bell$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bell$3e$__["Bell"], {
-                                    className: "h-7 w-7 text-yellow-500"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "28",
+                                    height: "28",
+                                    viewBox: "0 0 24 24",
+                                    fill: "#FFC107",
+                                    className: "hover:fill-orange-500 transition-colors",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M12 24c1.104 0 2-.897 2-2h-4c0 1.103.896 2 2 2zm6.707-5l1.293 1.293V21H4v-1.707L5.293 19H6v-7c0-3.309 2.691-6 6-6s6 2.691 6 6v7h.707z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
+                                        lineNumber: 236,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                    lineNumber: 232,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 unreadCount > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "absolute -top-1 -right-1 h-4 w-4 bg-red-600 text-white  text-[10px] flex items-center justify-center rounded-full border-2 border-white",
-                                    children: unreadCount
+                                    className: "absolute -top-1 -right-1 h-4 w-4 bg-red-600 text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white",
+                                    children: unreadCount > 9 ? "9+" : unreadCount
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                    lineNumber: 235,
+                                    lineNumber: 240,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -820,7 +830,7 @@ const Search = ()=>{
                                             children: "Notifications"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                            lineNumber: 246,
+                                            lineNumber: 249,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -829,13 +839,13 @@ const Search = ()=>{
                                             children: "Mark all read"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                            lineNumber: 248,
+                                            lineNumber: 251,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                    lineNumber: 245,
+                                    lineNumber: 248,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -845,7 +855,7 @@ const Search = ()=>{
                                         children: "No notifications"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                        lineNumber: 256,
+                                        lineNumber: 259,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)) : notifications.map((n)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `p-3 border-b flex justify-between items-start ${!n.read ? "bg-yellow-50" : ""}`,
@@ -857,7 +867,7 @@ const Search = ()=>{
                                                             children: n.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                            lineNumber: 266,
+                                                            lineNumber: 269,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -865,7 +875,7 @@ const Search = ()=>{
                                                             children: n.message
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                            lineNumber: 267,
+                                                            lineNumber: 270,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -873,7 +883,7 @@ const Search = ()=>{
                                                             children: new Date(n.createdAt).toLocaleString()
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                            lineNumber: 268,
+                                                            lineNumber: 271,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         !n.read && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -882,13 +892,13 @@ const Search = ()=>{
                                                             children: "Mark as read"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                            lineNumber: 273,
+                                                            lineNumber: 276,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                    lineNumber: 265,
+                                                    lineNumber: 268,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -897,18 +907,18 @@ const Search = ()=>{
                                                     children: "Delete"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                                    lineNumber: 282,
+                                                    lineNumber: 285,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, n._id, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                            lineNumber: 259,
+                                            lineNumber: 262,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                    lineNumber: 254,
+                                    lineNumber: 257,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 notifications.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -917,13 +927,13 @@ const Search = ()=>{
                                     children: "Delete All"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                                    lineNumber: 294,
+                                    lineNumber: 297,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/reportedcontent/Search.js",
-                            lineNumber: 244,
+                            lineNumber: 247,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
