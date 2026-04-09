@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaSort, FaTimes, FaChevronDown, FaPlus } from 'react-icons/fa';
+import { FaSort, FaTimes, FaChevronDown, FaPlus, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const API_URL = 'https://merimonial-backend.onrender.com';
 
 const DEFAULT_PERMISSIONS = [
-  { key: 'CAN_VIEW_USER',        label: 'Can View User' },
-  { key: 'EDIT_USER_INFO',       label: 'Edit User Info' },
-  { key: 'ACCESS_ANALYTICS',     label: 'Access Analytics' },
-  { key: 'MODERATE_REPORTS',     label: 'Moderate Reports' },
-  { key: 'BLOCK_REPORTED_USERS', label: 'Block Reported Users' },
-  { key: 'VERIFY_DOCUMENTS',     label: 'Verify Documents' },
-  { key: 'APPROVE_PROFILES',     label: 'Approve Profiles' },
+  { key: 'DASHBOARD',        label: 'Dashboard' },
+  { key: 'ANALYTICS',       label: 'Analytics' },
+  { key: 'MANAGE_USERS',     label: 'Manage Users' },
+  { key: 'REPORTED_CONTENT',     label: 'Reported Content' },
+  { key: 'VARIFICATION_REQUEST', label: 'Verification Requests' },
+  { key: 'PROFILE_DETAILS',     label: 'Profile Details' },
 ];
 
 const ROLE_SUGGESTIONS = ['reporter', 'moderator', 'verification_officer', 'analyst', 'support'];
@@ -73,12 +72,15 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom }) => (
   </label>
 );
 
-// ─── Create Sub Admin Modal ───────────────────────────────────────────────────
+// ─── Create Sub Admin Modal (with password visibility toggle) ────────────────
 const CreateSubAdminModal = ({ onClose, onCreated }) => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [createdId, setCreatedId] = useState(null);
+
+  // 👇 State for password visibility
+  const [showPassword, setShowPassword] = useState(false);
 
   const [form, setForm] = useState({
     firstName: '', lastName: '', email: '', phone: '',
@@ -109,32 +111,25 @@ const CreateSubAdminModal = ({ onClose, onCreated }) => {
   const togglePerm = (key) =>
     setPermissions((prev) => prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]);
 
-  // ✅ Add custom permission
   const handleAddCustomPermission = () => {
     const trimmed = customInput.trim();
     if (!trimmed) return;
-
-    // Convert to UPPER_SNAKE_CASE for key
     const key = trimmed.toUpperCase().replace(/\s+/g, '_');
     const label = trimmed
       .split(' ')
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
       .join(' ');
-
-    // Check for duplicates
     if (allPermissions.find((p) => p.key === key)) {
       setCustomInput('');
       return;
     }
-
     const newPerm = { key, label, isCustom: true };
     setAllPermissions((prev) => [...prev, newPerm]);
-    setPermissions((prev) => [...prev, key]); // auto-check it
+    setPermissions((prev) => [...prev, key]);
     setCustomInput('');
     customInputRef.current?.focus();
   };
 
-  // ✅ Delete custom permission
   const handleDeleteCustomPermission = (key) => {
     setAllPermissions((prev) => prev.filter((p) => p.key !== key));
     setPermissions((prev) => prev.filter((k) => k !== key));
@@ -286,11 +281,26 @@ const CreateSubAdminModal = ({ onClose, onCreated }) => {
                   <input type="text" name="phone" placeholder="+91 XXXXXXXXXX" value={form.phone} onChange={handleInput}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm" />
                 </div>
+                {/* Password field with visibility toggle */}
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 mb-1">Password <span className="text-red-500">*</span></label>
-                  <input type="password" name="password" placeholder="At least 6 characters"
-                    value={form.password} onChange={handleInput}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm" />
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                      placeholder="At least 6 characters"
+                      value={form.password}
+                      onChange={handleInput}
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 pr-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700"
+                    >
+                      {showPassword ? <FaEyeSlash size={16} /> : <FaEye size={16} />}
+                    </button>
+                  </div>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 mb-1">Gender</label>
@@ -339,7 +349,7 @@ const CreateSubAdminModal = ({ onClose, onCreated }) => {
             </>
           )}
 
-          {/* STEP 2 */}
+          {/* STEP 2 (unchanged) */}
           {step === 2 && (
             <>
               <div className="rounded-xl px-4 py-4" style={{ background: '#fffbf0' }}>
@@ -363,7 +373,6 @@ const CreateSubAdminModal = ({ onClose, onCreated }) => {
                   ))}
                 </div>
 
-                {/* ✅ Custom permission input */}
                 <div className="border-t border-yellow-200 pt-3 mt-1">
                   <p className="text-xs font-semibold text-gray-500 mb-2">➕ Add Custom Permission</p>
                   <div className="flex gap-2">

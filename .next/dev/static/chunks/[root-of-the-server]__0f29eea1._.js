@@ -1017,32 +1017,28 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 const API_URL = 'https://merimonial-backend.onrender.com';
 const DEFAULT_PERMISSIONS = [
     {
-        key: 'CAN_VIEW_USER',
-        label: 'Can View User'
+        key: 'DASHBOARD',
+        label: 'Dashboard'
     },
     {
-        key: 'EDIT_USER_INFO',
-        label: 'Edit User Info'
+        key: 'ANALYTICS',
+        label: 'Analytics'
     },
     {
-        key: 'ACCESS_ANALYTICS',
-        label: 'Access Analytics'
+        key: 'MANAGE_USERS',
+        label: 'Manage Users'
     },
     {
-        key: 'MODERATE_REPORTS',
-        label: 'Moderate Reports'
+        key: 'REPORTED_CONTENT',
+        label: 'Reported Content'
     },
     {
-        key: 'BLOCK_REPORTED_USERS',
-        label: 'Block Reported Users'
+        key: 'VARIFICATION_REQUEST',
+        label: 'Verification Requests'
     },
     {
-        key: 'VERIFY_DOCUMENTS',
-        label: 'Verify Documents'
-    },
-    {
-        key: 'APPROVE_PROFILES',
-        label: 'Approve Profiles'
+        key: 'PROFILE_DETAILS',
+        label: 'Profile Details'
     }
 ];
 const ROLE_SUGGESTIONS = [
@@ -1084,7 +1080,7 @@ const RoleInput = ({ value, onChange })=>{
                         className: "w-full px-3 py-2 text-sm focus:outline-none"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1096,18 +1092,18 @@ const RoleInput = ({ value, onChange })=>{
                             className: `text-gray-500 transition-transform ${open ? 'rotate-180' : ''}`
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 40,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 38,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1122,18 +1118,18 @@ const RoleInput = ({ value, onChange })=>{
                         children: r
                     }, r, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 46,
+                        lineNumber: 45,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-        lineNumber: 29,
+        lineNumber: 28,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1149,7 +1145,7 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PU
                 className: "w-4 h-4 rounded accent-blue-600 cursor-pointer"
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1157,7 +1153,7 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PU
                 children: label
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             isCustom && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1172,28 +1168,30 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PU
                     size: 10
                 }, void 0, false, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                    lineNumber: 70,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 64,
+                lineNumber: 63,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-        lineNumber: 59,
+        lineNumber: 58,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 _c1 = PermCheckbox;
-// ─── Create Sub Admin Modal ───────────────────────────────────────────────────
+// ─── Create Sub Admin Modal (with password visibility toggle) ────────────────
 const CreateSubAdminModal = ({ onClose, onCreated })=>{
     _s1();
     const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [createdId, setCreatedId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // 👇 State for password visibility
+    const [showPassword, setShowPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({
         firstName: '',
         lastName: '',
@@ -1233,14 +1231,11 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                 ...prev,
                 key
             ]);
-    // ✅ Add custom permission
     const handleAddCustomPermission = ()=>{
         const trimmed = customInput.trim();
         if (!trimmed) return;
-        // Convert to UPPER_SNAKE_CASE for key
         const key = trimmed.toUpperCase().replace(/\s+/g, '_');
         const label = trimmed.split(' ').map((w)=>w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-        // Check for duplicates
         if (allPermissions.find((p)=>p.key === key)) {
             setCustomInput('');
             return;
@@ -1257,11 +1252,10 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
         setPermissions((prev)=>[
                 ...prev,
                 key
-            ]); // auto-check it
+            ]);
         setCustomInput('');
         customInputRef.current?.focus();
     };
-    // ✅ Delete custom permission
     const handleDeleteCustomPermission = (key)=>{
         setAllPermissions((prev)=>prev.filter((p)=>p.key !== key));
         setPermissions((prev)=>prev.filter((k)=>k !== key));
@@ -1366,7 +1360,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             alt: "avatar"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 223,
+                                            lineNumber: 218,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1376,12 +1370,12 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                 children: "📷"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                lineNumber: 226,
+                                                lineNumber: 221,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 225,
+                                            lineNumber: 220,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1392,13 +1386,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             className: "hidden"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 228,
+                                            lineNumber: 223,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 222,
+                                    lineNumber: 217,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1408,7 +1402,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             children: form.firstName ? `${form.firstName} ${form.lastName}` : 'New Sub Admin'
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 231,
+                                            lineNumber: 226,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         form.role && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1416,7 +1410,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             children: form.role
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 234,
+                                            lineNumber: 229,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1426,26 +1420,26 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     className: "inline-block w-2 h-2 rounded-full mr-1 bg-green-500 align-middle"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 236,
+                                                    lineNumber: 231,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 form.status
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 235,
+                                            lineNumber: 230,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 230,
+                                    lineNumber: 225,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 221,
+                            lineNumber: 216,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1453,18 +1447,18 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                             className: "text-gray-400 hover:text-gray-600 text-lg",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTimes"], {}, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 241,
+                                lineNumber: 236,
                                 columnNumber: 91
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 241,
+                            lineNumber: 236,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                    lineNumber: 220,
+                    lineNumber: 215,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1484,7 +1478,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                     children: step > i + 1 ? '✓' : i + 1
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 248,
+                                    lineNumber: 243,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1492,7 +1486,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                     children: label
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 255,
+                                    lineNumber: 250,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 i === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1500,18 +1494,18 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                     children: "›"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 256,
+                                    lineNumber: 251,
                                     columnNumber: 27
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, i, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 247,
+                            lineNumber: 242,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                    lineNumber: 245,
+                    lineNumber: 240,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1521,7 +1515,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                             className: "border-gray-100 mb-4"
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 263,
+                            lineNumber: 258,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         step === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1540,8 +1534,46 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 270,
+                                                            lineNumber: 265,
                                                             columnNumber: 96
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                    lineNumber: 265,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                    type: "text",
+                                                    name: "firstName",
+                                                    placeholder: "e.g., Pritam",
+                                                    value: form.firstName,
+                                                    onChange: handleInput,
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                    lineNumber: 266,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                            lineNumber: 264,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block text-xs font-semibold text-gray-600 mb-1",
+                                                    children: [
+                                                        "Last Name ",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-red-500",
+                                                            children: "*"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                            lineNumber: 270,
+                                                            columnNumber: 95
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
@@ -1551,9 +1583,9 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "text",
-                                                    name: "firstName",
-                                                    placeholder: "e.g., Pritam",
-                                                    value: form.firstName,
+                                                    name: "lastName",
+                                                    placeholder: "e.g., Sharma",
+                                                    value: form.lastName,
                                                     onChange: handleInput,
                                                     className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
                                                 }, void 0, false, {
@@ -1572,14 +1604,14 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-xs font-semibold text-gray-600 mb-1",
                                                     children: [
-                                                        "Last Name ",
+                                                        "Email ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-red-500",
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
                                                             lineNumber: 275,
-                                                            columnNumber: 95
+                                                            columnNumber: 91
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
@@ -1588,10 +1620,10 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    type: "text",
-                                                    name: "lastName",
-                                                    placeholder: "e.g., Sharma",
-                                                    value: form.lastName,
+                                                    type: "email",
+                                                    name: "email",
+                                                    placeholder: "pritam@gmail.com",
+                                                    value: form.email,
                                                     onChange: handleInput,
                                                     className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
                                                 }, void 0, false, {
@@ -1610,7 +1642,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-xs font-semibold text-gray-600 mb-1",
                                                     children: [
-                                                        "Email ",
+                                                        "Phone ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-red-500",
                                                             children: "*"
@@ -1626,10 +1658,10 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    type: "email",
-                                                    name: "email",
-                                                    placeholder: "pritam@gmail.com",
-                                                    value: form.email,
+                                                    type: "text",
+                                                    name: "phone",
+                                                    placeholder: "+91 XXXXXXXXXX",
+                                                    value: form.phone,
                                                     onChange: handleInput,
                                                     className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
                                                 }, void 0, false, {
@@ -1648,75 +1680,68 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-xs font-semibold text-gray-600 mb-1",
                                                     children: [
-                                                        "Phone ",
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-red-500",
-                                                            children: "*"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 285,
-                                                            columnNumber: 91
-                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 285,
-                                                    columnNumber: 19
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    type: "text",
-                                                    name: "phone",
-                                                    placeholder: "+91 XXXXXXXXXX",
-                                                    value: form.phone,
-                                                    onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 286,
-                                                    columnNumber: 19
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 284,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                    className: "block text-xs font-semibold text-gray-600 mb-1",
-                                                    children: [
                                                         "Password ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-red-500",
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 290,
+                                                            lineNumber: 286,
                                                             columnNumber: 94
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 290,
+                                                    lineNumber: 286,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    type: "password",
-                                                    name: "password",
-                                                    placeholder: "At least 6 characters",
-                                                    value: form.password,
-                                                    onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
-                                                }, void 0, false, {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "relative",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                            type: showPassword ? "text" : "password",
+                                                            name: "password",
+                                                            placeholder: "At least 6 characters",
+                                                            value: form.password,
+                                                            onChange: handleInput,
+                                                            className: "w-full border border-gray-300 rounded-lg px-3 py-2 pr-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                            lineNumber: 288,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                            type: "button",
+                                                            onClick: ()=>setShowPassword(!showPassword),
+                                                            className: "absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700",
+                                                            children: showPassword ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaEyeSlash"], {
+                                                                size: 16
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                                lineNumber: 301,
+                                                                columnNumber: 39
+                                                            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaEye"], {
+                                                                size: 16
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                                lineNumber: 301,
+                                                                columnNumber: 66
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
+                                                            lineNumber: 296,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 291,
+                                                    lineNumber: 287,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 289,
+                                            lineNumber: 285,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1726,7 +1751,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "Gender"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 296,
+                                                    lineNumber: 306,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1740,7 +1765,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "Male"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 299,
+                                                            lineNumber: 309,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1748,7 +1773,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "Female"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 300,
+                                                            lineNumber: 310,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1756,19 +1781,19 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "Other"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 301,
+                                                            lineNumber: 311,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 297,
+                                                    lineNumber: 307,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 295,
+                                            lineNumber: 305,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1778,7 +1803,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "Status"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 305,
+                                                    lineNumber: 315,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1792,7 +1817,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "Active"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 308,
+                                                            lineNumber: 318,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1800,19 +1825,19 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "Inactive"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 309,
+                                                            lineNumber: 319,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 306,
+                                                    lineNumber: 316,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 304,
+                                            lineNumber: 314,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1827,13 +1852,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 313,
+                                                            lineNumber: 323,
                                                             columnNumber: 90
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 313,
+                                                    lineNumber: 323,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RoleInput, {
@@ -1844,13 +1869,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 314,
+                                                    lineNumber: 324,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 312,
+                                            lineNumber: 322,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1861,7 +1886,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "Profile Photo (optional)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 317,
+                                                    lineNumber: 327,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1874,7 +1899,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             alt: "preview"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 320,
+                                                            lineNumber: 330,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1884,7 +1909,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                                     children: form.profileImage ? '✅ Photo selected — click to change' : '📷 Click to upload photo'
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                                    lineNumber: 323,
+                                                                    lineNumber: 333,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1892,31 +1917,31 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                                     children: "JPG, PNG, WEBP supported"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                                    lineNumber: 326,
+                                                                    lineNumber: 336,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 322,
+                                                            lineNumber: 332,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 318,
+                                                    lineNumber: 328,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 316,
+                                            lineNumber: 326,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 268,
+                                    lineNumber: 263,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1924,7 +1949,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 331,
+                                    lineNumber: 341,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1936,7 +1961,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 333,
+                                            lineNumber: 343,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1946,13 +1971,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             children: loading ? 'Creating...' : 'Next: Permissions →'
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 334,
+                                            lineNumber: 344,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 332,
+                                    lineNumber: 342,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -1978,13 +2003,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 348,
+                                                    lineNumber: 358,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 346,
+                                            lineNumber: 356,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1998,7 +2023,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                         onDelete: ()=>handleDeleteCustomPermission(perm.key)
                                                     }, perm.key, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                        lineNumber: 353,
+                                                        lineNumber: 363,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))),
                                                 col2.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PermCheckbox, {
@@ -2009,13 +2034,13 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                         onDelete: ()=>handleDeleteCustomPermission(perm.key)
                                                     }, perm.key, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                        lineNumber: 359,
+                                                        lineNumber: 369,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 351,
+                                            lineNumber: 361,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2026,7 +2051,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "➕ Add Custom Permission"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 368,
+                                                    lineNumber: 377,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2042,7 +2067,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                             className: "flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 370,
+                                                            lineNumber: 379,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2055,20 +2080,20 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                                     size: 10
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                                    lineNumber: 385,
+                                                                    lineNumber: 394,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 " Add"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                            lineNumber: 379,
+                                                            lineNumber: 388,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 369,
+                                                    lineNumber: 378,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2076,19 +2101,19 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "Press Enter or click Add. Hover on custom items to remove them."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 388,
+                                                    lineNumber: 397,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 367,
+                                            lineNumber: 376,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 345,
+                                    lineNumber: 355,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2096,7 +2121,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 392,
+                                    lineNumber: 401,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2108,7 +2133,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                             children: "← Back"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 394,
+                                            lineNumber: 403,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2120,7 +2145,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: "Cancel"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 396,
+                                                    lineNumber: 405,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2130,19 +2155,19 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                                                     children: loading ? 'Saving...' : 'Create Sub Admin ✓'
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 397,
+                                                    lineNumber: 406,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 395,
+                                            lineNumber: 404,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 393,
+                                    lineNumber: 402,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -2150,22 +2175,22 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                    lineNumber: 262,
+                    lineNumber: 257,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-            lineNumber: 217,
+            lineNumber: 212,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-        lineNumber: 215,
+        lineNumber: 210,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s1(CreateSubAdminModal, "hB4yOWk4+477OU4HFYZY2qSnChw=");
+_s1(CreateSubAdminModal, "SNP0vOdzsGvUXiSB+hTij/LdDUc=");
 _c2 = CreateSubAdminModal;
 // ─── Main SubAdminTable ───────────────────────────────────────────────────────
 const SubAdminTable = ({ onView })=>{
@@ -2250,7 +2275,7 @@ const SubAdminTable = ({ onView })=>{
                         className: "border border-gray-300 focus:outline-0 px-3 py-2 rounded w-full sm:w-[20%]"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 471,
+                        lineNumber: 480,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2269,7 +2294,7 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Status"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 477,
+                                        lineNumber: 486,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2277,7 +2302,7 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Active"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 478,
+                                        lineNumber: 487,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2285,13 +2310,13 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Inactive"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 479,
+                                        lineNumber: 488,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 475,
+                                lineNumber: 484,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2300,19 +2325,19 @@ const SubAdminTable = ({ onView })=>{
                                 children: "Create Sub Admin"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 481,
+                                lineNumber: 490,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 474,
+                        lineNumber: 483,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 470,
+                lineNumber: 479,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             showCreateModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CreateSubAdminModal, {
@@ -2323,7 +2348,7 @@ const SubAdminTable = ({ onView })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 489,
+                lineNumber: 498,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2343,13 +2368,13 @@ const SubAdminTable = ({ onView })=>{
                                                 className: "inline ml-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                lineNumber: 499,
+                                                lineNumber: 508,
                                                 columnNumber: 51
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 499,
+                                        lineNumber: 508,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2357,7 +2382,7 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 500,
+                                        lineNumber: 509,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2368,13 +2393,13 @@ const SubAdminTable = ({ onView })=>{
                                                 className: "inline ml-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                lineNumber: 501,
+                                                lineNumber: 510,
                                                 columnNumber: 46
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 501,
+                                        lineNumber: 510,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2382,7 +2407,7 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Phone"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 502,
+                                        lineNumber: 511,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2390,7 +2415,7 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Status"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 503,
+                                        lineNumber: 512,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2398,18 +2423,18 @@ const SubAdminTable = ({ onView })=>{
                                         children: "Actions"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                        lineNumber: 504,
+                                        lineNumber: 513,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 498,
+                                lineNumber: 507,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 497,
+                            lineNumber: 506,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2420,12 +2445,12 @@ const SubAdminTable = ({ onView })=>{
                                     children: "Loading..."
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 509,
+                                    lineNumber: 518,
                                     columnNumber: 19
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 509,
+                                lineNumber: 518,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)) : admins.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2434,12 +2459,12 @@ const SubAdminTable = ({ onView })=>{
                                     children: "No sub admins found."
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 511,
+                                    lineNumber: 520,
                                     columnNumber: 19
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                lineNumber: 511,
+                                lineNumber: 520,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)) : admins.map((admin)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                     className: "border border-gray-400 hover:bg-gray-50",
@@ -2455,7 +2480,7 @@ const SubAdminTable = ({ onView })=>{
                                                         alt: admin.firstName
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                        lineNumber: 517,
+                                                        lineNumber: 526,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2469,7 +2494,7 @@ const SubAdminTable = ({ onView })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                                lineNumber: 520,
+                                                                lineNumber: 529,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2481,24 +2506,24 @@ const SubAdminTable = ({ onView })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                                lineNumber: 521,
+                                                                lineNumber: 530,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                        lineNumber: 519,
+                                                        lineNumber: 528,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                lineNumber: 516,
+                                                lineNumber: 525,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 515,
+                                            lineNumber: 524,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2506,7 +2531,7 @@ const SubAdminTable = ({ onView })=>{
                                             children: admin.email
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 525,
+                                            lineNumber: 534,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2514,7 +2539,7 @@ const SubAdminTable = ({ onView })=>{
                                             children: admin.role
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 526,
+                                            lineNumber: 535,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2522,7 +2547,7 @@ const SubAdminTable = ({ onView })=>{
                                             children: admin.phone
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 527,
+                                            lineNumber: 536,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2532,7 +2557,7 @@ const SubAdminTable = ({ onView })=>{
                                                     className: `inline-block w-3 h-3 rounded-full mr-2 ${admin.status === 'active' ? 'bg-green-700' : 'bg-red-500'}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 529,
+                                                    lineNumber: 538,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2540,13 +2565,13 @@ const SubAdminTable = ({ onView })=>{
                                                     children: admin.status
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 530,
+                                                    lineNumber: 539,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 528,
+                                            lineNumber: 537,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2558,7 +2583,7 @@ const SubAdminTable = ({ onView })=>{
                                                     children: "View"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 533,
+                                                    lineNumber: 542,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2567,35 +2592,35 @@ const SubAdminTable = ({ onView })=>{
                                                     children: "Remove"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                                    lineNumber: 534,
+                                                    lineNumber: 543,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                            lineNumber: 532,
+                                            lineNumber: 541,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, admin._id, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                                    lineNumber: 514,
+                                    lineNumber: 523,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 507,
+                            lineNumber: 516,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                    lineNumber: 496,
+                    lineNumber: 505,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 495,
+                lineNumber: 504,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             totalPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2608,7 +2633,7 @@ const SubAdminTable = ({ onView })=>{
                         children: "◄"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 545,
+                        lineNumber: 554,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     Array.from({
@@ -2619,7 +2644,7 @@ const SubAdminTable = ({ onView })=>{
                             children: idx + 1
                         }, idx, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                            lineNumber: 548,
+                            lineNumber: 557,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2629,19 +2654,19 @@ const SubAdminTable = ({ onView })=>{
                         children: "►"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                        lineNumber: 554,
+                        lineNumber: 563,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-                lineNumber: 544,
+                lineNumber: 553,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminTable.js",
-        lineNumber: 468,
+        lineNumber: 477,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -2755,6 +2780,33 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 const API_URL = 'https://merimonial-backend.onrender.com';
+// ✅ Master list of all available permissions (same as in CreateSubAdminModal)
+const MASTER_PERMISSIONS = [
+    {
+        key: 'DASHBOARD',
+        label: 'Dashboard'
+    },
+    {
+        key: 'ANALYTICS',
+        label: 'Analytics'
+    },
+    {
+        key: 'MANAGE_USERS',
+        label: 'Manage Users'
+    },
+    {
+        key: 'REPORTED_CONTENT',
+        label: 'Reported Content'
+    },
+    {
+        key: 'VARIFICATION_REQUEST',
+        label: 'Verification Requests'
+    },
+    {
+        key: 'PROFILE_DETAILS',
+        label: 'Profile Details'
+    }
+];
 const ROLE_SUGGESTIONS = [
     'reporter',
     'moderator',
@@ -2796,7 +2848,7 @@ const RoleInput = ({ value, onChange })=>{
                         className: "w-full px-3 py-2 text-sm focus:outline-none"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                        lineNumber: 21,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2808,18 +2860,18 @@ const RoleInput = ({ value, onChange })=>{
                             className: `text-gray-500 transition-transform ${open ? 'rotate-180' : ''}`
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 30,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                        lineNumber: 28,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                lineNumber: 20,
+                lineNumber: 30,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2834,25 +2886,25 @@ const RoleInput = ({ value, onChange })=>{
                         children: r
                     }, r, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                        lineNumber: 36,
+                        lineNumber: 46,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                lineNumber: 34,
+                lineNumber: 44,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-        lineNumber: 19,
+        lineNumber: 29,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
 _s(RoleInput, "wl9VvfhnMVWQ+kCekFjcRPEi3/0=");
 _c = RoleInput;
-const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-        className: "flex items-center gap-2 text-sm text-gray-700 cursor-pointer select-none group",
+const PermCheckbox = ({ label, checked, onChange })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+        className: "flex items-center gap-2 text-sm text-gray-700 cursor-pointer select-none",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 type: "checkbox",
@@ -2861,7 +2913,7 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PU
                 className: "w-4 h-4 rounded accent-blue-600 cursor-pointer"
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                lineNumber: 50,
+                lineNumber: 60,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2869,33 +2921,13 @@ const PermCheckbox = ({ label, checked, onChange, onDelete, isCustom })=>/*#__PU
                 children: label
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                lineNumber: 52,
+                lineNumber: 62,
                 columnNumber: 5
-            }, ("TURBOPACK compile-time value", void 0)),
-            isCustom && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                type: "button",
-                onClick: (e)=>{
-                    e.preventDefault();
-                    onDelete();
-                },
-                className: "text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition ml-1",
-                title: "Remove",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTimes"], {
-                    size: 10
-                }, void 0, false, {
-                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                    lineNumber: 60,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0))
-            }, void 0, false, {
-                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                lineNumber: 54,
-                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-        lineNumber: 49,
+        lineNumber: 59,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 _c1 = PermCheckbox;
@@ -2916,16 +2948,15 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
         profileImage: null,
         profileImageFile: null
     });
-    const [allPermissions, setAllPermissions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [permissions, setPermissions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [customInput, setCustomInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
+    // Permissions state: list of currently assigned permission objects
+    const [assignedPermissions, setAssignedPermissions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [selectedPermissionToAdd, setSelectedPermissionToAdd] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const customInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // Initialize form with data from props
+    // Initialize form and permissions from props
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "EditModal.useEffect": ()=>{
             if (data) {
-                console.log('Data received in EditModal:', data); // Debug log
+                console.log('Data received in EditModal:', data);
                 setForm({
                     firstName: data.firstName || '',
                     lastName: data.lastName || '',
@@ -2937,22 +2968,28 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                     profileImage: data.profileImage || null,
                     profileImageFile: null
                 });
-                // Initialize permissions
+                // Initialize permissions from data.permissions (array of strings or objects)
                 if (data.permissions && Array.isArray(data.permissions)) {
-                    const currentPermissions = data.permissions.map({
-                        "EditModal.useEffect.currentPermissions": (perm)=>{
-                            if (typeof perm === 'string') return {
-                                key: perm,
-                                label: perm.replace(/_/g, ' '),
-                                isCustom: true
-                            };
+                    const perms = data.permissions.map({
+                        "EditModal.useEffect.perms": (perm)=>{
+                            if (typeof perm === 'string') {
+                                // Find from master list or create a custom object
+                                const found = MASTER_PERMISSIONS.find({
+                                    "EditModal.useEffect.perms.found": (p)=>p.key === perm
+                                }["EditModal.useEffect.perms.found"]);
+                                if (found) return found;
+                                return {
+                                    key: perm,
+                                    label: perm.replace(/_/g, ' '),
+                                    isCustom: true
+                                };
+                            }
                             return perm;
                         }
-                    }["EditModal.useEffect.currentPermissions"]);
-                    setAllPermissions(currentPermissions);
-                    setPermissions(data.permissions.map({
-                        "EditModal.useEffect": (perm)=>typeof perm === 'string' ? perm : perm.key
-                    }["EditModal.useEffect"]));
+                    }["EditModal.useEffect.perms"]);
+                    setAssignedPermissions(perms);
+                } else {
+                    setAssignedPermissions([]);
                 }
             }
         }
@@ -2977,39 +3014,63 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                 }));
         reader.readAsDataURL(file);
     };
-    const togglePerm = (key)=>setPermissions((prev)=>prev.includes(key) ? prev.filter((k)=>k !== key) : [
-                ...prev,
-                key
-            ]);
-    const handleAddCustomPermission = ()=>{
-        const trimmed = customInput.trim();
-        if (!trimmed) return;
-        const key = trimmed.toUpperCase().replace(/\s+/g, '_');
-        const label = trimmed.split(' ').map((w)=>w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-        if (allPermissions.find((p)=>p.key === key)) {
-            setCustomInput('');
+    // Toggle a permission checkbox
+    const togglePerm = (permKey)=>{
+        setAssignedPermissions((prev)=>{
+            const exists = prev.find((p)=>p.key === permKey);
+            if (exists) {
+                return prev.filter((p)=>p.key !== permKey);
+            } else {
+                // Add from master list
+                const master = MASTER_PERMISSIONS.find((p)=>p.key === permKey);
+                if (master) return [
+                    ...prev,
+                    master
+                ];
+                // If not in master (shouldn't happen), add as custom
+                return [
+                    ...prev,
+                    {
+                        key: permKey,
+                        label: permKey.replace(/_/g, ' ')
+                    }
+                ];
+            }
+        });
+    };
+    // Add permission from dropdown
+    const handleAddPermissionFromDropdown = ()=>{
+        if (!selectedPermissionToAdd) return;
+        // Check if already assigned
+        if (assignedPermissions.some((p)=>p.key === selectedPermissionToAdd)) {
+            setError('Permission already added');
+            setTimeout(()=>setError(''), 2000);
             return;
         }
-        const newPerm = {
-            key,
-            label,
-            isCustom: true
-        };
-        setAllPermissions((prev)=>[
-                ...prev,
-                newPerm
-            ]);
-        setPermissions((prev)=>[
-                ...prev,
-                key
-            ]);
-        setCustomInput('');
-        customInputRef.current?.focus();
+        const master = MASTER_PERMISSIONS.find((p)=>p.key === selectedPermissionToAdd);
+        if (master) {
+            setAssignedPermissions((prev)=>[
+                    ...prev,
+                    master
+                ]);
+        } else {
+            // Fallback (should not happen because dropdown only shows master keys)
+            setAssignedPermissions((prev)=>[
+                    ...prev,
+                    {
+                        key: selectedPermissionToAdd,
+                        label: selectedPermissionToAdd.replace(/_/g, ' ')
+                    }
+                ]);
+        }
+        setSelectedPermissionToAdd('');
     };
-    const handleDeleteCustomPermission = (key)=>{
-        setAllPermissions((prev)=>prev.filter((p)=>p.key !== key));
-        setPermissions((prev)=>prev.filter((k)=>k !== key));
+    // Remove a permission (only custom ones or any permission)
+    const handleRemovePermission = (permKey)=>{
+        setAssignedPermissions((prev)=>prev.filter((p)=>p.key !== permKey));
     };
+    // Available permissions for dropdown (those not already assigned)
+    const availablePermissions = MASTER_PERMISSIONS.filter((master)=>!assignedPermissions.some((assigned)=>assigned.key === master.key));
     const handleUpdate = async ()=>{
         if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.role) {
             setError('Please fill all required fields');
@@ -3020,7 +3081,7 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
         setDebugInfo('');
         setLoading(true);
         try {
-            // First, update the profile using FormData
+            // Update profile using FormData
             const fd = new FormData();
             fd.append('firstName', form.firstName);
             fd.append('lastName', form.lastName);
@@ -3029,22 +3090,9 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
             fd.append('role', form.role);
             fd.append('gender', form.gender);
             fd.append('status', form.status);
-            if (form.profileImageFile) {
-                fd.append('profileImage', form.profileImageFile);
-            }
+            if (form.profileImageFile) fd.append('profileImage', form.profileImageFile);
             const token = localStorage.getItem('token');
             const updateUrl = `${API_URL}/api/sub-admin/update/sub-admin-profile/${data._id}`;
-            console.log('Updating at URL:', updateUrl); // Debug log
-            console.log('Form data being sent:', {
-                firstName: form.firstName,
-                lastName: form.lastName,
-                email: form.email,
-                phone: form.phone,
-                role: form.role,
-                gender: form.gender,
-                status: form.status,
-                hasNewImage: !!form.profileImageFile
-            });
             const res = await fetch(updateUrl, {
                 method: 'PUT',
                 headers: {
@@ -3053,65 +3101,44 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                 body: fd
             });
             const responseData = await res.json();
-            console.log('Update response:', responseData); // Debug log
-            if (!res.ok) {
-                setError(`Update failed: ${responseData.message || 'Unknown error'}`);
-                setDebugInfo(`Status: ${res.status}, Response: ${JSON.stringify(responseData)}`);
-                setLoading(false);
-                return;
-            }
-            if (!responseData.success) {
+            if (!res.ok || !responseData.success) {
                 setError(responseData.message || 'Update failed');
-                setDebugInfo(`Success flag false: ${JSON.stringify(responseData)}`);
                 setLoading(false);
                 return;
             }
-            setSuccess('Profile updated successfully!');
-            // Now update permissions
-            if (permissions.length > 0 || data.permissions) {
-                const permRes = await fetch(`${API_URL}/api/sub-admin/add/tab-permission`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${token}`
-                    },
-                    body: JSON.stringify({
-                        subAdminId: data._id,
-                        permissionTabs: permissions
-                    })
-                });
-                const permData = await permRes.json();
-                console.log('Permission update response:', permData); // Debug log
-                if (!permRes.ok || !permData.success) {
-                    console.error('Permission update failed:', permData.message);
-                    setError('Profile updated but permission update failed');
-                } else {
-                    setSuccess('Profile and permissions updated successfully!');
-                }
+            // Update permissions
+            const permissionKeys = assignedPermissions.map((p)=>p.key);
+            const permRes = await fetch(`${API_URL}/api/sub-admin/add/tab-permission`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    subAdminId: data._id,
+                    permissionTabs: permissionKeys
+                })
+            });
+            const permData = await permRes.json();
+            if (!permRes.ok || !permData.success) {
+                console.error('Permission update failed:', permData.message);
+                setError('Profile updated but permission update failed');
+            } else {
+                setSuccess('Profile and permissions updated successfully!');
             }
-            // Call refresh function to update parent component data
-            if (onRefresh) {
-                await onRefresh(); // Wait for refresh to complete
-            }
-            // Call onUpdate callback if provided
-            if (onUpdate) {
-                onUpdate();
-            }
-            // Close modal after a short delay
-            setTimeout(()=>{
-                onClose();
-            }, 1000);
+            if (onRefresh) await onRefresh();
+            if (onUpdate) onUpdate();
+            setTimeout(()=>onClose(), 1000);
         } catch (err) {
-            console.error('Update error:', err); // Debug log
+            console.error('Update error:', err);
             setError(`Network error: ${err.message}`);
-            setDebugInfo(`Error details: ${JSON.stringify(err)}`);
-            setLoading(false);
         } finally{
             setLoading(false);
         }
     };
-    const col1 = allPermissions.filter((_, i)=>i % 2 === 0);
-    const col2 = allPermissions.filter((_, i)=>i % 2 !== 0);
+    // Split assigned permissions into two columns for display
+    const col1 = assignedPermissions.filter((_, i)=>i % 2 === 0);
+    const col2 = assignedPermissions.filter((_, i)=>i % 2 !== 0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4",
         style: {
@@ -3137,7 +3164,7 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                             alt: "avatar"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 293,
+                                            lineNumber: 270,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3147,12 +3174,12 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                 children: "📷"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                lineNumber: 299,
+                                                lineNumber: 276,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 298,
+                                            lineNumber: 275,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3163,13 +3190,13 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                             className: "hidden"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 301,
+                                            lineNumber: 278,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 292,
+                                    lineNumber: 269,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3179,7 +3206,7 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                             children: "Edit Sub Admin"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 310,
+                                            lineNumber: 281,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3187,19 +3214,19 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                             children: "Update profile information"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 311,
+                                            lineNumber: 282,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 309,
+                                    lineNumber: 280,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 291,
+                            lineNumber: 268,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3207,120 +3234,78 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                             className: "text-gray-400 hover:text-gray-600 text-lg",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTimes"], {}, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                lineNumber: 315,
-                                columnNumber: 13
+                                lineNumber: 285,
+                                columnNumber: 91
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 314,
+                            lineNumber: 285,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                    lineNumber: 290,
+                    lineNumber: 267,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "overflow-y-auto flex-1 px-6 py-4",
                     children: [
                         success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-4 p-3 bg-green-50 border border-green-200 rounded-lg animate-pulse",
+                            className: "mb-4 p-3 bg-green-50 border border-green-200 rounded-lg",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-green-700 text-sm flex items-center gap-2",
+                                className: "text-green-700 text-sm",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "✅"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                        lineNumber: 325,
-                                        columnNumber: 17
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    " ",
-                                    success,
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xs ml-2",
-                                        children: "Closing in a moment..."
-                                    }, void 0, false, {
-                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                        lineNumber: 326,
-                                        columnNumber: 17
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    "✅ ",
+                                    success
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                lineNumber: 324,
+                                lineNumber: 292,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 323,
+                            lineNumber: 291,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mb-4 p-3 bg-red-50 border border-red-200 rounded-lg",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-red-700 text-sm font-semibold",
+                                    className: "text-red-700 text-sm",
                                     children: [
-                                        "Error: ",
+                                        "❌ ",
                                         error
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 334,
+                                    lineNumber: 297,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                debugInfo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("details", {
-                                    className: "mt-2",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("summary", {
-                                            className: "text-xs text-red-600 cursor-pointer",
-                                            children: "Debug Info"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 337,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
-                                            className: "text-xs text-red-500 mt-1 whitespace-pre-wrap",
-                                            children: debugInfo
-                                        }, void 0, false, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 338,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, void 0, true, {
+                                debugInfo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
+                                    className: "text-xs text-red-500 mt-1",
+                                    children: debugInfo
+                                }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 336,
-                                    columnNumber: 17
+                                    lineNumber: 298,
+                                    columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 333,
+                            lineNumber: 296,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mb-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-md font-semibold text-gray-900 mb-3 flex items-center gap-2",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-lg",
-                                            children: "📝"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 347,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        " Basic Information"
-                                    ]
-                                }, void 0, true, {
+                                    className: "text-md font-semibold text-gray-900 mb-3",
+                                    children: "📝 Basic Information"
+                                }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 346,
+                                    lineNumber: 304,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3337,31 +3322,30 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 352,
-                                                            columnNumber: 30
+                                                            lineNumber: 307,
+                                                            columnNumber: 94
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 351,
+                                                    lineNumber: 307,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "text",
                                                     name: "firstName",
-                                                    placeholder: "e.g., Pritam",
                                                     value: form.firstName,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 354,
+                                                    lineNumber: 308,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 350,
+                                            lineNumber: 306,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3375,31 +3359,30 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 365,
-                                                            columnNumber: 29
+                                                            lineNumber: 312,
+                                                            columnNumber: 93
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 364,
+                                                    lineNumber: 312,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "text",
                                                     name: "lastName",
-                                                    placeholder: "e.g., Sharma",
                                                     value: form.lastName,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 367,
+                                                    lineNumber: 313,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 363,
+                                            lineNumber: 311,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3413,31 +3396,30 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 378,
-                                                            columnNumber: 25
+                                                            lineNumber: 317,
+                                                            columnNumber: 89
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 377,
+                                                    lineNumber: 317,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "email",
                                                     name: "email",
-                                                    placeholder: "pritam@gmail.com",
                                                     value: form.email,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 380,
+                                                    lineNumber: 318,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 376,
+                                            lineNumber: 316,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3451,31 +3433,30 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 391,
-                                                            columnNumber: 25
+                                                            lineNumber: 322,
+                                                            columnNumber: 89
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 390,
+                                                    lineNumber: 322,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "text",
                                                     name: "phone",
-                                                    placeholder: "+91 XXXXXXXXXX",
                                                     value: form.phone,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm"
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 393,
+                                                    lineNumber: 323,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 389,
+                                            lineNumber: 321,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3485,21 +3466,21 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                     children: "Gender"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 403,
+                                                    lineNumber: 327,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                     name: "gender",
                                                     value: form.gender,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm bg-white",
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "male",
                                                             children: "Male"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 410,
+                                                            lineNumber: 330,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3507,7 +3488,7 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "Female"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 411,
+                                                            lineNumber: 331,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3515,19 +3496,19 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "Other"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 412,
+                                                            lineNumber: 332,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 404,
+                                                    lineNumber: 328,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 402,
+                                            lineNumber: 326,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3537,21 +3518,21 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                     children: "Status"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 416,
+                                                    lineNumber: 336,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                     name: "status",
                                                     value: form.status,
                                                     onChange: handleInput,
-                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-sm bg-white",
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-indigo-500",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "active",
                                                             children: "Active"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 423,
+                                                            lineNumber: 339,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3559,19 +3540,19 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "Inactive"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 424,
+                                                            lineNumber: 340,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 417,
+                                                    lineNumber: 337,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 415,
+                                            lineNumber: 335,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3586,13 +3567,13 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             children: "*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 429,
-                                                            columnNumber: 24
+                                                            lineNumber: 344,
+                                                            columnNumber: 88
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 428,
+                                                    lineNumber: 344,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RoleInput, {
@@ -3603,32 +3584,29 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 431,
+                                                    lineNumber: 345,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 427,
+                                            lineNumber: 343,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 349,
+                                    lineNumber: 305,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 345,
+                            lineNumber: 303,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "rounded-xl px-4 py-4",
-                            style: {
-                                background: '#fffbf0'
-                            },
+                            className: "rounded-xl px-4 py-4 bg-amber-50",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "text-sm font-bold text-gray-800 mb-3",
@@ -3638,122 +3616,181 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                                             className: "ml-2 text-xs font-normal text-gray-400",
                                             children: [
                                                 "(",
-                                                permissions.length,
+                                                assignedPermissions.length,
                                                 " selected)"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 443,
+                                            lineNumber: 354,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 441,
+                                    lineNumber: 352,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-2 gap-x-4 gap-y-3 mb-4",
+                                    className: "mb-4 flex gap-2 items-end",
                                     children: [
-                                        col1.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PermCheckbox, {
-                                                label: perm.label,
-                                                isCustom: perm.isCustom,
-                                                checked: permissions.includes(perm.key),
-                                                onChange: ()=>togglePerm(perm.key),
-                                                onDelete: ()=>handleDeleteCustomPermission(perm.key)
-                                            }, perm.key, false, {
-                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                lineNumber: 448,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0))),
-                                        col2.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PermCheckbox, {
-                                                label: perm.label,
-                                                isCustom: perm.isCustom,
-                                                checked: permissions.includes(perm.key),
-                                                onChange: ()=>togglePerm(perm.key),
-                                                onDelete: ()=>handleDeleteCustomPermission(perm.key)
-                                            }, perm.key, false, {
-                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                lineNumber: 458,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0)))
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 446,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "border-t border-yellow-200 pt-3 mt-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xs font-semibold text-gray-500 mb-2",
-                                            children: "➕ Add Custom Permission"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 471,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex gap-2",
+                                            className: "flex-1",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    ref: customInputRef,
-                                                    type: "text",
-                                                    placeholder: "e.g., Manage Payments",
-                                                    value: customInput,
-                                                    onChange: (e)=>setCustomInput(e.target.value),
-                                                    onKeyDown: (e)=>e.key === 'Enter' && handleAddCustomPermission(),
-                                                    className: "flex-1 border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block text-xs font-semibold text-gray-600 mb-1",
+                                                    children: "➕ Add Permission"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 473,
+                                                    lineNumber: 360,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    type: "button",
-                                                    onClick: handleAddCustomPermission,
-                                                    disabled: !customInput.trim(),
-                                                    className: "flex items-center gap-1 px-3 py-1.5 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition disabled:opacity-40",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                                    value: selectedPermissionToAdd,
+                                                    onChange: (e)=>setSelectedPermissionToAdd(e.target.value),
+                                                    className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-indigo-500 bg-white",
                                                     children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaPlus"], {
-                                                            size: 10
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                            value: "",
+                                                            children: "-- Select a permission --"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                            lineNumber: 488,
+                                                            lineNumber: 366,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
-                                                        " Add"
+                                                        availablePermissions.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                                value: perm.key,
+                                                                children: perm.label
+                                                            }, perm.key, false, {
+                                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                                lineNumber: 368,
+                                                                columnNumber: 21
+                                                            }, ("TURBOPACK compile-time value", void 0)))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                                    lineNumber: 482,
+                                                    lineNumber: 361,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 472,
+                                            lineNumber: 359,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xs text-gray-400 mt-1",
-                                            children: "Press Enter or click Add. Hover on custom items to remove them."
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: handleAddPermissionFromDropdown,
+                                            disabled: !selectedPermissionToAdd,
+                                            className: "flex items-center gap-1 px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition disabled:opacity-40",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaPlus"], {
+                                                    size: 12
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                    lineNumber: 377,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                " Add"
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                            lineNumber: 491,
+                                            lineNumber: 372,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 470,
+                                    lineNumber: 358,
                                     columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "grid grid-cols-2 gap-x-4 gap-y-3",
+                                    children: [
+                                        col1.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center justify-between group",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PermCheckbox, {
+                                                        label: perm.label,
+                                                        checked: true,
+                                                        onChange: ()=>togglePerm(perm.key)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                        lineNumber: 385,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: ()=>handleRemovePermission(perm.key),
+                                                        className: "text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition",
+                                                        title: "Remove",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTimes"], {
+                                                            size: 10
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                            lineNumber: 395,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                        lineNumber: 390,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, perm.key, true, {
+                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                lineNumber: 384,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))),
+                                        col2.map((perm)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center justify-between group",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PermCheckbox, {
+                                                        label: perm.label,
+                                                        checked: true,
+                                                        onChange: ()=>togglePerm(perm.key)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                        lineNumber: 401,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: ()=>handleRemovePermission(perm.key),
+                                                        className: "text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition",
+                                                        title: "Remove",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTimes"], {
+                                                            size: 10
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                            lineNumber: 411,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                        lineNumber: 406,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, perm.key, true, {
+                                                fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                                lineNumber: 400,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                    lineNumber: 382,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                assignedPermissions.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-gray-400 text-center py-2",
+                                    children: "No permissions assigned. Use the dropdown to add."
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
+                                    lineNumber: 418,
+                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 440,
+                            lineNumber: 351,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3761,49 +3798,49 @@ const EditModal = ({ data, onClose, onUpdate, onRefresh })=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: onClose,
-                                    className: "px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-300 transition-colors",
                                     disabled: loading,
+                                    className: "px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-300",
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 497,
+                                    lineNumber: 424,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: handleUpdate,
                                     disabled: loading,
-                                    className: "px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors disabled:opacity-60",
+                                    className: "px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold hover:bg-green-700 disabled:opacity-60",
                                     children: loading ? 'Updating...' : 'Update Changes ✓'
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                                    lineNumber: 504,
+                                    lineNumber: 428,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                            lineNumber: 496,
+                            lineNumber: 423,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-                    lineNumber: 320,
+                    lineNumber: 289,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-            lineNumber: 287,
+            lineNumber: 264,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/subadmin/SubAdminViewModal.js",
-        lineNumber: 285,
+        lineNumber: 262,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s1(EditModal, "3PYMMVOGapKhawOuxFJrMNh9Mk4=");
+_s1(EditModal, "40Z4ipHYGHs7cjTcRIEdYE8Ftes=");
 _c2 = EditModal;
 const __TURBOPACK__default__export__ = EditModal;
 var _c, _c1, _c2;

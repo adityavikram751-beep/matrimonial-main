@@ -625,7 +625,7 @@ function LoginPage() {
             })["LoginPage.useEffect"];
         }
     }["LoginPage.useEffect"], []);
-    /* ── LOGIN (Manual JWT decode) ───────────────────────────────────── */ const handleLogin = async (data)=>{
+    /* ── LOGIN with permission storage ───────────────────────────────────── */ const handleLogin = async (data)=>{
         setLoading(true);
         setApiError("");
         const input = data.identifier;
@@ -637,11 +637,33 @@ function LoginPage() {
             });
             const token = res.data.token;
             if (!token) throw new Error("No token received");
-            // Decode token manually
             const user = parseJwt(token);
             if (!user) throw new Error("Invalid token");
+            // ----- PERMISSION HANDLING -----
+            let permissions = [];
+            let role = selectedRole.key;
+            if (selectedRole.key === "super_admin") {
+                permissions = [
+                    "ALL"
+                ]; // Super admin sees everything
+                role = "super_admin";
+            } else if (selectedRole.key === "sub_admin") {
+                permissions = res.data.subAdminPermission || [];
+                role = user?.role || "sub_admin";
+            }
+            // Store auth data
             localStorage.setItem("token", token);
             localStorage.setItem("user", JSON.stringify(user));
+            localStorage.setItem("permissions", JSON.stringify(permissions));
+            localStorage.setItem("role", role);
+            // Store profile for sidebar
+            const profile = {
+                name: user?.name || (role === "super_admin" ? "Super Admin" : "Sub Admin"),
+                profileImage: "/profile.png",
+                role: role === "super_admin" ? "Super Admin" : "Sub Admin"
+            };
+            localStorage.setItem("admin_profile", JSON.stringify(profile));
+            window.dispatchEvent(new Event("adminProfileUpdated"));
             window.location.href = "/dashboard";
         } catch (err) {
             console.error("Login error:", err);
@@ -724,7 +746,7 @@ function LoginPage() {
                 }
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                lineNumber: 171,
+                lineNumber: 194,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -744,7 +766,7 @@ function LoginPage() {
                                         alt: "profile"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 179,
+                                        lineNumber: 202,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -757,19 +779,19 @@ function LoginPage() {
                                                 className: `ml-0.5 text-gray-400 transition-transform ${dropdownOpen ? "rotate-180" : ""}`
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 187,
+                                                lineNumber: 210,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 184,
+                                        lineNumber: 207,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 178,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, this),
                             dropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -790,7 +812,7 @@ function LoginPage() {
                                                 children: role.icon
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 209,
+                                                lineNumber: 232,
                                                 columnNumber: 19
                                             }, this),
                                             role.label,
@@ -798,24 +820,24 @@ function LoginPage() {
                                                 className: "ml-auto w-2 h-2 rounded-full bg-green-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 212,
+                                                lineNumber: 235,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, role.key, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 197,
+                                        lineNumber: 220,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 195,
+                                lineNumber: 218,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                        lineNumber: 177,
+                        lineNumber: 200,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -823,7 +845,7 @@ function LoginPage() {
                         children: "ADITYA"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                        lineNumber: 220,
+                        lineNumber: 243,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -831,7 +853,7 @@ function LoginPage() {
                         children: selectedRole.label
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                        lineNumber: 221,
+                        lineNumber: 244,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,7 +871,7 @@ function LoginPage() {
                                         className: "w-full px-4 py-3 rounded-xl bg-white/90 shadow-inner"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 226,
+                                        lineNumber: 249,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,7 +886,7 @@ function LoginPage() {
                                                 className: "w-full px-4 py-3 rounded-xl bg-white/90 shadow-inner"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 232,
+                                                lineNumber: 255,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -874,24 +896,24 @@ function LoginPage() {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 239,
+                                                    lineNumber: 262,
                                                     columnNumber: 31
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$ai$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["AiOutlineEye"], {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 239,
+                                                    lineNumber: 262,
                                                     columnNumber: 69
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 238,
+                                                lineNumber: 261,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 231,
+                                        lineNumber: 254,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -900,7 +922,7 @@ function LoginPage() {
                                         children: "Forgot Password?"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 242,
+                                        lineNumber: 265,
                                         columnNumber: 15
                                     }, this),
                                     apiError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -908,7 +930,7 @@ function LoginPage() {
                                         children: apiError
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 245,
+                                        lineNumber: 268,
                                         columnNumber: 28
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -916,13 +938,13 @@ function LoginPage() {
                                         children: loading ? "Loading..." : `Login as ${selectedRole.label}`
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 246,
+                                        lineNumber: 269,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 225,
+                                lineNumber: 248,
                                 columnNumber: 13
                             }, this),
                             step === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -937,7 +959,7 @@ function LoginPage() {
                                         className: "w-full px-4 py-3 rounded-xl bg-white/90 shadow-inner"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 254,
+                                        lineNumber: 277,
                                         columnNumber: 15
                                     }, this),
                                     apiError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -945,7 +967,7 @@ function LoginPage() {
                                         children: apiError
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 259,
+                                        lineNumber: 282,
                                         columnNumber: 28
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -953,7 +975,7 @@ function LoginPage() {
                                         children: loading ? "Sending..." : "Send OTP"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 260,
+                                        lineNumber: 283,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -962,13 +984,13 @@ function LoginPage() {
                                         children: "← Back to Login"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 263,
+                                        lineNumber: 286,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 253,
+                                lineNumber: 276,
                                 columnNumber: 13
                             }, this),
                             step === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -984,12 +1006,12 @@ function LoginPage() {
                                                 className: "w-14 h-14 text-center rounded-xl bg-white/90 shadow-inner text-lg"
                                             }, i, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 273,
+                                                lineNumber: 296,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 271,
+                                        lineNumber: 294,
                                         columnNumber: 15
                                     }, this),
                                     apiError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -997,7 +1019,7 @@ function LoginPage() {
                                         children: apiError
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 283,
+                                        lineNumber: 306,
                                         columnNumber: 28
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1006,13 +1028,13 @@ function LoginPage() {
                                         children: loading ? "Verifying..." : "Confirm OTP"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 284,
+                                        lineNumber: 307,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 270,
+                                lineNumber: 293,
                                 columnNumber: 13
                             }, this),
                             step === 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -1031,7 +1053,7 @@ function LoginPage() {
                                                 className: "w-full px-4 py-3 rounded-xl bg-white/90 shadow-inner"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 293,
+                                                lineNumber: 316,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1041,24 +1063,24 @@ function LoginPage() {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 300,
+                                                    lineNumber: 323,
                                                     columnNumber: 36
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$ai$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["AiOutlineEye"], {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 300,
+                                                    lineNumber: 323,
                                                     columnNumber: 74
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 299,
+                                                lineNumber: 322,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 292,
+                                        lineNumber: 315,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1073,7 +1095,7 @@ function LoginPage() {
                                                 className: "w-full px-4 py-3 rounded-xl bg-white/90 shadow-inner"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 304,
+                                                lineNumber: 327,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1083,24 +1105,24 @@ function LoginPage() {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 311,
+                                                    lineNumber: 334,
                                                     columnNumber: 39
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$ai$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["AiOutlineEye"], {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                    lineNumber: 311,
+                                                    lineNumber: 334,
                                                     columnNumber: 77
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                                lineNumber: 310,
+                                                lineNumber: 333,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 303,
+                                        lineNumber: 326,
                                         columnNumber: 15
                                     }, this),
                                     apiError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1108,7 +1130,7 @@ function LoginPage() {
                                         children: apiError
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 314,
+                                        lineNumber: 337,
                                         columnNumber: 28
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1116,31 +1138,31 @@ function LoginPage() {
                                         children: loading ? "Updating..." : "Update Password"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                        lineNumber: 315,
+                                        lineNumber: 338,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                                lineNumber: 291,
+                                lineNumber: 314,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                        lineNumber: 223,
+                        lineNumber: 246,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-                lineNumber: 176,
+                lineNumber: 199,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/login/Login.jsx",
-        lineNumber: 170,
+        lineNumber: 193,
         columnNumber: 5
     }, this);
 }

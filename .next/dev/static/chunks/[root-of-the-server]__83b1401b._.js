@@ -472,11 +472,9 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/link.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$image$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/image.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/navigation.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/navigation.js [client] (ecmascript)"); // use 'next/navigation' for App Router
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/react-icons/hi/index.mjs [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/lucide-react/dist/esm/icons/log-out.js [client] (ecmascript) <export default as LogOut>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/matrimonial-main/matrimonial-main/node_modules/next/router.js [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -485,51 +483,73 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
-;
-const navItems = [
+// Define all possible menu items with their required permission keys
+const ALL_NAV_ITEMS = [
     {
         label: 'Dashboard',
-        href: '/dashboard'
+        href: '/dashboard',
+        permissionKey: 'DASHBOARD'
     },
     {
         label: 'Analytics',
-        href: '/analytics'
+        href: '/analytics',
+        permissionKey: 'ANALYTICS'
     },
     {
         label: 'Manage Users',
-        href: '/manageusers'
+        href: '/manageusers',
+        permissionKey: 'MANAGE_USERS'
     },
     {
         label: 'Reported Content',
-        href: '/reportedcontent'
+        href: '/reportedcontent',
+        permissionKey: 'REPORTED_CONTENT'
     },
     {
         label: 'Verification Request',
-        href: '/verificationrequest'
+        href: '/verificationrequest',
+        permissionKey: 'VERIFICATION_REQUEST'
     },
     {
         label: 'Manage Sub Admin',
-        href: '/managesubadmin'
+        href: '/managesubadmin',
+        permissionKey: 'MANAGE_SUB_ADMIN'
     },
     {
         label: 'Profile Details',
-        href: '/profileDetails'
+        href: '/profileDetails',
+        permissionKey: 'PROFILE'
     }
 ];
 const Sidebar = ()=>{
     _s();
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__["usePathname"])();
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const toggleSidebar = ()=>setIsOpen(!isOpen);
-    // 🔥 Sidebar Profile State
+    const [navItems, setNavItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    // Sidebar profile state
     const [profile, setProfile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({
         name: 'Super Admin',
         profileImage: '/profile.png',
         role: 'Super Admin'
     });
-    // 🔥 Load sidebar profile
+    // Load permissions from localStorage and filter menu
+    const loadPermissionsAndFilterMenu = ()=>{
+        try {
+            const permissions = JSON.parse(localStorage.getItem('permissions') || '[]');
+            const role = localStorage.getItem('role');
+            let filtered = [];
+            if (role === 'super_admin' || permissions.includes('ALL')) {
+                filtered = ALL_NAV_ITEMS; // Super admin sees everything
+            } else {
+                filtered = ALL_NAV_ITEMS.filter((item)=>permissions.includes(item.permissionKey));
+            }
+            setNavItems(filtered);
+        } catch (e) {
+            setNavItems([]);
+        }
+    };
+    // Load profile from localStorage (existing logic)
     const loadSidebarProfile = ()=>{
         try {
             const raw = localStorage.getItem('admin_profile');
@@ -545,28 +565,54 @@ const Sidebar = ()=>{
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Sidebar.useEffect": ()=>{
-            // initial load
+            loadPermissionsAndFilterMenu();
             loadSidebarProfile();
-            // listen to profile page updates
             const listener = {
-                "Sidebar.useEffect.listener": ()=>loadSidebarProfile()
+                "Sidebar.useEffect.listener": ()=>{
+                    loadPermissionsAndFilterMenu();
+                    loadSidebarProfile();
+                }
             }["Sidebar.useEffect.listener"];
             window.addEventListener('adminProfileUpdated', listener);
-            // listen if updated in another tab
-            const storageListener = {
-                "Sidebar.useEffect.storageListener": (e)=>{
-                    if (e.key === 'admin_profile') loadSidebarProfile();
-                }
-            }["Sidebar.useEffect.storageListener"];
-            window.addEventListener('storage', storageListener);
+            window.addEventListener('storage', listener);
             return ({
                 "Sidebar.useEffect": ()=>{
                     window.removeEventListener('adminProfileUpdated', listener);
-                    window.removeEventListener('storage', storageListener);
+                    window.removeEventListener('storage', listener);
                 }
             })["Sidebar.useEffect"];
         }
     }["Sidebar.useEffect"], []);
+    const toggleSidebar = ()=>setIsOpen(!isOpen);
+    // If no menu items, show a fallback
+    if (navItems.length === 0) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "fixed top-0 left-0 h-full w-[250px] bg-gray-100 border-r p-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-red-500",
+                    children: "No modules available."
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
+                    lineNumber: 89,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: ()=>router.push('/logout'),
+                    className: "mt-4 text-sm underline",
+                    children: "Logout"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
+                    lineNumber: 90,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
+            lineNumber: 88,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0));
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -578,23 +624,23 @@ const Sidebar = ()=>{
                         className: "w-6 h-6"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 78,
+                        lineNumber: 100,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiMenu"], {
                         className: "w-6 h-6"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 78,
+                        lineNumber: 100,
                         columnNumber: 51
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                    lineNumber: 74,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                lineNumber: 73,
+                lineNumber: 98,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -607,7 +653,7 @@ const Sidebar = ()=>{
                         children: "LOGO"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 88,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -617,26 +663,19 @@ const Sidebar = ()=>{
                             className: "bg-white rounded-md shadow p-2 mb-6 gap-2 flex items-center space-x-3 border border-gray-300 hover:bg-gray-100 cursor-pointer",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-center items-center",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-[50px] h-[50px] flex justify-center items-center rounded-full bg-red-100 relative overflow-hidden",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: profile.profileImage,
-                                            alt: "Profile",
-                                            className: "rounded-full w-full h-full object-cover"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                            lineNumber: 96,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0))
+                                    className: "w-[50px] h-[50px] flex justify-center items-center rounded-full bg-red-100 relative overflow-hidden",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: profile.profileImage,
+                                        alt: "Profile",
+                                        className: "rounded-full w-full h-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                        lineNumber: 95,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                    lineNumber: 94,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -646,7 +685,7 @@ const Sidebar = ()=>{
                                             children: profile.name
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                            lineNumber: 105,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -654,24 +693,24 @@ const Sidebar = ()=>{
                                             children: profile.role
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                            lineNumber: 106,
+                                            lineNumber: 120,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                    lineNumber: 104,
+                                    lineNumber: 118,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                            lineNumber: 92,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 91,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -681,7 +720,7 @@ const Sidebar = ()=>{
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: item.href,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: `cursor-pointer px-4 py-2 font-semibold text-sm flex items-center transition-all duration-200 ${isActive ? 'bg-[#a52a3d] text-white border border-[#a52a3d]' : 'bg-white text-gray-900 border border-gray-400 hover:bg-[#a52a3d] hover:text-white hover:border-[#a52a3d]'} rounded-[10px]`,
+                                    className: `cursor-pointer px-4 py-2 font-semibold text-sm flex items-center transition-all duration-200 rounded-[10px] ${isActive ? 'bg-[#a52a3d] text-white border border-[#a52a3d]' : 'bg-white text-gray-900 border border-gray-400 hover:bg-[#a52a3d] hover:text-white hover:border-[#a52a3d]'}`,
                                     onClick: ()=>setIsOpen(false),
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -689,25 +728,25 @@ const Sidebar = ()=>{
                                             children: "|"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                            lineNumber: 127,
+                                            lineNumber: 139,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         item.label
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                    lineNumber: 119,
+                                    lineNumber: 131,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, item.href, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                lineNumber: 118,
+                                lineNumber: 130,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 113,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -718,7 +757,7 @@ const Sidebar = ()=>{
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                lineNumber: 146,
+                                lineNumber: 152,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -726,19 +765,19 @@ const Sidebar = ()=>{
                                 children: "Log out"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                                lineNumber: 147,
+                                lineNumber: 153,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                        lineNumber: 142,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                lineNumber: 83,
+                lineNumber: 105,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -746,16 +785,16 @@ const Sidebar = ()=>{
                 onClick: ()=>setIsOpen(false)
             }, void 0, false, {
                 fileName: "[project]/Downloads/matrimonial-main/matrimonial-main/src/component/common/sidebar.js",
-                lineNumber: 153,
+                lineNumber: 159,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true);
 };
-_s(Sidebar, "x8QLreGeFKjaBUn7eBslUj6Yx8U=", false, function() {
+_s(Sidebar, "jqFoJv8xV+dh5fGN2rdeTxGVwqo=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__["usePathname"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$matrimonial$2d$main$2f$matrimonial$2d$main$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
 });
 _c = Sidebar;

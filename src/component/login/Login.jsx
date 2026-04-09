@@ -35,7 +35,7 @@ const ROLES = [
     key: "sub_admin",
     label: "Sub Admin",
     icon: <FaUserCog className="text-indigo-500" />,
-    loginEndpoint: "/api/sub-admin/loginIn",   // ✅ correct endpoint
+    loginEndpoint: "/api/sub-admin/loginIn",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function LoginPage() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  /* ── LOGIN (Manual JWT decode) ───────────────────────────────────── */
+  /* ── LOGIN with permission storage ───────────────────────────────────── */
   const handleLogin = async (data) => {
     setLoading(true);
     setApiError("");
@@ -81,12 +81,35 @@ export default function LoginPage() {
       const token = res.data.token;
       if (!token) throw new Error("No token received");
 
-      // Decode token manually
       const user = parseJwt(token);
       if (!user) throw new Error("Invalid token");
 
+      // ----- PERMISSION HANDLING -----
+      let permissions = [];
+      let role = selectedRole.key;
+
+      if (selectedRole.key === "super_admin") {
+        permissions = ["ALL"]; // Super admin sees everything
+        role = "super_admin";
+      } else if (selectedRole.key === "sub_admin") {
+        permissions = res.data.subAdminPermission || [];
+        role = user?.role || "sub_admin";
+      }
+
+      // Store auth data
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("permissions", JSON.stringify(permissions));
+      localStorage.setItem("role", role);
+
+      // Store profile for sidebar
+      const profile = {
+        name: user?.name || (role === "super_admin" ? "Super Admin" : "Sub Admin"),
+        profileImage: "/profile.png",
+        role: role === "super_admin" ? "Super Admin" : "Sub Admin",
+      };
+      localStorage.setItem("admin_profile", JSON.stringify(profile));
+      window.dispatchEvent(new Event("adminProfileUpdated"));
 
       window.location.href = "/dashboard";
     } catch (err) {

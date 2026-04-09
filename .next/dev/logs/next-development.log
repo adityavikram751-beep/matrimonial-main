@@ -1,831 +1,302 @@
-[00:00:04.235] Server  LOG      ✓ Ready in 3.1s
-[00:03:29.193] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-[00:03:29.211] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[00:03:29.211] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[00:03:29.285] Server  WARN     ⚠ The requested resource "/loading2.gif" is an animated image so it will not be optimized. Consider adding the "unoptimized" property to the <Image>.
-[00:03:29.402] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:03:30.308] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:01.910] Server  LOG      ✓ Ready in 1408ms
+[00:00:05.054] Server  LOG      ○ Compiling / ...
+[00:00:17.004] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:17.041] Server  WARN     ⚠ The requested resource "/loading2.gif" is an animated image so it will not be optimized. Consider adding the "unoptimized" property to the <Image>.
+[00:00:17.150] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[00:00:17.150] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[00:00:17.150] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:18.306] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:03:30.308] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:18.306] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:03:30.799] Browser LOG      SOCKET CONNECTED: 3MvZuTul3ljR8MKGAAAB
-[00:03:30.799] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[00:07:31.763] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[00:07:31.763] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:07:31.763] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[00:07:32.389] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:18.306] Browser LOG      SOCKET CONNECTED: aSXueD32JMtps0yqAAAD
+[00:00:18.306] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[00:00:23.791] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:23.791] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:27.619] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:27.620] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:28.999] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:28.999] Browser LOG     🟢 Realtime Listener Enabled
+[00:00:42.020] Browser LOG     Data received in EditModal: {"__v":0,"_id":"69d651b43ebdd730ab96f299","createdAt":"2026-04-08T13:01:40.884Z","email":"rahulsingh@gmail.com","firstName":"aditya","gender":"male","lastName":"singh","permissions":[],"phone":"8787878787","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775653299/metrimonial/1775653298032-868896782-maybelline%20poster%201%20%281%29.png","public_id":"metrimonial/1775653298032-868896782-maybelline poster 1 (1)","role":"moderator","status":"inactive","subAdminId":"vm51753","updatedAt":"2026-04-08T13:03:07.072Z"}
+[00:00:42.020] Browser LOG     Data received in EditModal: {"__v":0,"_id":"69d651b43ebdd730ab96f299","createdAt":"2026-04-08T13:01:40.884Z","email":"rahulsingh@gmail.com","firstName":"aditya","gender":"male","lastName":"singh","permissions":[],"phone":"8787878787","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775653299/metrimonial/1775653298032-868896782-maybelline%20poster%201%20%281%29.png","public_id":"metrimonial/1775653298032-868896782-maybelline poster 1 (1)","role":"moderator","status":"inactive","subAdminId":"vm51753","updatedAt":"2026-04-08T13:03:07.072Z"}
+[00:11:18.368] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[00:11:19.939] Browser LOG      SOCKET CONNECTED: joifiJJOi5zVlndVAAAF
+[00:11:19.939] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[00:26:23.313] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[00:26:25.594] Browser LOG      SOCKET CONNECTED: ev-YNwdVK1GoRtdpAAAB
+[00:26:25.594] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[00:37:30.946] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[00:37:33.948] Browser LOG      SOCKET CONNECTED: kfvm3cC_h8Y5G_VzAAAB
+[00:37:33.948] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[00:53:54.412] Server  LOG      ✓ Compiled in 355ms
+[00:55:17.534] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[00:55:17.534] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[01:01:41.946] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[01:01:44.936] Browser LOG      SOCKET CONNECTED: DVM0p_-pHv29VA0WAAAB
+[01:01:44.936] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[01:26:50.531] Server  LOG      ✓ Compiled in 121ms
+[01:27:26.714] Server  LOG      ✓ Compiled in 357ms
+[01:27:49.448] Browser LOG      SOCKET CONNECTED: zMSm0lFBxyNg_5oqAAAD
+[01:27:49.448] Browser LOG      adminId: undefined
+[01:28:16.908] Browser LOG     Admin ID from localStorage: 69d7436a37bd81bb031da4dc
+[01:28:16.908] Browser LOG     Connecting socket with adminId: 69d7436a37bd81bb031da4dc
+[01:28:17.059] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:28:17.435] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:07:32.389] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[01:28:17.435] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:07:32.494] Browser WARN    Image with src "https://res.cloudinary.com/dsnmnwusd/image/upload/v1774866705/metrimonial/1774866660084-221023371-destop%201.avif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[01:28:17.435] Browser LOG      SOCKET CONNECTED: LdWuuRHBYR3cct6yAAAF
+[01:28:17.435] Browser LOG      adminId: 69d7436a37bd81bb031da4dc
+[01:28:37.007] Browser LOG     Admin ID from localStorage: 69d7436a37bd81bb031da4dc
+[01:28:37.007] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[01:28:37.007] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:28:37.007] Browser LOG     Admin ID from localStorage: 69d7436a37bd81bb031da4dc
+[01:28:37.007] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:28:37.007] Browser LOG     Connecting socket with adminId: 69d7436a37bd81bb031da4dc
+[01:28:38.133] Browser LOG      SOCKET CONNECTED: 3B7qffza7oNwY8XLAAAH
+[01:28:38.133] Browser LOG      adminId: 69d7436a37bd81bb031da4dc
+[01:28:38.266] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:28:38.267] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:29:09.111] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:29:09.111] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:29:09.111] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[01:29:10.229] Browser LOG      SOCKET CONNECTED: fa-43uJYAb2cwof6AAAJ
+[01:29:10.229] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[01:29:10.990] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:29:10.990] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:29:16.647] Browser LOG     🟢 Realtime Listener Enabled
+[01:29:16.648] Browser LOG     🟢 Realtime Listener Enabled
+[01:30:52.080] Browser ERROR   Login error: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"email\":\"adityavikram751@gmail.com\",\"password\":\"123456\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://merimonial-backend.onrender.com/api/sub-admin/loginIn","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (http://localhost:3001/_next/static/chunks/647d8_axios_lib_1d832328._.js:1945:16)\n    at XMLHttpRequest.onloadend (http://localhost:3001/_next/static/chunks/647d8_axios_lib_1d832328._.js:2442:226)\n    at Axios.request (http://localhost:3001/_next/static/chunks/647d8_axios_lib_1d832328._.js:3161:49)\n    at async handleLogin (http://localhost:3001/_next/static/chunks/%5Broot-of-the-server%5D__f0962cf0._.js:634:25)\n    at async http://localhost:3001/_next/static/chunks/647d8_68cf5390._.js:3411:21","status":401}
+[01:31:08.163] Browser LOG     Admin ID from localStorage: 69d74b9a35fc6d35a7d9db38
+[01:31:08.163] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:08.163] Browser LOG     Connecting socket with adminId: 69d74b9a35fc6d35a7d9db38
+[01:31:08.673] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:08.673] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:09.292] Browser LOG      SOCKET CONNECTED: TY_JbhN5qFmHH4OQAAAL
+[01:31:09.292] Browser LOG      adminId: 69d74b9a35fc6d35a7d9db38
+[01:31:15.776] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:31:15.776] Browser LOG     🟢 Socket Active For Analytics Page
+[01:31:15.776] Browser LOG     🟢 Socket Active For Analytics Page
+[01:31:16.295] Browser LOG     name 
+[01:31:16.295] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:16.295] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:16.870] Browser LOG     name 
+[01:31:21.803] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:31:21.803] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:31:47.240] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:31:47.240] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:31:47.240] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[01:31:47.749] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:47.749] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:31:48.298] Browser LOG      SOCKET CONNECTED: aG-X2XKjS86-e8yvAAAN
+[01:31:48.298] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[01:31:51.761] Browser LOG     🟢 Realtime Listener Enabled
+[01:31:51.761] Browser LOG     🟢 Realtime Listener Enabled
+[01:31:59.465] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:31:59.465] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:41:15.842] Browser LOG     🟢 Realtime Listener Enabled
+[01:41:15.842] Browser LOG     🟢 Realtime Listener Enabled
+[01:41:21.766] Browser LOG     🟢 Realtime Listener Enabled
+[01:41:21.766] Browser LOG     🟢 Realtime Listener Enabled
+[01:42:05.859] Browser LOG     🟢 Verification Page Socket Active
+[01:42:05.859] Browser LOG     🟢 Verification Page Socket Active
+[01:42:05.859] Browser LOG     🟢 Verification Page Socket Active
+[01:42:05.859] Browser LOG     🟢 Verification Page Socket Active
+[01:42:20.950] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:42:20.950] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:42:26.591] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:42:26.591] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:42:30.918] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[01:42:30.918] Browser LOG     🟢 Socket Active For Analytics Page
+[01:42:30.918] Browser LOG     🟢 Socket Active For Analytics Page
+[01:42:31.430] Browser LOG     name 
+[01:42:31.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:42:31.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:42:31.917] Browser LOG     name 
+[01:42:46.870] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:42:46.870] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[01:42:46.870] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:42:46.870] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:42:46.870] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:42:46.870] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[01:42:47.890] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:42:47.890] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:42:48.017] Browser LOG      SOCKET CONNECTED: -Cleruks6AKALcLlAAAP
+[01:42:48.017] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[01:43:01.553] Browser LOG     🟢 Socket Active For Analytics Page
+[01:43:01.554] Browser LOG     🟢 Socket Active For Analytics Page
+[01:43:02.071] Browser LOG     name 
+[01:43:02.071] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:43:02.071] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:43:02.592] Browser LOG     name 
+[01:43:48.692] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:43:48.692] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:43:53.274] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:43:53.274] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:44:40.599] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:44:40.599] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[01:44:42.439] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:44:42.439] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:45:20.664] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:45:20.664] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:45:31.988] Browser LOG     🟢 Verification Page Socket Active
+[01:45:31.988] Browser LOG     🟢 Verification Page Socket Active
+[01:45:31.988] Browser LOG     🟢 Verification Page Socket Active
+[01:45:31.988] Browser LOG     🟢 Verification Page Socket Active
+[01:45:49.461] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:45:49.461] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[01:46:06.989] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:46:06.989] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
+[01:46:06.989] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:46:06.989] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[01:46:06.989] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
+[01:46:06.989] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[01:46:08.064] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:46:08.064] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[01:46:08.064] Browser LOG      SOCKET CONNECTED: AcHfOGyQGC1hWEEvAAAR
+[01:46:08.064] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[01:46:39.727] Server  LOG      ✓ Compiled in 168ms
+[01:47:37.158] Browser LOG     🟢 Realtime Listener Enabled
+[01:47:37.158] Browser LOG     🟢 Realtime Listener Enabled
+[01:48:27.991] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:48:27.991] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:03.497] Server  LOG      ✓ Compiled in 60ms
+[01:50:13.065] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:13.066] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:27.821] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:27.821] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:46.939] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:50:46.939] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:51:39.180] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[01:51:39.180] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[02:00:19.493] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[02:00:21.431] Browser LOG      SOCKET CONNECTED: cEUYfg8LE0kdW4kAAAAB
+[02:00:21.431] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[02:00:54.240] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[02:00:54.240] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[02:01:04.573] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[02:01:04.573] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T06:48:04.509Z"}
+[02:01:11.600] Browser LOG      SOCKET CONNECTED: g91sv1qfjcgVjlyvAAAD
+[02:01:11.600] Browser LOG      adminId: undefined
+[02:01:13.380] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:01:13.381] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:01:19.020] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:01:19.020] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:01:29.455] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:01:29.456] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:01:40.466] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:01:40.466] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:01:45.837] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:01:45.837] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:05:50.772] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:05:50.772] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:06:10.933] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:06:10.933] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:06:57.571] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:06:57.571] Browser LOG     Data received in EditModal: {"__v":1,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T06:13:07.806Z"}
+[02:07:06.190] Browser LOG      SOCKET CONNECTED: HczLG2aHRJSMB_RnAAAF
+[02:07:06.190] Browser LOG      adminId: undefined
+[02:07:07.698] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD","REPORTED_CONTENT"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T07:24:00.582Z"}
+[02:07:07.698] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d7436a37bd81bb031da4dc","createdAt":"2026-04-09T06:12:58.643Z","email":"prachi@gmail.com","firstName":"prachi","gender":"female","lastName":"singh","permissions":["DASHBOARD","REPORTED_CONTENT"],"phone":"7878787878","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775715177/metrimonial/1775715176725-636897200-image.png","public_id":"metrimonial/1775715176725-636897200-image","role":"reporter","status":"active","subAdminId":"vm54906","updatedAt":"2026-04-09T07:24:00.582Z"}
+[02:07:15.788] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:07:15.788] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:07:24.637] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:07:24.637] Browser LOG     Data received in EditModal: {"__v":5,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:18:54.632Z"}
+[02:07:38.382] Browser LOG      SOCKET CONNECTED: sfMpN6yET4kC3QKbAAAH
+[02:07:38.382] Browser LOG      adminId: undefined
+[02:07:39.676] Browser LOG     Data received in EditModal: {"__v":7,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS","REPORTED_CONTENT"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:25:24.549Z"}
+[02:07:39.677] Browser LOG     Data received in EditModal: {"__v":7,"_id":"69d74b9a35fc6d35a7d9db38","createdAt":"2026-04-09T06:47:54.764Z","email":"adityavikram751@gmail.com","firstName":"Aditya","gender":"male","lastName":"Singh","permissions":["DASHBOARD","ANALYTICS","MANAGE_USERS","REPORTED_CONTENT"],"phone":"8175022207","profileImage":"https://res.cloudinary.com/dsnmnwusd/image/upload/v1775717273/metrimonial/1775717273233-266119310-Frame%2032.png","public_id":"metrimonial/1775717273233-266119310-Frame 32","role":"analyst","status":"active","subAdminId":"vm30926","updatedAt":"2026-04-09T07:25:24.549Z"}
+[02:07:50.976] Browser LOG     🟢 Realtime Listener Enabled
+[02:07:50.976] Browser LOG     🟢 Realtime Listener Enabled
+[02:07:52.557] Browser LOG     🟢 Realtime Listener Enabled
+[02:07:52.557] Browser LOG     🟢 Realtime Listener Enabled
+[02:08:28.041] Browser LOG     Admin ID from localStorage: 69d7436a37bd81bb031da4dc
+[02:08:28.041] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:08:28.041] Browser LOG     Connecting socket with adminId: 69d7436a37bd81bb031da4dc
+[02:08:28.564] Browser WARN    Image with src "https://res.cloudinary.com/dsnmnwusd/image/upload/v1774866705/metrimonial/1774866660084-221023371-destop%201.avif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:07:32.952] Browser LOG      SOCKET CONNECTED: OEHS-agsXLEKq05gAAAD
-[00:07:32.952] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[00:07:49.351] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[00:07:49.351] Browser LOG     🟢 Socket Active For Analytics Page
-[00:07:49.351] Browser LOG     🟢 Socket Active For Analytics Page
-[00:07:50.111] Browser LOG     name 
-[00:07:50.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[02:08:28.763] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:07:50.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[02:08:28.763] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:07:50.644] Browser LOG     name 
-[00:11:30.458] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[00:11:30.459] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[00:14:13.845] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[00:14:13.845] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[00:14:16.488] Browser LOG     🟢 Verification Page Socket Active
-[00:14:16.488] Browser LOG     🟢 Verification Page Socket Active
-[00:14:16.488] Browser LOG     🟢 Verification Page Socket Active
-[00:14:16.488] Browser LOG     🟢 Verification Page Socket Active
-[00:14:23.008] Browser LOG     🟢 Realtime Listener Enabled
-[00:14:23.008] Browser LOG     🟢 Realtime Listener Enabled
-[00:14:27.322] Browser LOG     🟢 Realtime Listener Enabled
-[00:14:27.322] Browser LOG     🟢 Realtime Listener Enabled
-[00:14:36.212] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[00:14:36.212] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[00:14:36.212] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[00:14:36.212] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[00:14:36.212] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[00:14:36.212] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[00:14:37.356] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[02:08:29.171] Browser LOG      SOCKET CONNECTED: fk3aHs1jP5USESjPAAAJ
+[02:08:29.171] Browser LOG      adminId: 69d7436a37bd81bb031da4dc
+[02:08:43.245] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[02:08:43.245] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:08:43.245] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[02:08:43.920] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:14:37.356] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[02:08:43.920] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:14:37.356] Browser LOG      SOCKET CONNECTED: cTAmGu3Ks9GypCHrAAAF
-[00:14:37.356] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[00:15:25.654] Browser LOG     🟢 Socket Active For Analytics Page
-[00:15:25.654] Browser LOG     🟢 Socket Active For Analytics Page
-[00:15:26.279] Browser LOG     name 
-[00:15:26.279] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:15:26.279] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:15:26.809] Browser LOG     name 
-[02:44:45.064] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:44:45.064] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:45:07.566] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:45:07.566] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:45:09.799] Browser LOG     🟢 Verification Page Socket Active
-[02:45:09.799] Browser LOG     🟢 Verification Page Socket Active
-[02:45:09.799] Browser LOG     🟢 Verification Page Socket Active
-[02:45:09.799] Browser LOG     🟢 Verification Page Socket Active
-[02:45:14.498] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:14.498] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:19.132] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:19.132] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:22.274] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:22.274] Browser LOG     🟢 Realtime Listener Enabled
-[02:45:25.907] Browser LOG     🟢 Verification Page Socket Active
-[02:45:25.908] Browser LOG     🟢 Verification Page Socket Active
-[02:45:25.908] Browser LOG     🟢 Verification Page Socket Active
-[02:45:25.908] Browser LOG     🟢 Verification Page Socket Active
-[02:45:28.824] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:45:28.824] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:45:32.982] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:45:32.982] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:45:40.516] Browser LOG     🟢 Socket Active For Analytics Page
-[02:45:40.516] Browser LOG     🟢 Socket Active For Analytics Page
-[02:45:41.041] Browser LOG     name 
-[02:45:41.041] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:41.041] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:41.566] Browser LOG     name 
-[02:45:45.307] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:45:45.307] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:45:45.307] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:45:45.307] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:45:45.307] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:45:45.307] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:45:46.522] Browser LOG      SOCKET CONNECTED: GfKppo3Qkf7hNQtpAAAl
-[02:45:46.522] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:45:47.785] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:47.785] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:57.249] Browser LOG     🟢 Socket Active For Analytics Page
-[02:45:57.249] Browser LOG     🟢 Socket Active For Analytics Page
-[02:45:57.765] Browser LOG     name 
-[02:45:57.765] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:57.765] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:45:58.282] Browser LOG     name 
-[02:46:10.481] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:46:10.481] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:46:17.656] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:46:17.656] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:47:11.468] Browser LOG      SOCKET CONNECTED: DkeI5CyT3MwtpyyhAAAn
-[02:47:11.468] Browser LOG      adminId: undefined
-[02:47:18.984] Browser LOG     API Response: {"message":"Report approved and user blocked","reportStatus":"blocked","reportedUserStatus":"blocked","success":true}
-[02:47:20.667] Browser LOG     API Response: {"message":"Report approved and user blocked","reportStatus":"blocked","reportedUserStatus":"blocked","success":true}
-[02:47:35.032] Browser LOG     API Response: {"message":"Report rejected and no action taken","reportStatus":"approved","reportedUserStatus":"approved","success":true}
-[02:47:38.597] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:47:38.598] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:47:38.598] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:47:38.598] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:47:38.598] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:47:38.598] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:47:38.598] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[02:47:39.709] Browser LOG      SOCKET CONNECTED: _eF7WYPfM3wqQW86AAAp
-[02:47:39.709] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:47:39.919] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:47:39.919] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:47:49.428] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:47:49.428] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:47:52.630] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:47:52.630] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:47:56.058] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[02:47:56.058] Browser LOG     🟢 Socket Active For Analytics Page
-[02:47:56.058] Browser LOG     🟢 Socket Active For Analytics Page
-[02:47:56.580] Browser LOG     name 
-[02:47:56.581] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:47:56.581] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:47:57.095] Browser LOG     name 
-[02:48:11.813] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:11.813] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:12.380] Browser LOG     name 
-[02:48:12.380] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:12.380] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:12.891] Browser LOG     name 
-[02:48:27.454] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:48:27.454] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:48:32.880] Browser LOG     🟢 Verification Page Socket Active
-[02:48:32.880] Browser LOG     🟢 Verification Page Socket Active
-[02:48:32.880] Browser LOG     🟢 Verification Page Socket Active
-[02:48:32.880] Browser LOG     🟢 Verification Page Socket Active
-[02:48:38.913] Browser LOG     🟢 Realtime Listener Enabled
-[02:48:38.913] Browser LOG     🟢 Realtime Listener Enabled
-[02:48:40.071] Browser LOG     🟢 Realtime Listener Enabled
-[02:48:40.071] Browser LOG     🟢 Realtime Listener Enabled
-[02:48:41.445] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:41.445] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:48:41.445] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:41.445] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:41.445] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:41.445] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:48:42.590] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:42.591] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:42.591] Browser LOG      SOCKET CONNECTED: ZTDclcsBquiS9_oCAAAr
-[02:48:42.591] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:48:45.488] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:45.488] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:46.015] Browser LOG     name 
-[02:48:46.015] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:46.015] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:46.538] Browser LOG     name 
-[02:48:48.504] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:48.504] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:48.998] Browser LOG     name 
-[02:48:48.998] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:48.998] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:49.538] Browser LOG     name 
-[02:48:52.187] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:52.187] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:48:52.187] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:52.187] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:52.187] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:52.187] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:48:53.328] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:53.328] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:53.329] Browser LOG      SOCKET CONNECTED: 9kCbbt5UHs0JO_NLAAAt
-[02:48:53.329] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:48:54.046] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:54.046] Browser LOG     🟢 Socket Active For Analytics Page
-[02:48:54.561] Browser LOG     name 
-[02:48:54.561] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:54.561] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:55.071] Browser LOG     name 
-[02:48:55.405] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:55.405] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:48:55.405] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:55.405] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:48:55.405] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:48:55.405] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:48:56.557] Browser LOG      SOCKET CONNECTED: undefined
-[02:48:56.557] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:48:56.557] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:56.557] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:48:57.379] Browser LOG      SOCKET CONNECTED: 8lZxgmPIIL3bYCMCAAAx
-[02:48:57.379] Browser LOG      adminId: undefined
-[02:50:35.859] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:50:35.859] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[02:50:35.859] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:50:36.454] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:36.454] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:37.027] Browser LOG      SOCKET CONNECTED: xriNGJ_6ZLej8r4lAAAz
-[02:50:37.027] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:50:49.719] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[02:50:49.719] Browser LOG     🟢 Socket Active For Analytics Page
-[02:50:49.719] Browser LOG     🟢 Socket Active For Analytics Page
-[02:50:50.243] Browser LOG     name 
-[02:50:50.243] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:50.243] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:50.753] Browser LOG     name 
-[02:50:51.627] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:50:51.627] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:50:51.627] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:50:51.627] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:50:51.627] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:50:51.627] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:50:52.778] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:52.778] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:50:52.778] Browser LOG      SOCKET CONNECTED: undefined
-[02:50:52.778] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:50:53.668] Browser LOG      SOCKET CONNECTED: F1D3_-YTs2wzvQFuAAA3
-[02:50:53.668] Browser LOG      adminId: undefined
-[02:51:03.636] Browser LOG     🟢 Socket Active For Analytics Page
-[02:51:03.636] Browser LOG     🟢 Socket Active For Analytics Page
-[02:51:04.193] Browser LOG     name 
-[02:51:04.193] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:51:04.193] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:51:04.737] Browser LOG     name 
-[02:51:18.283] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:51:18.283] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[02:51:21.218] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:51:21.218] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[02:51:23.867] Browser LOG     🟢 Verification Page Socket Active
-[02:51:23.867] Browser LOG     🟢 Verification Page Socket Active
-[02:51:23.867] Browser LOG     🟢 Verification Page Socket Active
-[02:51:23.867] Browser LOG     🟢 Verification Page Socket Active
-[02:51:27.409] Browser LOG     🟢 Realtime Listener Enabled
-[02:51:27.409] Browser LOG     🟢 Realtime Listener Enabled
-[02:51:31.734] Browser LOG     🟢 Realtime Listener Enabled
-[02:51:31.734] Browser LOG     🟢 Realtime Listener Enabled
-[02:51:33.426] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:51:33.426] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[02:51:33.426] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:51:33.426] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:51:33.426] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[02:51:33.426] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:51:34.577] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:51:34.577] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:51:34.577] Browser LOG      SOCKET CONNECTED: 2ofgfe1MMQPrddTBAAA5
-[02:51:34.577] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:52:07.714] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:07.714] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:20.182] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:20.182] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:27.951] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:52:27.951] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[02:52:27.951] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:52:28.497] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:28.497] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:52:29.097] Browser LOG      SOCKET CONNECTED: HjVcMySDiuACx76cAAA7
-[02:52:29.097] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[02:53:08.386] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[02:53:08.386] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[02:53:08.386] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[02:53:09.207] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:53:09.207] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[02:53:09.700] Browser LOG      SOCKET CONNECTED: v1nqH62ghYkZDQjEAAA9
-[02:53:09.700] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[04:08:26.894] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
-[04:08:28.876] Browser LOG      SOCKET CONNECTED: NdcTfo8xZuLISZAeAAA_
-[04:08:28.876] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[04:09:29.119] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
-[04:09:31.871] Browser LOG      SOCKET CONNECTED: loTSdqPieTrnrT_CAABB
-[04:09:31.871] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[04:09:51.313] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
-[04:09:52.878] Browser LOG      SOCKET CONNECTED: g9RtI8VAvxswl-qdAABD
-[04:09:52.878] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[04:10:54.031] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
-[04:10:56.866] Browser LOG      SOCKET CONNECTED: dD-LqvpivekMnHreAABF
-[04:10:56.866] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[04:35:54.629] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
-[04:35:56.869] Browser LOG      SOCKET CONNECTED: YDouHFFLlQFS-kUHAABH
-[04:35:56.869] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:17:01.991] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[05:17:01.991] Browser LOG     🟢 Socket Active For Analytics Page
-[05:17:01.991] Browser LOG     🟢 Socket Active For Analytics Page
-[05:17:02.696] Browser LOG     name 
-[05:17:02.696] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:17:02.696] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:17:03.173] Browser LOG     name 
-[05:37:25.287] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:37:25.287] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:37:25.287] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:37:25.287] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:37:25.287] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:37:25.287] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:37:26.061] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:37:26.061] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:37:26.605] Browser LOG      SOCKET CONNECTED: NWLmcWxCKA2apF0AAABT
-[05:37:26.605] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:48:46.574] Browser LOG     🟢 Socket Active For Analytics Page
-[05:48:46.575] Browser LOG     🟢 Socket Active For Analytics Page
-[05:48:47.158] Browser LOG     name 
-[05:48:47.158] Browser LOG     name 
-[05:48:47.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:47.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:51.314] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:48:51.314] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:48:51.314] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:48:51.314] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:48:51.314] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:48:51.314] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:48:51.939] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:51.939] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:52.651] Browser LOG      SOCKET CONNECTED: d-kT69LDBZsPvh-OAABX
-[05:48:52.651] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:48:53.013] Browser LOG     🟢 Socket Active For Analytics Page
-[05:48:53.013] Browser LOG     🟢 Socket Active For Analytics Page
-[05:48:53.533] Browser LOG     name 
-[05:48:53.533] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:53.533] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:48:54.041] Browser LOG     name 
-[05:48:58.363] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:48:58.363] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:50:24.716] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[05:50:24.716] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[05:50:29.618] Browser LOG      SOCKET CONNECTED: undefined
-[05:50:29.618] Browser LOG      adminId: undefined
-[05:50:30.497] Browser LOG      SOCKET CONNECTED: uptXFoAb4LbLRXcjAABb
-[05:50:30.497] Browser LOG      adminId: undefined
-[05:51:13.344] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:51:13.344] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:51:17.256] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[05:51:17.256] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:17.256] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:17.822] Browser LOG     name 
-[05:51:17.822] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:17.822] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:17.822] Browser LOG     name 
-[05:51:18.655] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:51:18.655] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:51:18.655] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:51:18.655] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:51:18.655] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:51:18.655] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:51:19.514] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:19.514] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:19.913] Browser LOG      SOCKET CONNECTED: YC0eGVEbWVLqm-2CAABd
-[05:51:19.914] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:51:20.828] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:20.828] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:21.323] Browser LOG     name 
-[05:51:21.323] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:21.323] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:21.893] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:51:21.893] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:51:21.893] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:51:21.893] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:51:21.893] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:51:21.893] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:51:21.893] Browser LOG     name 
-[05:51:23.091] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:23.091] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:23.091] Browser LOG      SOCKET CONNECTED: undefined
-[05:51:23.091] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:51:23.788] Browser LOG      SOCKET CONNECTED: undefined
-[05:51:23.788] Browser LOG      adminId: undefined
-[05:51:24.624] Browser LOG      SOCKET CONNECTED: O-IacTGpIkCkCQ3SAABj
-[05:51:24.624] Browser LOG      adminId: undefined
-[05:51:39.860] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:39.860] Browser LOG     🟢 Socket Active For Analytics Page
-[05:51:40.473] Browser LOG     name 
-[05:51:40.473] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:40.473] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:51:40.473] Browser LOG     name 
-[05:51:48.773] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:51:48.773] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:52:02.622] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:52:02.622] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:52:08.752] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:52:08.752] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:52:08.752] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:52:08.752] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:52:08.752] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:52:08.752] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:52:09.373] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:52:09.373] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:52:10.002] Browser LOG      SOCKET CONNECTED: bm3uU0ilChc4XcygAABl
-[05:52:10.002] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:52:40.887] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:52:40.888] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:52:44.509] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:52:44.509] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:53:03.405] Browser LOG     🟢 Verification Page Socket Active
-[05:53:03.405] Browser LOG     🟢 Verification Page Socket Active
-[05:53:03.405] Browser LOG     🟢 Verification Page Socket Active
-[05:53:03.405] Browser LOG     🟢 Verification Page Socket Active
-[05:53:08.733] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:08.733] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:14.899] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:14.899] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:19.208] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:19.208] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:20.966] Browser LOG     🟢 Verification Page Socket Active
-[05:53:20.966] Browser LOG     🟢 Verification Page Socket Active
-[05:53:20.966] Browser LOG     🟢 Verification Page Socket Active
-[05:53:20.966] Browser LOG     🟢 Verification Page Socket Active
-[05:53:22.316] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:53:22.317] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:53:26.535] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:53:26.535] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:53:27.721] Browser LOG     🟢 Socket Active For Analytics Page
-[05:53:27.721] Browser LOG     🟢 Socket Active For Analytics Page
-[05:53:28.254] Browser LOG     name 
-[05:53:28.254] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:53:28.254] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:53:28.355] Browser LOG     name 
-[05:53:29.594] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:53:29.594] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:53:29.594] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:53:29.594] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:53:29.594] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:53:29.594] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:53:30.218] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:53:30.218] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:53:30.914] Browser LOG      SOCKET CONNECTED: u--qIyqIoO4c4nrvAABn
-[05:53:30.914] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:53:32.512] Browser LOG     🟢 Verification Page Socket Active
-[05:53:32.512] Browser LOG     🟢 Verification Page Socket Active
-[05:53:32.512] Browser LOG     🟢 Verification Page Socket Active
-[05:53:32.512] Browser LOG     🟢 Verification Page Socket Active
-[05:53:35.033] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:35.033] Browser LOG     🟢 Realtime Listener Enabled
-[05:53:37.916] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:53:37.916] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:55:28.524] Server  LOG      ✓ Compiled in 373ms
-[05:55:28.859] Browser LOG     🟢 Realtime Listener Enabled
-[05:55:51.712] Browser ERROR   uncaughtError: TypeError: onSearch is not a function
-[05:55:58.509] Server  LOG      ✓ Compiled in 94ms
-[05:55:58.582] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:56:30.721] Server  LOG      ✓ Compiled in 81ms
-[05:56:38.247] Browser LOG     🟢 Verification Page Socket Active
-[05:56:38.248] Browser LOG     🟢 Verification Page Socket Active
-[05:56:38.248] Browser LOG     🟢 Verification Page Socket Active
-[05:56:38.248] Browser LOG     🟢 Verification Page Socket Active
-[05:56:41.123] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:41.123] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:43.143] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:43.143] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:46.255] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:46.255] Browser LOG     🟢 Realtime Listener Enabled
-[05:56:49.353] Browser LOG     🟢 Verification Page Socket Active
-[05:56:49.353] Browser LOG     🟢 Verification Page Socket Active
-[05:56:49.353] Browser LOG     🟢 Verification Page Socket Active
-[05:56:49.353] Browser LOG     🟢 Verification Page Socket Active
-[05:57:12.514] Server  LOG      ✓ Compiled in 80ms
-[05:57:12.614] Browser ERROR   %o
-
-%s
-
-%s
- {} The above error occurred in the <Search> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[05:57:17.915] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__cdf3749b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:57:17.917] Server  ERROR   ReferenceError: handleBellClick is not defined
-[05:57:17.929] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__cdf3749b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:57:17.929] Server  ERROR    ⨯ ReferenceError: handleBellClick is not defined
-[05:57:17.934] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__cdf3749b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:57:17.934] Server  ERROR    ⨯ ReferenceError: handleBellClick is not defined
-[05:57:18.650] Browser ERROR   uncaughtError: ReferenceError: handleBellClick is not defined
-[05:57:24.745] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[05:57:24.940] Server  LOG      ✓ Compiled in 102ms
-[05:57:28.524] Browser LOG      SOCKET CONNECTED: undefined
-[05:57:28.524] Browser LOG      adminId: undefined
-[05:57:29.392] Browser LOG      SOCKET CONNECTED: i5YW_KzpAgnFSNI9AABr
-[05:57:29.392] Browser LOG      adminId: undefined
-[05:57:34.441] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:57:34.441] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:57:38.599] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[05:57:40.981] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:57:40.982] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[05:57:45.194] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[05:57:45.194] Browser LOG     🟢 Socket Active For Analytics Page
-[05:57:45.194] Browser LOG     🟢 Socket Active For Analytics Page
-[05:57:46.254] Browser LOG     name 
-[05:57:46.254] Browser LOG     name 
-[05:57:46.254] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:57:46.254] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:57:49.222] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:57:49.222] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[05:57:49.222] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:57:49.222] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[05:57:49.222] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[05:57:49.222] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[05:57:49.958] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:57:49.958] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[05:57:51.118] Browser LOG      SOCKET CONNECTED: azi2jUER1JhxIV7eAABt
-[05:57:51.118] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
-[05:57:53.631] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:57:53.631] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:58:00.607] Browser LOG     🟢 Verification Page Socket Active
-[05:58:00.607] Browser LOG     🟢 Verification Page Socket Active
-[05:58:00.607] Browser LOG     🟢 Verification Page Socket Active
-[05:58:00.607] Browser LOG     🟢 Verification Page Socket Active
-[05:58:13.701] Server  LOG      ✓ Compiled in 82ms
-[05:58:19.031] Browser ERROR   %o
-
-%s
-
-%s
- {} The above error occurred in the <Search> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[05:58:39.763] Server  LOG      ✓ Compiled in 136ms
-[05:58:39.858] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
-[05:58:59.195] Server  LOG      ✓ Compiled in 87ms
-[05:58:59.249] Browser ERROR   %o
-
-%s
-
-%s
- {} The above error occurred in the <Search> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[05:59:23.257] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:59:23.258] Server  ERROR   ReferenceError: unread is not defined
-[05:59:23.262] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:59:23.262] Server  ERROR    ⨯ ReferenceError: unread is not defined
-[05:59:23.264] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[05:59:23.265] Server  ERROR    ⨯ ReferenceError: unread is not defined
-[05:59:23.911] Browser ERROR   uncaughtError: ReferenceError: unread is not defined
-[06:00:10.959] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[06:00:11.159] Server  LOG      ✓ Compiled in 74ms
-[06:00:14.944] Browser LOG      SOCKET CONNECTED: tbFWhIRtWryx1Rf2AABv
-[06:00:14.944] Browser LOG      adminId: undefined
-[06:00:21.949] Server  LOG      ✓ Compiled in 70ms
-[06:00:21.998] Browser ERROR   %o
-
-%s
-
-%s
- {} The above error occurred in the <Search> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
-[06:00:27.302] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[06:00:27.302] Server  ERROR   ReferenceError: unread is not defined
-[06:00:27.304] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[06:00:27.304] Server  ERROR    ⨯ ReferenceError: unread is not defined
-[06:00:27.306] Server  ERROR   C:\Users\My PC Buddy\Downloads\matrimonial-main\matrimonial-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c8a438e3._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[06:00:27.306] Server  ERROR    ⨯ ReferenceError: unread is not defined
-[06:00:27.828] Browser ERROR   uncaughtError: ReferenceError: unread is not defined
-[06:00:36.686] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[06:00:36.753] Server  LOG      ✓ Compiled in 59ms
-[06:00:39.662] Browser LOG      SOCKET CONNECTED: rpSwIyLmPBkliV73AABx
-[06:00:39.662] Browser LOG      adminId: undefined
-[06:00:55.729] Server  LOG      ✓ Compiled in 72ms
-[06:01:04.942] Browser LOG     🟢 Verification Page Socket Active
-[06:01:04.942] Browser LOG     🟢 Verification Page Socket Active
-[06:01:04.942] Browser LOG     🟢 Verification Page Socket Active
-[06:01:04.942] Browser LOG     🟢 Verification Page Socket Active
-[06:01:06.642] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[06:01:09.064] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[06:01:09.064] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
-[06:01:10.892] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
-[06:01:10.892] Browser LOG     🟢 Socket Active For Analytics Page
-[06:01:10.892] Browser LOG     🟢 Socket Active For Analytics Page
-[06:01:11.606] Browser LOG     name 
-[06:01:11.606] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[06:01:11.606] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[06:01:11.804] Browser LOG     name 
-[06:01:13.526] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[06:01:13.526] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: io client disconnect
-[06:01:13.526] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[06:01:13.526] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
-[06:01:13.526] Browser LOG     :red_circle: SOCKET MANUALLY DISCONNECTED
-[06:01:13.526] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
-[06:01:14.365] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[06:01:14.365] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[06:01:15.061] Browser LOG      SOCKET CONNECTED: IrNQPScy9eN2PnBvAABz
-[06:01:15.061] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[02:08:44.529] Browser LOG      SOCKET CONNECTED: td2ZzmW5RALOyq4GAAAL
+[02:08:44.529] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
