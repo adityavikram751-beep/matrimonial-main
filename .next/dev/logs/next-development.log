@@ -300,3 +300,76 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
        height and width.
 [02:08:44.529] Browser LOG      SOCKET CONNECTED: td2ZzmW5RALOyq4GAAAL
 [02:08:44.529] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[02:09:54.940] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[02:09:54.940] Browser LOG     🟢 Socket Active For Analytics Page
+[02:09:54.940] Browser LOG     🟢 Socket Active For Analytics Page
+[02:09:55.464] Browser LOG     name 
+[02:09:55.464] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:09:55.464] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:09:56.498] Browser LOG     name 
+[02:10:05.132] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:10:05.132] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:10:15.894] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:10:25.513] Browser LOG     🟢 Realtime Listener Enabled
+[02:10:25.513] Browser LOG     🟢 Realtime Listener Enabled
+[02:10:55.655] Browser LOG     Admin ID from localStorage: 69d74b9a35fc6d35a7d9db38
+[02:10:55.655] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:10:55.655] Browser LOG     Connecting socket with adminId: 69d74b9a35fc6d35a7d9db38
+[02:10:56.230] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:10:56.230] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:10:56.859] Browser LOG      SOCKET CONNECTED: 2rP4U8uYxceA0vXjAAAN
+[02:10:56.859] Browser LOG      adminId: 69d74b9a35fc6d35a7d9db38
+[02:10:59.855] Browser WARN    Highcharts warning: Consider including the "accessibility.js" module to make your chart more usable for people with disabilities. Set the "accessibility.enabled" option to false to remove this warning. See https://www.highcharts.com/docs/accessibility/accessibility-module.
+[02:10:59.855] Browser LOG     🟢 Socket Active For Analytics Page
+[02:10:59.855] Browser LOG     🟢 Socket Active For Analytics Page
+[02:11:01.854] Browser LOG     name 
+[02:11:01.854] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:11:01.854] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:11:02.349] Browser LOG     name 
+[02:11:05.025] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[02:11:05.025] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[02:11:23.072] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[02:11:23.072] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:11:23.072] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[02:11:23.588] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:11:23.588] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:11:24.189] Browser LOG      SOCKET CONNECTED: LrzzbwLILxaCRzsTAAAP
+[02:11:24.189] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[02:19:55.335] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:19:55.335] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[02:20:02.160] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[02:20:02.160] Browser LOG     🟢 REAL-TIME NOTIFICATION LISTENER ACTIVE
+[02:20:07.012] Browser LOG     🟢 Verification Page Socket Active
+[02:20:07.012] Browser LOG     🟢 Verification Page Socket Active
+[02:20:07.012] Browser LOG     🟢 Verification Page Socket Active
+[02:20:07.012] Browser LOG     🟢 Verification Page Socket Active
+[02:35:18.946] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[02:35:51.943] Browser LOG      SOCKET CONNECTED: qg-k3A-Fgrnbk4bMAAAB
+[02:35:51.943] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[02:51:00.945] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[02:51:26.933] Browser LOG      SOCKET CONNECTED: teaAyrKBdfDnKvU6AAAB
+[02:51:26.933] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef

@@ -23,6 +23,9 @@ self.__BUILD_MANIFEST = {
   "/manageusers": [
     "static/chunks/pages/manageusers.js"
   ],
+  "/manageusers/[id]": [
+    "static/chunks/pages/manageusers/[id].js"
+  ],
   "/profileDetails": [
     "static/chunks/pages/profileDetails.js"
   ],

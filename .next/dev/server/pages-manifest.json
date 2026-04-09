@@ -9,6 +9,7 @@
   "/logout": "pages/logout.js",
   "/managesubadmin": "pages/managesubadmin.js",
   "/manageusers": "pages/manageusers.js",
+  "/manageusers/[id]": "pages/manageusers/[id].js",
   "/profileDetails": "pages/profileDetails.js",
   "/reportedcontent": "pages/reportedcontent.js",
   "/verificationrequest": "pages/verificationrequest.js"
