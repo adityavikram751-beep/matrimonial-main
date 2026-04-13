@@ -1045,8 +1045,7 @@ const ROLE_SUGGESTIONS = [
     'reporter',
     'moderator',
     'verification_officer',
-    'analyst',
-    'support'
+    'analyst'
 ];
 const RoleInput = ({ value, onChange })=>{
     _s();
@@ -2811,10 +2810,7 @@ const ROLE_SUGGESTIONS = [
     'reporter',
     'moderator',
     'verification_officer',
-    'analyst',
-    'support',
-    'backend',
-    'frontend'
+    'analyst'
 ];
 const RoleInput = ({ value, onChange })=>{
     _s();
