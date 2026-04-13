@@ -12,7 +12,7 @@ const DEFAULT_PERMISSIONS = [
   { key: 'PROFILE_DETAILS',     label: 'Profile Details' },
 ];
 
-const ROLE_SUGGESTIONS = ['reporter', 'moderator', 'verification_officer', 'analyst', 'support'];
+const ROLE_SUGGESTIONS = ['reporter', 'moderator', 'verification_officer', 'analyst'];
 
 const RoleInput = ({ value, onChange }) => {
   const [open, setOpen] = useState(false);
