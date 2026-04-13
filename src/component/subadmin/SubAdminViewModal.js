@@ -13,7 +13,7 @@ const MASTER_PERMISSIONS = [
   { key: 'PROFILE_DETAILS', label: 'Profile Details' },
 ];
 
-const ROLE_SUGGESTIONS = ['reporter', 'moderator', 'verification_officer', 'analyst', 'support', 'backend', 'frontend'];
+const ROLE_SUGGESTIONS = ['reporter', 'moderator', 'verification_officer', 'analyst', 'support'];
 
 const RoleInput = ({ value, onChange }) => {
   const [open, setOpen] = useState(false);

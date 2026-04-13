@@ -373,3 +373,12 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [02:51:00.945] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
 [02:51:26.933] Browser LOG      SOCKET CONNECTED: teaAyrKBdfDnKvU6AAAB
 [02:51:26.933] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[03:06:35.934] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[03:07:09.948] Browser LOG      SOCKET CONNECTED: L_VLgxnS18FMTqDFAAAB
+[03:07:09.948] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[03:22:18.946] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[03:22:52.938] Browser LOG      SOCKET CONNECTED: 41G-w0KviEHspXQ2AAAB
+[03:22:52.938] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[03:52:15.579] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[03:52:48.941] Browser LOG      SOCKET CONNECTED: 160mfk5ZXYhWa6olAAAB
+[03:52:48.942] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
