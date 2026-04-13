@@ -193,3 +193,34 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [05:11:48.124] Browser LOG      adminId: undefined
 [05:12:20.419] Server  LOG      ✓ Compiled in 236ms
 [05:12:53.005] Server  LOG      ✓ Compiled in 147ms
+[05:15:52.587] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:15:52.587] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:15:58.690] Browser LOG      SOCKET CONNECTED: undefined
+[05:15:58.690] Browser LOG      adminId: undefined
+[05:15:58.968] Browser LOG      SOCKET CONNECTED: 6sBaAYKAucVBpviIAAAT
+[05:15:58.968] Browser LOG      adminId: undefined
+[05:20:20.467] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:21:07.640] Server  LOG      ✓ Compiled in 134ms
+[05:21:08.195] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <UserDetailCard> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:21:16.170] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <UserDetailCard> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:22:08.865] Server  LOG      ✓ Compiled in 61ms
+[05:22:14.844] Browser WARN    Image with src "/location.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:22:33.504] Server  LOG      ✓ Compiled in 65ms
+[05:22:34.195] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <UserDetailCard> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:22:53.473] Server  LOG      ✓ Compiled in 50ms
