@@ -142,3 +142,54 @@
 [04:47:50.194] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
 [04:48:25.192] Browser LOG      SOCKET CONNECTED: T_eGnDq2l2Wk3V43AAAB
 [04:48:25.192] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[05:03:34.200] Browser LOG     :red_circle: SOCKET DISCONNECTED — reason: transport close
+[05:04:09.192] Browser LOG      SOCKET CONNECTED: 9T6FzzU9AF1xLfCfAAAB
+[05:04:09.192] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[05:07:23.610] Server  LOG      ✓ Compiled in 334ms
+[05:07:29.414] Browser LOG     Admin ID from localStorage: 69ca04ccf6640ad85a7454ef
+[05:07:29.414] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:07:29.414] Browser LOG     Connecting socket with adminId: 69ca04ccf6640ad85a7454ef
+[05:07:30.084] Browser WARN    Image with src "https://res.cloudinary.com/dsnmnwusd/image/upload/v1774866705/metrimonial/1774866660084-221023371-destop%201.avif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:07:30.312] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:07:30.313] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:07:30.712] Browser LOG      SOCKET CONNECTED: e_NG0blLwGmm9hK1AAAD
+[05:07:30.712] Browser LOG      adminId: 69ca04ccf6640ad85a7454ef
+[05:07:33.254] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:07:33.254] Browser LOG     🟢 REAL-TIME SOCKET ACTIVE (Manage Users)
+[05:08:31.540] Server  LOG      ✓ Compiled in 217ms
+[05:08:36.280] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:08:36.280] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:08:41.687] Browser LOG      SOCKET CONNECTED: undefined
+[05:08:41.687] Browser LOG      adminId: undefined
+[05:08:42.461] Browser LOG      SOCKET CONNECTED: SjjrM1YAnBxbdrsPAAAH
+[05:08:42.461] Browser LOG      adminId: undefined
+[05:09:59.823] Server  LOG      ✓ Compiled in 48ms
+[05:11:15.054] Server  LOG      ✓ Compiled in 59ms
+[05:11:19.888] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:11:19.888] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:11:23.057] Browser ERROR   Error fetching users: {}
+[05:11:23.811] Browser ERROR   Error fetching users: {}
+[05:11:24.289] Browser LOG      SOCKET CONNECTED: undefined
+[05:11:24.289] Browser LOG      adminId: undefined
+[05:11:26.194] Browser LOG      SOCKET CONNECTED: 1p_VRED17ralXe7SAAAL
+[05:11:26.194] Browser LOG      adminId: undefined
+[05:11:42.860] Browser WARN    Image with src "/loading2.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:11:42.860] Browser WARN    Image with src "/loading2.gif" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:11:45.877] Browser ERROR   Error fetching users: {}
+[05:11:46.374] Browser ERROR   Error fetching users: {}
+[05:11:47.031] Browser LOG      SOCKET CONNECTED: undefined
+[05:11:47.031] Browser LOG      adminId: undefined
+[05:11:48.124] Browser LOG      SOCKET CONNECTED: wOdObkBt6t21RaOPAAAP
+[05:11:48.124] Browser LOG      adminId: undefined
+[05:12:20.419] Server  LOG      ✓ Compiled in 236ms
+[05:12:53.005] Server  LOG      ✓ Compiled in 147ms
