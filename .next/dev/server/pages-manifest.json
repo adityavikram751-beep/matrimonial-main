@@ -1,14 +1,1 @@
-{
-  "/": "pages/index.js",
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/analytics": "pages/analytics.js",
-  "/dashboard": "pages/dashboard.js",
-  "/managesubadmin": "pages/managesubadmin.js",
-  "/manageusers": "pages/manageusers.js",
-  "/manageusers/[id]": "pages/manageusers/[id].js",
-  "/profileDetails": "pages/profileDetails.js",
-  "/reportedcontent": "pages/reportedcontent.js",
-  "/verificationrequest": "pages/verificationrequest.js"
-}
+{}

@@ -2189,7 +2189,7 @@ const CreateSubAdminModal = ({ onClose, onCreated })=>{
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s1(CreateSubAdminModal, "SNP0vOdzsGvUXiSB+hTij/LdDUc=");
+_s1(CreateSubAdminModal, "Kr+ChVnt9YxFfNrrPNlZO20MTnQ=");
 _c2 = CreateSubAdminModal;
 // ─── Main SubAdminTable ───────────────────────────────────────────────────────
 const SubAdminTable = ({ onView })=>{
